@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EF1AB1AD48FE469D0D69E7D /* libPods-LocalCommerce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAECDFA06305EE598C75EFB /* libPods-LocalCommerce.a */; };
 		D290D9941F02E15F007B44D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290D9931F02E15F007B44D6 /* AppDelegate.swift */; };
 		D290D9961F02E15F007B44D6 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290D9951F02E15F007B44D6 /* SearchController.swift */; };
 		D290D9991F02E15F007B44D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D290D9971F02E15F007B44D6 /* Main.storyboard */; };
@@ -19,9 +20,11 @@
 		D290D9B01F02EA4F007B44D6 /* WishlistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290D9AF1F02EA4F007B44D6 /* WishlistController.swift */; };
 		D290D9B21F02EA7A007B44D6 /* SalesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290D9B11F02EA7A007B44D6 /* SalesController.swift */; };
 		D290D9B41F02EA9C007B44D6 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290D9B31F02EA9C007B44D6 /* ProfileController.swift */; };
+		D290D9B61F02F4D5007B44D6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D290D9B51F02F4D5007B44D6 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		78DEBD75B1AAFE33A2CED470 /* Pods-LocalCommerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalCommerce.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocalCommerce/Pods-LocalCommerce.release.xcconfig"; sourceTree = "<group>"; };
 		D290D9901F02E15F007B44D6 /* LocalCommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalCommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D290D9931F02E15F007B44D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D290D9951F02E15F007B44D6 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
@@ -36,6 +39,9 @@
 		D290D9AF1F02EA4F007B44D6 /* WishlistController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistController.swift; sourceTree = "<group>"; };
 		D290D9B11F02EA7A007B44D6 /* SalesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesController.swift; sourceTree = "<group>"; };
 		D290D9B31F02EA9C007B44D6 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		D290D9B51F02F4D5007B44D6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
+		DDAECDFA06305EE598C75EFB /* libPods-LocalCommerce.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LocalCommerce.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCAC84DABA769EFCE96DDBA6 /* Pods-LocalCommerce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalCommerce.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocalCommerce/Pods-LocalCommerce.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +49,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF1AB1AD48FE469D0D69E7D /* libPods-LocalCommerce.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D033B23E36B395ADE8D76BDC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDAECDFA06305EE598C75EFB /* libPods-LocalCommerce.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D290D9871F02E15F007B44D6 = {
 			isa = PBXGroup;
 			children = (
 				D290D9921F02E15F007B44D6 /* LocalCommerce */,
 				D290D9911F02E15F007B44D6 /* Products */,
+				EDCA49B77099A8D87B707598 /* Pods */,
+				D033B23E36B395ADE8D76BDC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +88,7 @@
 				D290D9AE1F02E95C007B44D6 /* Controllers */,
 				D290D9A91F02E250007B44D6 /* Views */,
 				D290D9931F02E15F007B44D6 /* AppDelegate.swift */,
+				D290D9B51F02F4D5007B44D6 /* Podfile */,
 				D290D99A1F02E15F007B44D6 /* Assets.xcassets */,
 				D290D99F1F02E15F007B44D6 /* Info.plist */,
 			);
@@ -101,6 +119,15 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		EDCA49B77099A8D87B707598 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FCAC84DABA769EFCE96DDBA6 /* Pods-LocalCommerce.debug.xcconfig */,
+				78DEBD75B1AAFE33A2CED470 /* Pods-LocalCommerce.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -108,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D290D9A21F02E15F007B44D6 /* Build configuration list for PBXNativeTarget "LocalCommerce" */;
 			buildPhases = (
+				E74B335F87C6D58B390BFDEB /* [CP] Check Pods Manifest.lock */,
 				D290D98C1F02E15F007B44D6 /* Sources */,
 				D290D98D1F02E15F007B44D6 /* Frameworks */,
 				D290D98E1F02E15F007B44D6 /* Resources */,
+				B8DD0F98750E9D2A0503C9D5 /* [CP] Embed Pods Frameworks */,
+				5B88E966DB1E566DFE62506A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,6 +193,7 @@
 			files = (
 				D290D99E1F02E15F007B44D6 /* LaunchScreen.storyboard in Resources */,
 				D290D9AB1F02E277007B44D6 /* Sales.storyboard in Resources */,
+				D290D9B61F02F4D5007B44D6 /* Podfile in Resources */,
 				D290D99B1F02E15F007B44D6 /* Assets.xcassets in Resources */,
 				D290D9A61F02E204007B44D6 /* Search.storyboard in Resources */,
 				D290D9991F02E15F007B44D6 /* Main.storyboard in Resources */,
@@ -172,6 +203,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B88E966DB1E566DFE62506A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LocalCommerce/Pods-LocalCommerce-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8DD0F98750E9D2A0503C9D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LocalCommerce/Pods-LocalCommerce-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E74B335F87C6D58B390BFDEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D290D98C1F02E15F007B44D6 /* Sources */ = {
@@ -305,6 +384,7 @@
 		};
 		D290D9A31F02E15F007B44D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCAC84DABA769EFCE96DDBA6 /* Pods-LocalCommerce.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5W8YC8Y5Q7;
@@ -318,6 +398,7 @@
 		};
 		D290D9A41F02E15F007B44D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78DEBD75B1AAFE33A2CED470 /* Pods-LocalCommerce.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5W8YC8Y5Q7;
