@@ -12,7 +12,7 @@
         <!--WishList-->
         <scene sceneID="YW3-zY-m3Q">
             <objects>
-                <viewController storyboardIdentifier="Wishlist" id="dsN-9u-abs" userLabel="WishList" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Wishlist" id="dsN-9u-abs" userLabel="WishList" customClass="WishlistController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tvv-kW-OEw"/>
                         <viewControllerLayoutGuide type="bottom" id="uqM-1M-3Yb"/>

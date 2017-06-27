@@ -12,7 +12,7 @@
         <!--Sales-->
         <scene sceneID="nWT-Zd-8km">
             <objects>
-                <viewController storyboardIdentifier="Sales" id="03q-cT-5Il" userLabel="Sales" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Sales" id="03q-cT-5Il" userLabel="Sales" customClass="SalerController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uO3-8s-EJ7"/>
                         <viewControllerLayoutGuide type="bottom" id="h1z-pg-ECL"/>

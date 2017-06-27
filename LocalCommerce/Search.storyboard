@@ -12,7 +12,7 @@
         <!--Search-->
         <scene sceneID="4bD-x1-RB6">
             <objects>
-                <viewController storyboardIdentifier="Search" id="MDa-Gd-0gD" userLabel="Search" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Search" id="MDa-Gd-0gD" userLabel="Search" customClass="SearchController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HXg-Ge-IEk"/>
                         <viewControllerLayoutGuide type="bottom" id="GFb-3h-3W2"/>

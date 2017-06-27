@@ -12,7 +12,7 @@
         <!--Profile-->
         <scene sceneID="6GG-YZ-bMz">
             <objects>
-                <viewController storyboardIdentifier="Profile" id="K0a-gS-M8I" userLabel="Profile" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Profile" id="K0a-gS-M8I" userLabel="Profile" customClass="ProfileController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wh2-ka-zwy"/>
                         <viewControllerLayoutGuide type="bottom" id="ebd-We-7wr"/>
