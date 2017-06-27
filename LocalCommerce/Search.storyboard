@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,13 +21,35 @@
                     <view key="view" contentMode="scaleToFill" id="DeQ-kP-TlZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="KHj-Ie-mCV">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VJE-r1-jYp">
+                                <rect key="frame" x="0.0" y="64" width="375" height="222.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VJE-r1-jYp" firstAttribute="height" secondItem="DeQ-kP-TlZ" secondAttribute="height" multiplier="0.3333" id="07W-W2-Ac1" userLabel="Map View Height"/>
+                            <constraint firstAttribute="trailing" secondItem="KHj-Ie-mCV" secondAttribute="trailing" id="4Qw-sR-86L"/>
+                            <constraint firstItem="VJE-r1-jYp" firstAttribute="top" secondItem="KHj-Ie-mCV" secondAttribute="bottom" id="DU5-kq-pOu"/>
+                            <constraint firstAttribute="trailing" secondItem="VJE-r1-jYp" secondAttribute="trailing" id="MPg-8t-MJN"/>
+                            <constraint firstItem="VJE-r1-jYp" firstAttribute="leading" secondItem="DeQ-kP-TlZ" secondAttribute="leading" id="gO3-yb-ypo"/>
+                            <constraint firstItem="KHj-Ie-mCV" firstAttribute="top" secondItem="HXg-Ge-IEk" secondAttribute="bottom" id="h3f-Kk-LAx"/>
+                            <constraint firstItem="KHj-Ie-mCV" firstAttribute="leading" secondItem="DeQ-kP-TlZ" secondAttribute="leading" id="jez-oO-iAO"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" id="YAV-aq-96i" userLabel="Search"/>
+                    <connections>
+                        <outlet property="map" destination="VJE-r1-jYp" id="1og-EN-RWB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3Y-TB-cgR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="498" y="-397"/>
+            <point key="canvasLocation" x="496.80000000000001" y="-397.15142428785612"/>
         </scene>
     </scenes>
 </document>
