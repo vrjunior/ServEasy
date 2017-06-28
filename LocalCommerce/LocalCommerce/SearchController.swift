@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import GoogleMaps
 
-class SearchController: UIViewController, CLLocationManagerDelegate {
+class SearchController: UIViewController {
 
     @IBOutlet weak var mapView: GMSMapView!
     
@@ -22,6 +22,7 @@ class SearchController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.mapView.delegate = self
         
         //setting market info
         self.myMarkerPoint.title = "My location"
@@ -78,6 +79,10 @@ class SearchController: UIViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+}
+
+extension SearchController: CLLocationManagerDelegate {
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         //getting the last location
@@ -95,6 +100,14 @@ class SearchController: UIViewController, CLLocationManagerDelegate {
         self.currentMapZoom = self.mapView.camera.zoom
         
     }
-
 }
 
+extension SearchController: GMSMapViewDelegate {
+    
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+
+        self.locationManager.stopUpdatingLocation()
+        self.myMarkerPoint.position = coordinate
+        
+    }
+}
