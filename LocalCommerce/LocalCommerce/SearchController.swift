@@ -50,12 +50,12 @@ class SearchController: UIViewController, CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        manager.stopUpdatingLocation()
-        
+        //getting the last location
         self.currentLocation = locations.first
         
-        
+        //getting the current coordinate
         let coordinate = self.currentLocation.coordinate
+        
         self.mapView.camera = GMSCameraPosition(target: coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
         
         // Creates a marker in the center of the map.
