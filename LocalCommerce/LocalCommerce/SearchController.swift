@@ -74,6 +74,10 @@ class SearchController: UIViewController {
         
     }
 
+    @IBAction func locationSync(_ sender: UIButton) {
+        self.locationManager.startUpdatingLocation()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -104,10 +108,18 @@ extension SearchController: CLLocationManagerDelegate {
 
 extension SearchController: GMSMapViewDelegate {
     
-    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+    /*func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
 
         self.locationManager.stopUpdatingLocation()
         self.myMarkerPoint.position = coordinate
         
+        //center the camera to marker stay on center
+        self.mapView.animate(toLocation: coordinate)
+    }*/
+    
+    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+        
+        self.locationManager.stopUpdatingLocation()
+        self.myMarkerPoint.position = position.target
     }
 }
