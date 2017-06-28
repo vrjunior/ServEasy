@@ -30,6 +30,34 @@ class SearchController: UIViewController, CLLocationManagerDelegate {
         //adding current position marker to map
         self.myMarkerPoint.map = self.mapView
         
+        //defining style to hide poi on google maps
+        let myStyle = "[" +
+            "  {" +
+            "    \"featureType\": \"poi\"," +
+            "    \"elementType\": \"all\"," +
+            "    \"stylers\": [" +
+            "      {" +
+            "        \"visibility\": \"off\"" +
+            "      }" +
+            "    ]" +
+            "  }," +
+            "  {" +
+            "    \"featureType\": \"transit\"," +
+            "    \"elementType\": \"labels.icon\"," +
+            "    \"stylers\": [" +
+            "      {" +
+            "        \"visibility\": \"off\"" +
+            "      }" +
+            "    ]" +
+            "  }" +
+        "]"
+        
+        do {
+            try self.mapView.mapStyle = GMSMapStyle(jsonString: myStyle)
+        } catch {
+            NSLog("Fail to set style on google maps")
+        }
+        
         self.determineMyCurrentLocation()
     }
     
@@ -52,9 +80,6 @@ class SearchController: UIViewController, CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        //saving current zoom
-        self.currentMapZoom = self.mapView.camera.zoom
-        
         //getting the last location
         self.currentLocation = locations.first
         
@@ -65,6 +90,9 @@ class SearchController: UIViewController, CLLocationManagerDelegate {
         
         // Creates a marker in the center of the map.
         self.myMarkerPoint.position = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        
+        //saving current zoom to next update
+        self.currentMapZoom = self.mapView.camera.zoom
         
     }
 
