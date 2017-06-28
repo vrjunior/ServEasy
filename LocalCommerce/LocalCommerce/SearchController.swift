@@ -17,9 +17,11 @@ class SearchController: UIViewController, CLLocationManagerDelegate {
     var locationManager: CLLocationManager = CLLocationManager()
     var currentLocation: CLLocation!
     var myMarkerPoint: GMSMarker = GMSMarker()
+    var currentMapZoom: Float = 15 //initial zoom
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         //setting market info
         self.myMarkerPoint.title = "My location"
@@ -50,13 +52,16 @@ class SearchController: UIViewController, CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
+        //saving current zoom
+        self.currentMapZoom = self.mapView.camera.zoom
+        
         //getting the last location
         self.currentLocation = locations.first
         
         //getting the current coordinate
         let coordinate = self.currentLocation.coordinate
         
-        self.mapView.camera = GMSCameraPosition(target: coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+        self.mapView.camera = GMSCameraPosition(target: coordinate, zoom: self.currentMapZoom, bearing: 0, viewingAngle: 0)
         
         // Creates a marker in the center of the map.
         self.myMarkerPoint.position = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
