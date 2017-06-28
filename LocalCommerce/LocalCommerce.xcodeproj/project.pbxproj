@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2EF1AB1AD48FE469D0D69E7D /* libPods-LocalCommerce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAECDFA06305EE598C75EFB /* libPods-LocalCommerce.a */; };
+		D22409DA1F0409E7006848A0 /* Commerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22409D91F0409E7006848A0 /* Commerce.swift */; };
+		D22409DC1F040BE6006848A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22409DB1F040BE6006848A0 /* User.swift */; };
+		D22409DE1F040C34006848A0 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22409DD1F040C34006848A0 /* Review.swift */; };
+		D22409E01F040C64006848A0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22409DF1F040C64006848A0 /* Category.swift */; };
+		D22409E21F040C94006848A0 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22409E11F040C94006848A0 /* Product.swift */; };
+		D22409E41F040CDD006848A0 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22409E31F040CDD006848A0 /* Purchase.swift */; };
+		D22409E61F041B5D006848A0 /* Promotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22409E51F041B5D006848A0 /* Promotion.swift */; };
 		D290D9941F02E15F007B44D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290D9931F02E15F007B44D6 /* AppDelegate.swift */; };
 		D290D9961F02E15F007B44D6 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290D9951F02E15F007B44D6 /* SearchController.swift */; };
 		D290D9991F02E15F007B44D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D290D9971F02E15F007B44D6 /* Main.storyboard */; };
@@ -25,6 +32,13 @@
 
 /* Begin PBXFileReference section */
 		78DEBD75B1AAFE33A2CED470 /* Pods-LocalCommerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalCommerce.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocalCommerce/Pods-LocalCommerce.release.xcconfig"; sourceTree = "<group>"; };
+		D22409D91F0409E7006848A0 /* Commerce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commerce.swift; sourceTree = "<group>"; };
+		D22409DB1F040BE6006848A0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D22409DD1F040C34006848A0 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		D22409DF1F040C64006848A0 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		D22409E11F040C94006848A0 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		D22409E31F040CDD006848A0 /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
+		D22409E51F041B5D006848A0 /* Promotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promotion.swift; sourceTree = "<group>"; };
 		D290D9901F02E15F007B44D6 /* LocalCommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalCommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D290D9931F02E15F007B44D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D290D9951F02E15F007B44D6 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
@@ -64,6 +78,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D22409D81F0409BE006848A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D22409D91F0409E7006848A0 /* Commerce.swift */,
+				D22409DB1F040BE6006848A0 /* User.swift */,
+				D22409DD1F040C34006848A0 /* Review.swift */,
+				D22409DF1F040C64006848A0 /* Category.swift */,
+				D22409E11F040C94006848A0 /* Product.swift */,
+				D22409E31F040CDD006848A0 /* Purchase.swift */,
+				D22409E51F041B5D006848A0 /* Promotion.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		D290D9871F02E15F007B44D6 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +113,7 @@
 		D290D9921F02E15F007B44D6 /* LocalCommerce */ = {
 			isa = PBXGroup;
 			children = (
+				D22409D81F0409BE006848A0 /* Models */,
 				D290D9AE1F02E95C007B44D6 /* Controllers */,
 				D290D9A91F02E250007B44D6 /* Views */,
 				D290D9931F02E15F007B44D6 /* AppDelegate.swift */,
@@ -257,11 +286,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D22409E41F040CDD006848A0 /* Purchase.swift in Sources */,
 				D290D9B41F02EA9C007B44D6 /* ProfileController.swift in Sources */,
+				D22409DE1F040C34006848A0 /* Review.swift in Sources */,
 				D290D9B21F02EA7A007B44D6 /* SalesController.swift in Sources */,
+				D22409DA1F0409E7006848A0 /* Commerce.swift in Sources */,
+				D22409E61F041B5D006848A0 /* Promotion.swift in Sources */,
 				D290D9B01F02EA4F007B44D6 /* WishlistController.swift in Sources */,
+				D22409E01F040C64006848A0 /* Category.swift in Sources */,
 				D290D9961F02E15F007B44D6 /* SearchController.swift in Sources */,
+				D22409E21F040C94006848A0 /* Product.swift in Sources */,
 				D290D9941F02E15F007B44D6 /* AppDelegate.swift in Sources */,
+				D22409DC1F040BE6006848A0 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +465,7 @@
 				D290D9A41F02E15F007B44D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

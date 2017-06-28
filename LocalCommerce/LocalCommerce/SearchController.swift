@@ -16,16 +16,23 @@ class SearchController: UIViewController, CLLocationManagerDelegate {
     
     var locationManager: CLLocationManager = CLLocationManager()
     var currentLocation: CLLocation!
+    var myMarkerPoint: GMSMarker = GMSMarker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //setting market info
+        self.myMarkerPoint.title = "My location"
+        self.myMarkerPoint.snippet = "Current location"
+        
+        //adding current position marker to map
+        self.myMarkerPoint.map = self.mapView
         
         self.determineMyCurrentLocation()
     }
     
     func determineMyCurrentLocation() {
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         
@@ -52,11 +59,7 @@ class SearchController: UIViewController, CLLocationManagerDelegate {
         self.mapView.camera = GMSCameraPosition(target: coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
         
         // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
-        marker.title = "My location"
-        marker.snippet = "Current location"
-        marker.map = self.mapView
+        self.myMarkerPoint.position = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
         
     }
 
