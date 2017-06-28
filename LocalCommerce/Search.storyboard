@@ -26,9 +26,9 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VJE-r1-jYp">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VJE-r1-jYp" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="222.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -44,7 +44,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" id="YAV-aq-96i" userLabel="Search"/>
                     <connections>
-                        <outlet property="map" destination="VJE-r1-jYp" id="1og-EN-RWB"/>
+                        <outlet property="mapView" destination="VJE-r1-jYp" id="CZH-5M-bpw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3Y-TB-cgR" userLabel="First Responder" sceneMemberID="firstResponder"/>

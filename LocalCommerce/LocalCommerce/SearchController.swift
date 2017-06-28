@@ -12,34 +12,16 @@ import GoogleMaps
 
 class SearchController: UIViewController, CLLocationManagerDelegate {
 
-    @IBOutlet weak var map: UIView!
+    @IBOutlet weak var mapView: GMSMapView!
     
     var locationManager: CLLocationManager = CLLocationManager()
     var currentLocation: CLLocation!
-    
-    
-    override func loadView() {
-        
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        mapView.isMyLocationEnabled = true
-        self.map = mapView
-        
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
-    
-        
-        //self.determineMyCurrentLocation()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
+        self.determineMyCurrentLocation()
     }
     
     func determineMyCurrentLocation() {
@@ -60,29 +42,22 @@ class SearchController: UIViewController, CLLocationManagerDelegate {
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        manager.stopUpdatingLocation()
+        
         self.currentLocation = locations.first
         
         
         let coordinate = self.currentLocation.coordinate
-        
-        print("user latitude = \(coordinate.latitude)")
-        print("user longitude = \(coordinate.longitude)")
-        
-        
-        
-        let camera = GMSCameraPosition.camera(withLatitude: 0, longitude: 0, zoom: 6.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        mapView.isMyLocationEnabled = true
-        self.map = mapView
+        self.mapView.camera = GMSCameraPosition(target: coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
         
         // Creates a marker in the center of the map.
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
         marker.title = "My location"
-        marker.snippet = "Me"
-        marker.map = mapView
+        marker.snippet = "Current location"
+        marker.map = self.mapView
         
-        manager.stopUpdatingLocation()
     }
 
 }
