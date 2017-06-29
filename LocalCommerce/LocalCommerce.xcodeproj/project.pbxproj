@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2EF1AB1AD48FE469D0D69E7D /* libPods-LocalCommerce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAECDFA06305EE598C75EFB /* libPods-LocalCommerce.a */; };
+		A935D19E1F042D3000510B0A /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A935D19D1F042D3000510B0A /* ProductTableViewCell.swift */; };
 		D22409DA1F0409E7006848A0 /* Commerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22409D91F0409E7006848A0 /* Commerce.swift */; };
 		D22409DC1F040BE6006848A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22409DB1F040BE6006848A0 /* User.swift */; };
 		D22409DE1F040C34006848A0 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22409DD1F040C34006848A0 /* Review.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		78DEBD75B1AAFE33A2CED470 /* Pods-LocalCommerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalCommerce.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocalCommerce/Pods-LocalCommerce.release.xcconfig"; sourceTree = "<group>"; };
+		A935D19D1F042D3000510B0A /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		D22409D91F0409E7006848A0 /* Commerce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commerce.swift; sourceTree = "<group>"; };
 		D22409DB1F040BE6006848A0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D22409DD1F040C34006848A0 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			children = (
 				D290D9951F02E15F007B44D6 /* SearchController.swift */,
 				D290D9AF1F02EA4F007B44D6 /* WishlistController.swift */,
+				A935D19D1F042D3000510B0A /* ProductTableViewCell.swift */,
 				D290D9B11F02EA7A007B44D6 /* SalesController.swift */,
 				D290D9B31F02EA9C007B44D6 /* ProfileController.swift */,
 			);
@@ -295,6 +298,7 @@
 				D290D9B01F02EA4F007B44D6 /* WishlistController.swift in Sources */,
 				D22409E01F040C64006848A0 /* Category.swift in Sources */,
 				D290D9961F02E15F007B44D6 /* SearchController.swift in Sources */,
+				A935D19E1F042D3000510B0A /* ProductTableViewCell.swift in Sources */,
 				D22409E21F040C94006848A0 /* Product.swift in Sources */,
 				D290D9941F02E15F007B44D6 /* AppDelegate.swift in Sources */,
 				D22409DC1F040BE6006848A0 /* User.swift in Sources */,

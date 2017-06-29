@@ -9,5 +9,12 @@
 import Foundation
 
 class Product {
+
+    public var name: String?
+    public var description: String?
+    public var category: String?
+    public var id: Int?
+    public var price: Float?
+    
     
 }
