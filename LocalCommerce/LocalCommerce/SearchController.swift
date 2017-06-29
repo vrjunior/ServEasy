@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import GoogleMaps
 
-class SearchController: UIViewController, UISearchBarDelegate {
+class SearchController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mapView: GMSMapView!
@@ -63,6 +63,7 @@ class SearchController: UIViewController, UISearchBarDelegate {
             NSLog("Fail to set style on google maps")
         }
         
+        
         self.determineMyCurrentLocation()
     }
     
@@ -78,24 +79,6 @@ class SearchController: UIViewController, UISearchBarDelegate {
         
     }
     
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        //getting the geocode from searchtext
-        self.newSearchLocation?.geocodeAddressString(searchText, completionHandler: { (placemarks, error) in
-            if error == nil {
-                for placemark in placemarks! {
-                    print(placemark.name)
-                    
-                    //quando entra com um nome, ele transforma a string entrada em um placemark. esse placemark.location retorna um CLLocation. Precisa agora fazer a alteração para mudar a localização mostrada no mapa para a adquirida.
-                    
-                }
-            }
-        })
-        
-        
-    }
-
     
     @IBAction func locationSync(_ sender: UIButton) {
         self.locationManager.startUpdatingLocation()
@@ -145,4 +128,28 @@ extension SearchController: GMSMapViewDelegate {
         self.locationManager.stopUpdatingLocation()
         self.myMarkerPoint.position = position.target
     }
+}
+
+extension SearchController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        //getting the geocode from searchtext
+        self.newSearchLocation?.geocodeAddressString(searchBar.text!, completionHandler: { (placemarks, error) in
+            if error == nil {
+                for placemark in placemarks! {
+                    print(placemark.name)
+                    
+                    //updating position
+                    if let location = placemark.location {
+                        self.locationManager.stopUpdatingLocation()
+                        
+                        self.mapView.animate(toLocation: location.coordinate)
+                    }
+                    
+                    
+                }
+            }
+        })
+    }
+    
 }
