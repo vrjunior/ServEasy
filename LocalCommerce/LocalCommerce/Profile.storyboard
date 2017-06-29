@@ -22,11 +22,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="O3S-Ro-eYa" userLabel="Profile"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="O3S-Ro-eYa" userLabel="Profile"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ycv-nb-Jaz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="519" y="238"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Profile" width="25" height="25"/>
+    </resources>
 </document>

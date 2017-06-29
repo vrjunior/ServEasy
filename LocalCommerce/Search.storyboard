@@ -96,7 +96,7 @@
                             <constraint firstItem="a1b-aL-qcH" firstAttribute="height" secondItem="DeQ-kP-TlZ" secondAttribute="height" multiplier="0.45" id="ucj-BV-DUH"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" image="GMSNavNightModeSprites-0-2x.png" selectedImage="gps-location" id="YAV-aq-96i" userLabel="Search"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="Explore" id="YAV-aq-96i" userLabel="Search"/>
                     <connections>
                         <outlet property="mapView" destination="VJE-r1-jYp" id="CZH-5M-bpw"/>
                         <outlet property="searchBar" destination="KHj-Ie-mCV" id="5Di-bQ-wXR"/>
@@ -108,7 +108,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="GMSNavNightModeSprites-0-2x.png" width="256" height="280"/>
+        <image name="Explore" width="25" height="25"/>
         <image name="gps-location" width="25" height="25"/>
     </resources>
 </document>
