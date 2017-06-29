@@ -38,18 +38,62 @@
                                     <action selector="locationSync:" destination="MDa-Gd-0gD" eventType="touchUpInside" id="WYe-nE-DFr"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a1b-aL-qcH">
+                                <rect key="frame" x="0.0" y="367" width="375" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a4c-D5-a57">
+                                    <size key="itemSize" width="125" height="189"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="commerce" id="Q0C-FV-mo2" customClass="CommerceCollectionViewCell" customModule="LocalCommerce" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="125" height="189"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="189"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXm-CU-pJg">
+                                                    <rect key="frame" x="41" y="84" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="dXm-CU-pJg" firstAttribute="centerX" secondItem="Q0C-FV-mo2" secondAttribute="centerX" id="1jR-vQ-ewv"/>
+                                            <constraint firstItem="dXm-CU-pJg" firstAttribute="centerY" secondItem="Q0C-FV-mo2" secondAttribute="centerY" id="icH-eE-Nnr"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="placeholder" destination="dXm-CU-pJg" id="6yU-bI-Ze3"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="MDa-Gd-0gD" id="EJS-AU-Y3f"/>
+                                    <outlet property="delegate" destination="MDa-Gd-0gD" id="nse-yk-vNk"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="VJE-r1-jYp" firstAttribute="height" secondItem="DeQ-kP-TlZ" secondAttribute="height" multiplier="0.3333" id="07W-W2-Ac1" userLabel="Map View Height"/>
                             <constraint firstAttribute="trailing" secondItem="KHj-Ie-mCV" secondAttribute="trailing" id="4Qw-sR-86L"/>
+                            <constraint firstAttribute="trailing" secondItem="a1b-aL-qcH" secondAttribute="trailing" id="Bgi-bD-H5B"/>
                             <constraint firstItem="VJE-r1-jYp" firstAttribute="top" secondItem="KHj-Ie-mCV" secondAttribute="bottom" id="DU5-kq-pOu"/>
                             <constraint firstAttribute="trailing" secondItem="VJE-r1-jYp" secondAttribute="trailing" id="MPg-8t-MJN"/>
+                            <constraint firstItem="a1b-aL-qcH" firstAttribute="leading" secondItem="DeQ-kP-TlZ" secondAttribute="leading" id="UWi-Uk-mtu"/>
+                            <constraint firstItem="GFb-3h-3W2" firstAttribute="top" secondItem="a1b-aL-qcH" secondAttribute="bottom" id="ZGy-Zc-z4W"/>
                             <constraint firstItem="bWe-tQ-DcL" firstAttribute="bottom" secondItem="VJE-r1-jYp" secondAttribute="bottom" constant="-5" id="aOI-ym-RRV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bWe-tQ-DcL" secondAttribute="trailing" id="gLx-iD-MNn"/>
                             <constraint firstItem="VJE-r1-jYp" firstAttribute="leading" secondItem="DeQ-kP-TlZ" secondAttribute="leading" id="gO3-yb-ypo"/>
                             <constraint firstItem="KHj-Ie-mCV" firstAttribute="top" secondItem="HXg-Ge-IEk" secondAttribute="bottom" id="h3f-Kk-LAx"/>
                             <constraint firstItem="KHj-Ie-mCV" firstAttribute="leading" secondItem="DeQ-kP-TlZ" secondAttribute="leading" id="jez-oO-iAO"/>
+                            <constraint firstItem="a1b-aL-qcH" firstAttribute="height" secondItem="DeQ-kP-TlZ" secondAttribute="height" multiplier="0.45" id="ucj-BV-DUH"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="GMSNavNightModeSprites-0-2x.png" selectedImage="gps-location" id="YAV-aq-96i" userLabel="Search"/>

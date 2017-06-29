@@ -10,8 +10,13 @@ import UIKit
 import CoreLocation
 import GoogleMaps
 
+
 class SearchController: UIViewController {
 
+    // For test
+    var array = ["Moscow", "Saint Petersburg", "Novosibirsk"]
+    
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mapView: GMSMapView!
     
@@ -153,3 +158,40 @@ extension SearchController: UISearchBarDelegate {
     }
     
 }
+
+
+extension SearchController: UICollectionViewDelegate {
+
+
+
+}
+
+extension SearchController: UICollectionViewDataSource {
+
+
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        
+        return 1
+        
+    }
+
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+       
+        return array.count
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "commerce", for: indexPath as IndexPath) as! CommerceCollectionViewCell
+        
+        cell.placeholder.text = array[indexPath.row]
+        
+        return cell
+        
+    }
+    
+    
+   }
