@@ -10,8 +10,9 @@ import UIKit
 import CoreLocation
 import GoogleMaps
 
-class SearchController: UIViewController {
+class SearchController: UIViewController, UISearchBarDelegate {
 
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mapView: GMSMapView!
     
     var locationManager: CLLocationManager = CLLocationManager()
@@ -19,10 +20,13 @@ class SearchController: UIViewController {
     var myMarkerPoint: GMSMarker = GMSMarker()
     var currentMapZoom: Float = 15 //initial zoom
     
+    var newSearchLocation:CLGeocoder? = CLGeocoder()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.mapView.delegate = self
+        searchBar.delegate = self
         
         //setting market info
         self.myMarkerPoint.title = "My location"
@@ -73,7 +77,26 @@ class SearchController: UIViewController {
         
         
     }
+    
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        //getting the geocode from searchtext
+        self.newSearchLocation?.geocodeAddressString(searchText, completionHandler: { (placemarks, error) in
+            if error == nil {
+                for placemark in placemarks! {
+                    print(placemark.name)
+                    
+                    //quando entra com um nome, ele transforma a string entrada em um placemark. esse placemark.location retorna um CLLocation. Precisa agora fazer a alteração para mudar a localização mostrada no mapa para a adquirida.
+                    
+                }
+            }
+        })
+        
+        
+    }
 
+    
     @IBAction func locationSync(_ sender: UIButton) {
         self.locationManager.startUpdatingLocation()
     }
