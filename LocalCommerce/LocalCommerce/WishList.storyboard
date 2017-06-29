@@ -12,7 +12,6 @@
         <!--WishList-->
         <scene sceneID="YW3-zY-m3Q">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tR2-oc-FmP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Wishlist" id="dsN-9u-abs" userLabel="WishList" customClass="WishlistController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tvv-kW-OEw"/>
@@ -56,10 +55,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorites" id="buQ-G3-bcO" userLabel="Favorites"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="Favorite" id="buQ-G3-bcO" userLabel="Favorites"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tR2-oc-FmP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="517.60000000000002" y="237.93103448275863"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Favorite" width="25" height="25"/>
+    </resources>
 </document>
