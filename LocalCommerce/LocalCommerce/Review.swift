@@ -9,5 +9,8 @@
 import Foundation
 
 class Review {
-    
+    public var user: User?
+    public var date: Date?
+    public var rating: Int?
+    public var comment: String?
 }

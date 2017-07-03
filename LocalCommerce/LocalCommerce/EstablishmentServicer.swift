@@ -1,21 +1,21 @@
 //
-//  Commerce.swift
+//  EstablishmentServicer.swift
 //  LocalCommerce
 //
-//  Created by Valmir Junior on 28/06/17.
+//  Created by Valmir Junior on 03/07/17.
 //  Copyright © 2017 Valmir Junior. All rights reserved.
 //
 
 import Foundation
 import CoreLocation
+import UIKit
 
-class Commerce {
-    public var name:String?
-    public var cnpj:String?
+class EstablishmentServicer: Servicer {
+    
     public var openingTime:(hour: Int, minute: Int, second: Int)?
     public var closingTime:(hour: Int, minute: Int, second: Int)?
     public var location:CLLocationCoordinate2D?
-    public var rating: Float?
+    public var facadeImages: UIImage?
     
     public func isOpen() -> Bool {
         return true
