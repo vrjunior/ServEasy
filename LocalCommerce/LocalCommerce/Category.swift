@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
-class Category {
-    
+public class Category {
+    public var name:String?
+    public var icon:UIImageView?
 }

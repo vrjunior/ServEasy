@@ -7,7 +7,22 @@
 //
 
 import Foundation
+import UIKit
+import CoreLocation
 
 class User {
+    public var id: Int?
+    public var firstName: String?
+    public var lastName: String?
+    public var token: String?
+    public var profilePicture: UIImage?
+    public var email: String?
+    public var lastLocation: CLLocationCoordinate2D?
+    
+    
+    public func setLastLocation(latitude: Double, longitude: Double) {
+        self.lastLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+    
     
 }

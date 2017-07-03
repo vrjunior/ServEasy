@@ -137,12 +137,14 @@ extension SearchController: GMSMapViewDelegate {
 
 extension SearchController: UISearchBarDelegate {
     
+
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         //getting the geocode from searchtext
         self.newSearchLocation?.geocodeAddressString(searchBar.text!, completionHandler: { (placemarks, error) in
             if error == nil {
                 for placemark in placemarks! {
-                    print(placemark.name)
+                    print(placemark.name!)
                     
                     //updating position
                     if let location = placemark.location {
@@ -155,6 +157,13 @@ extension SearchController: UISearchBarDelegate {
                 }
             }
         })
+        
+        searchBar.endEditing(true)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.searchBar.endEditing(true)
+     //   self.view.resignFirstResponder()
     }
     
 }
