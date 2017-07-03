@@ -11,12 +11,12 @@ import CoreLocation
 
 class CommerceRepository {
     
-    func getCommercesByLocation(location: CLLocationCoordinate2D, radius: Double) -> [Commerce] {
+    func getServicersByLocation(location: CLLocationCoordinate2D, radius: Double) -> [Servicer] {
         
-        return [Commerce]()
+        return [Servicer]()
     }
     
-    func getCommerceReviews(commerceId: Int) -> [Review] {
+    func getServicesReviews(commerceId: Int) -> [Review] {
         
         return [Review]()
     }    

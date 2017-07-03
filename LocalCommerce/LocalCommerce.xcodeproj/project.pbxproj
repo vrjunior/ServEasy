@@ -32,7 +32,7 @@
 		D290D9B21F02EA7A007B44D6 /* SalesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290D9B11F02EA7A007B44D6 /* SalesController.swift */; };
 		D290D9B41F02EA9C007B44D6 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290D9B31F02EA9C007B44D6 /* ProfileController.swift */; };
 		D290D9B61F02F4D5007B44D6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D290D9B51F02F4D5007B44D6 /* Podfile */; };
-		D2EE5D1B1F0590D1008B86A1 /* CommerceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE5D1A1F0590D1008B86A1 /* CommerceRepository.swift */; };
+		D2EE5D1B1F0590D1008B86A1 /* ServicerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE5D1A1F0590D1008B86A1 /* ServicerRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +63,7 @@
 		D290D9B11F02EA7A007B44D6 /* SalesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesController.swift; sourceTree = "<group>"; };
 		D290D9B31F02EA9C007B44D6 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		D290D9B51F02F4D5007B44D6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
-		D2EE5D1A1F0590D1008B86A1 /* CommerceRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceRepository.swift; sourceTree = "<group>"; };
+		D2EE5D1A1F0590D1008B86A1 /* ServicerRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicerRepository.swift; sourceTree = "<group>"; };
 		DDAECDFA06305EE598C75EFB /* libPods-LocalCommerce.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LocalCommerce.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAC84DABA769EFCE96DDBA6 /* Pods-LocalCommerce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalCommerce.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocalCommerce/Pods-LocalCommerce.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,7 +166,7 @@
 		D2EE5D191F0590B4008B86A1 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				D2EE5D1A1F0590D1008B86A1 /* CommerceRepository.swift */,
+				D2EE5D1A1F0590D1008B86A1 /* ServicerRepository.swift */,
 			);
 			name = Repositories;
 			sourceTree = "<group>";
@@ -309,7 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A91341B41F057E6B00B21EEA /* CommerceCollectionViewCell.swift in Sources */,
-				D2EE5D1B1F0590D1008B86A1 /* CommerceRepository.swift in Sources */,
+				D2EE5D1B1F0590D1008B86A1 /* ServicerRepository.swift in Sources */,
 				D290D9B41F02EA9C007B44D6 /* ProfileController.swift in Sources */,
 				D22409DE1F040C34006848A0 /* Review.swift in Sources */,
 				D22E779A1F0AB8690009DD4E /* BudgetMessage.swift in Sources */,
