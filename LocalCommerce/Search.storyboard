@@ -55,18 +55,24 @@
                                             <rect key="frame" x="0.0" y="0.0" width="125" height="189"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXm-CU-pJg">
-                                                    <rect key="frame" x="41" y="84" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Teste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXm-CU-pJg">
+                                                    <rect key="frame" x="12" y="151" width="103" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Explore" translatesAutoresizingMaskIntoConstraints="NO" id="Ikg-9Z-hgy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="94.5"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="dXm-CU-pJg" firstAttribute="centerX" secondItem="Q0C-FV-mo2" secondAttribute="centerX" id="1jR-vQ-ewv"/>
-                                            <constraint firstItem="dXm-CU-pJg" firstAttribute="centerY" secondItem="Q0C-FV-mo2" secondAttribute="centerY" id="icH-eE-Nnr"/>
+                                            <constraint firstItem="Ikg-9Z-hgy" firstAttribute="leading" secondItem="Q0C-FV-mo2" secondAttribute="leading" id="bnP-h1-4wd"/>
+                                            <constraint firstItem="Ikg-9Z-hgy" firstAttribute="height" secondItem="Q0C-FV-mo2" secondAttribute="height" multiplier="0.5" id="gsI-Q7-VtY"/>
+                                            <constraint firstItem="Ikg-9Z-hgy" firstAttribute="top" secondItem="Q0C-FV-mo2" secondAttribute="top" id="hhF-Df-vlP"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ikg-9Z-hgy" secondAttribute="trailing" id="ths-UI-4OK"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="placeholder" destination="dXm-CU-pJg" id="6yU-bI-Ze3"/>
