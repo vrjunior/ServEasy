@@ -14,7 +14,7 @@ import GoogleMaps
 class SearchController: UIViewController {
 
     // For test
-    var array = ["Moscow", "Saint Petersburg", "Novosibirsk"]
+    var array = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -24,7 +24,6 @@ class SearchController: UIViewController {
     var currentLocation: CLLocation!
     var myMarkerPoint: GMSMarker = GMSMarker()
     var currentMapZoom: Float = 15 //initial zoom
-    
     var newSearchLocation:CLGeocoder? = CLGeocoder()
     
     
@@ -32,6 +31,7 @@ class SearchController: UIViewController {
         super.viewDidLoad()
         self.mapView.delegate = self
         searchBar.delegate = self
+        
         
         //setting market info
         self.myMarkerPoint.title = "My location"
@@ -119,6 +119,7 @@ extension SearchController: CLLocationManagerDelegate {
 
 extension SearchController: GMSMapViewDelegate {
     
+
     /*func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
 
         self.locationManager.stopUpdatingLocation()
@@ -137,7 +138,6 @@ extension SearchController: GMSMapViewDelegate {
 
 extension SearchController: UISearchBarDelegate {
     
-
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         //getting the geocode from searchtext
@@ -159,6 +159,7 @@ extension SearchController: UISearchBarDelegate {
         })
         
         searchBar.endEditing(true)
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -168,16 +169,21 @@ extension SearchController: UISearchBarDelegate {
     
 }
 
+extension SearchController: UISearchDisplayDelegate{
+    
+    
+}
+
+
+
 
 extension SearchController: UICollectionViewDelegate {
 
 
-
 }
 
+
 extension SearchController: UICollectionViewDataSource {
-
-
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
@@ -191,16 +197,16 @@ extension SearchController: UICollectionViewDataSource {
         return array.count
         
     }
+
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "commerce", for: indexPath as IndexPath) as! CommerceCollectionViewCell
         
-        cell.placeholder.text = array[indexPath.row]
+        cell.placeholder.text = "Loja " + array[indexPath.row]
+        cell.layer.cornerRadius = 9
+    
         
         return cell
-        
     }
-    
-    
-   }
+}

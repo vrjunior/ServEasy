@@ -25,8 +25,8 @@
 		D290D99B1F02E15F007B44D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D290D99A1F02E15F007B44D6 /* Assets.xcassets */; };
 		D290D99E1F02E15F007B44D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D290D99C1F02E15F007B44D6 /* LaunchScreen.storyboard */; };
 		D290D9A61F02E204007B44D6 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D290D9A51F02E204007B44D6 /* Search.storyboard */; };
-		D290D9A81F02E245007B44D6 /* WishList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D290D9A71F02E245007B44D6 /* WishList.storyboard */; };
-		D290D9AB1F02E277007B44D6 /* Sales.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D290D9AA1F02E277007B44D6 /* Sales.storyboard */; };
+		D290D9A81F02E245007B44D6 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D290D9A71F02E245007B44D6 /* Favorites.storyboard */; };
+		D290D9AB1F02E277007B44D6 /* Budgets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D290D9AA1F02E277007B44D6 /* Budgets.storyboard */; };
 		D290D9AD1F02E290007B44D6 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D290D9AC1F02E290007B44D6 /* Profile.storyboard */; };
 		D290D9B01F02EA4F007B44D6 /* WishlistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290D9AF1F02EA4F007B44D6 /* WishlistController.swift */; };
 		D290D9B21F02EA7A007B44D6 /* SalesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290D9B11F02EA7A007B44D6 /* SalesController.swift */; };
@@ -56,8 +56,8 @@
 		D290D99D1F02E15F007B44D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D290D99F1F02E15F007B44D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D290D9A51F02E204007B44D6 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Search.storyboard; path = ../Search.storyboard; sourceTree = "<group>"; };
-		D290D9A71F02E245007B44D6 /* WishList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WishList.storyboard; sourceTree = "<group>"; };
-		D290D9AA1F02E277007B44D6 /* Sales.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sales.storyboard; sourceTree = "<group>"; };
+		D290D9A71F02E245007B44D6 /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		D290D9AA1F02E277007B44D6 /* Budgets.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Budgets.storyboard; sourceTree = "<group>"; };
 		D290D9AC1F02E290007B44D6 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		D290D9AF1F02EA4F007B44D6 /* WishlistController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistController.swift; sourceTree = "<group>"; };
 		D290D9B11F02EA7A007B44D6 /* SalesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesController.swift; sourceTree = "<group>"; };
@@ -142,8 +142,8 @@
 			children = (
 				D290D9971F02E15F007B44D6 /* Main.storyboard */,
 				D290D9A51F02E204007B44D6 /* Search.storyboard */,
-				D290D9A71F02E245007B44D6 /* WishList.storyboard */,
-				D290D9AA1F02E277007B44D6 /* Sales.storyboard */,
+				D290D9A71F02E245007B44D6 /* Favorites.storyboard */,
+				D290D9AA1F02E277007B44D6 /* Budgets.storyboard */,
 				D290D9AC1F02E290007B44D6 /* Profile.storyboard */,
 				D290D99C1F02E15F007B44D6 /* LaunchScreen.storyboard */,
 			);
@@ -243,13 +243,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D290D99E1F02E15F007B44D6 /* LaunchScreen.storyboard in Resources */,
-				D290D9AB1F02E277007B44D6 /* Sales.storyboard in Resources */,
+				D290D9AB1F02E277007B44D6 /* Budgets.storyboard in Resources */,
 				D290D9B61F02F4D5007B44D6 /* Podfile in Resources */,
 				D290D99B1F02E15F007B44D6 /* Assets.xcassets in Resources */,
 				D290D9A61F02E204007B44D6 /* Search.storyboard in Resources */,
 				D290D9991F02E15F007B44D6 /* Main.storyboard in Resources */,
 				D290D9AD1F02E290007B44D6 /* Profile.storyboard in Resources */,
-				D290D9A81F02E245007B44D6 /* WishList.storyboard in Resources */,
+				D290D9A81F02E245007B44D6 /* Favorites.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

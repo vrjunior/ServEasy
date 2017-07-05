@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Servicer {
     public var name:String?
@@ -14,7 +15,6 @@ class Servicer {
     public var rating: Float?
     public var phone: String?
     public var category: Category?
-    
-    public var logoImage: UIImage?
+    //public var logoImage: UIImage?
     
 }
