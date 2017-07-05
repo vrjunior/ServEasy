@@ -19,10 +19,10 @@
             </objects>
             <point key="canvasLocation" x="337" y="-243"/>
         </scene>
-        <!--Wishlist-->
+        <!--Favorites-->
         <scene sceneID="53y-Hc-8uW">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="WishlistStoryboard" storyboardName="WishList" referencedIdentifier="Wishlist" id="zCm-1o-AtN" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Favorites" storyboardName="Favorites" referencedIdentifier="Favorites" id="zCm-1o-AtN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ZJl-Oq-tO5"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GMB-F6-pZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -39,10 +39,10 @@
             </objects>
             <point key="canvasLocation" x="262" y="114"/>
         </scene>
-        <!--Sales-->
+        <!--Budgets-->
         <scene sceneID="7ta-Yz-FWF">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="SalesStoryboard" storyboardName="Sales" referencedIdentifier="Sales" id="iir-XN-CCR" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Budgets" storyboardName="Budgets" referencedIdentifier="Budgets" id="iir-XN-CCR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="zs0-Y1-N2y"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oZa-7Q-kC4" userLabel="First Responder" sceneMemberID="firstResponder"/>

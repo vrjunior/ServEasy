@@ -215,6 +215,7 @@
 				TargetAttributes = {
 					D290D98F1F02E15F007B44D6 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 5W8YC8Y5Q7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -450,6 +451,7 @@
 			baseConfigurationReference = FCAC84DABA769EFCE96DDBA6 /* Pods-LocalCommerce.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5W8YC8Y5Q7;
 				INFOPLIST_FILE = LocalCommerce/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vrmassoni.LocalCommerce;
@@ -464,6 +466,7 @@
 			baseConfigurationReference = 78DEBD75B1AAFE33A2CED470 /* Pods-LocalCommerce.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5W8YC8Y5Q7;
 				INFOPLIST_FILE = LocalCommerce/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vrmassoni.LocalCommerce;

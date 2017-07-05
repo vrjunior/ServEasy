@@ -57,7 +57,7 @@
         <!--Favorites-->
         <scene sceneID="YW3-zY-m3Q">
             <objects>
-                <viewController storyboardIdentifier="Wishlist" id="dsN-9u-abs" customClass="WishlistController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Favorites" id="dsN-9u-abs" customClass="WishlistController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tvv-kW-OEw"/>
                         <viewControllerLayoutGuide type="bottom" id="uqM-1M-3Yb"/>
