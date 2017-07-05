@@ -13,7 +13,7 @@ var array = ["Moscow", "Saint Petersburg", "Novosibirsk"]
 
 
 
-class WishlistController: UIViewController {
+class FavoritesController: UIViewController {
     
 
     
@@ -21,7 +21,7 @@ class WishlistController: UIViewController {
 
 
 
-extension WishlistController: UITableViewDelegate, UITableViewDataSource {
+extension FavoritesController: UITableViewDelegate, UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

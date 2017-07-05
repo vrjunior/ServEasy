@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CommerceCollectionViewCell: UICollectionViewCell {
+class ServicerCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var placeholder: UILabel!
     
 }

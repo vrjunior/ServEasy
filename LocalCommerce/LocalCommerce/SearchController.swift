@@ -201,7 +201,7 @@ extension SearchController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "commerce", for: indexPath as IndexPath) as! CommerceCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "commerce", for: indexPath as IndexPath) as! ServicerCollectionViewCell
         
         cell.placeholder.text = "Loja " + array[indexPath.row]
         cell.layer.cornerRadius = 9

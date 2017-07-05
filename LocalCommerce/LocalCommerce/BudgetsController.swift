@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SalerController: UIViewController {
+class BudgetsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
