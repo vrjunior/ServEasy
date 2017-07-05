@@ -111,7 +111,6 @@ class SearchController: UIViewController {
         
     }
     
-    
     @IBAction func locationSync(_ sender: UIButton) {
         self.locationManager.startUpdatingLocation()
     }
@@ -120,7 +119,7 @@ class SearchController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+        
 }
 
 extension SearchController: CLLocationManagerDelegate {
