@@ -14,7 +14,7 @@ import GoogleMaps
 class SearchController: UIViewController {
 
     // For test
-    var array = ["Moscow", "Saint Petersburg", "Novosibirsk"]
+    var array = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -180,12 +180,10 @@ extension SearchController: UISearchDisplayDelegate{
 extension SearchController: UICollectionViewDelegate {
 
 
-
 }
 
+
 extension SearchController: UICollectionViewDataSource {
-
-
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
@@ -199,16 +197,16 @@ extension SearchController: UICollectionViewDataSource {
         return array.count
         
     }
+
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "commerce", for: indexPath as IndexPath) as! CommerceCollectionViewCell
         
-        cell.placeholder.text = array[indexPath.row]
+        cell.placeholder.text = "Loja " + array[indexPath.row]
+        cell.layer.cornerRadius = 9
+    
         
         return cell
-        
     }
-    
-    
-   }
+}
