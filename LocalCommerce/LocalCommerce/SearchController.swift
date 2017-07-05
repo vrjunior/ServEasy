@@ -24,7 +24,6 @@ class SearchController: UIViewController {
     var currentLocation: CLLocation!
     var myMarkerPoint: GMSMarker = GMSMarker()
     var currentMapZoom: Float = 15 //initial zoom
-    
     var newSearchLocation:CLGeocoder? = CLGeocoder()
     
     
@@ -32,6 +31,7 @@ class SearchController: UIViewController {
         super.viewDidLoad()
         self.mapView.delegate = self
         searchBar.delegate = self
+        
         
         //setting market info
         self.myMarkerPoint.title = "My location"
@@ -119,6 +119,7 @@ extension SearchController: CLLocationManagerDelegate {
 
 extension SearchController: GMSMapViewDelegate {
     
+
     /*func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
 
         self.locationManager.stopUpdatingLocation()
@@ -137,7 +138,6 @@ extension SearchController: GMSMapViewDelegate {
 
 extension SearchController: UISearchBarDelegate {
     
-
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         //getting the geocode from searchtext
@@ -159,6 +159,7 @@ extension SearchController: UISearchBarDelegate {
         })
         
         searchBar.endEditing(true)
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -167,6 +168,13 @@ extension SearchController: UISearchBarDelegate {
     }
     
 }
+
+extension SearchController: UISearchDisplayDelegate{
+    
+    
+}
+
+
 
 
 extension SearchController: UICollectionViewDelegate {
