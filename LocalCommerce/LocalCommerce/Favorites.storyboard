@@ -12,7 +12,7 @@
         <!--Navigation Controller-->
         <scene sceneID="os8-s0-2vO">
             <objects>
-                <navigationController id="Deu-nx-i8I" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Favorites" id="Deu-nx-i8I" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="a5X-4J-QLJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -28,7 +28,7 @@
         <!--Favorites-->
         <scene sceneID="YW3-zY-m3Q">
             <objects>
-                <viewController storyboardIdentifier="Favorites" id="dsN-9u-abs" customClass="FavoritesController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dsN-9u-abs" customClass="FavoritesController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tvv-kW-OEw"/>
                         <viewControllerLayoutGuide type="bottom" id="uqM-1M-3Yb"/>
@@ -107,7 +107,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorites" image="Favorite" id="buQ-G3-bcO" userLabel="Favorites"/>
-                    <navigationItem key="navigationItem" id="hhz-Kh-q47"/>
+                    <navigationItem key="navigationItem" title="Favorites" id="8NN-4r-qAy"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tR2-oc-FmP" userLabel="First Responder" sceneMemberID="firstResponder"/>
