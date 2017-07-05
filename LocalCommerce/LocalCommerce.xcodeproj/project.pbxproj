@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2EF1AB1AD48FE469D0D69E7D /* libPods-LocalCommerce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAECDFA06305EE598C75EFB /* libPods-LocalCommerce.a */; };
-		A91341B41F057E6B00B21EEA /* CommerceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91341B31F057E6B00B21EEA /* CommerceCollectionViewCell.swift */; };
+		A91341B41F057E6B00B21EEA /* ServicerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91341B31F057E6B00B21EEA /* ServicerCollectionViewCell.swift */; };
 		A935D19E1F042D3000510B0A /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A935D19D1F042D3000510B0A /* ProductTableViewCell.swift */; };
 		D22409DA1F0409E7006848A0 /* Servicer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22409D91F0409E7006848A0 /* Servicer.swift */; };
 		D22409DC1F040BE6006848A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22409DB1F040BE6006848A0 /* User.swift */; };
@@ -28,8 +28,8 @@
 		D290D9A81F02E245007B44D6 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D290D9A71F02E245007B44D6 /* Favorites.storyboard */; };
 		D290D9AB1F02E277007B44D6 /* Budgets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D290D9AA1F02E277007B44D6 /* Budgets.storyboard */; };
 		D290D9AD1F02E290007B44D6 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D290D9AC1F02E290007B44D6 /* Profile.storyboard */; };
-		D290D9B01F02EA4F007B44D6 /* WishlistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290D9AF1F02EA4F007B44D6 /* WishlistController.swift */; };
-		D290D9B21F02EA7A007B44D6 /* SalesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290D9B11F02EA7A007B44D6 /* SalesController.swift */; };
+		D290D9B01F02EA4F007B44D6 /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290D9AF1F02EA4F007B44D6 /* FavoritesController.swift */; };
+		D290D9B21F02EA7A007B44D6 /* BudgetsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290D9B11F02EA7A007B44D6 /* BudgetsController.swift */; };
 		D290D9B41F02EA9C007B44D6 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290D9B31F02EA9C007B44D6 /* ProfileController.swift */; };
 		D290D9B61F02F4D5007B44D6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D290D9B51F02F4D5007B44D6 /* Podfile */; };
 		D2EE5D1B1F0590D1008B86A1 /* ServicerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE5D1A1F0590D1008B86A1 /* ServicerRepository.swift */; };
@@ -37,7 +37,7 @@
 
 /* Begin PBXFileReference section */
 		78DEBD75B1AAFE33A2CED470 /* Pods-LocalCommerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalCommerce.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocalCommerce/Pods-LocalCommerce.release.xcconfig"; sourceTree = "<group>"; };
-		A91341B31F057E6B00B21EEA /* CommerceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommerceCollectionViewCell.swift; sourceTree = "<group>"; };
+		A91341B31F057E6B00B21EEA /* ServicerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicerCollectionViewCell.swift; sourceTree = "<group>"; };
 		A935D19D1F042D3000510B0A /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		D22409D91F0409E7006848A0 /* Servicer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Servicer.swift; sourceTree = "<group>"; };
 		D22409DB1F040BE6006848A0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -59,8 +59,8 @@
 		D290D9A71F02E245007B44D6 /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		D290D9AA1F02E277007B44D6 /* Budgets.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Budgets.storyboard; sourceTree = "<group>"; };
 		D290D9AC1F02E290007B44D6 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		D290D9AF1F02EA4F007B44D6 /* WishlistController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistController.swift; sourceTree = "<group>"; };
-		D290D9B11F02EA7A007B44D6 /* SalesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesController.swift; sourceTree = "<group>"; };
+		D290D9AF1F02EA4F007B44D6 /* FavoritesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesController.swift; sourceTree = "<group>"; };
+		D290D9B11F02EA7A007B44D6 /* BudgetsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetsController.swift; sourceTree = "<group>"; };
 		D290D9B31F02EA9C007B44D6 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		D290D9B51F02F4D5007B44D6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
 		D2EE5D1A1F0590D1008B86A1 /* ServicerRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicerRepository.swift; sourceTree = "<group>"; };
@@ -154,10 +154,10 @@
 			isa = PBXGroup;
 			children = (
 				D290D9951F02E15F007B44D6 /* SearchController.swift */,
-				A91341B31F057E6B00B21EEA /* CommerceCollectionViewCell.swift */,
-				D290D9AF1F02EA4F007B44D6 /* WishlistController.swift */,
+				A91341B31F057E6B00B21EEA /* ServicerCollectionViewCell.swift */,
+				D290D9AF1F02EA4F007B44D6 /* FavoritesController.swift */,
 				A935D19D1F042D3000510B0A /* ProductTableViewCell.swift */,
-				D290D9B11F02EA7A007B44D6 /* SalesController.swift */,
+				D290D9B11F02EA7A007B44D6 /* BudgetsController.swift */,
 				D290D9B31F02EA9C007B44D6 /* ProfileController.swift */,
 			);
 			name = Controllers;
@@ -308,14 +308,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A91341B41F057E6B00B21EEA /* CommerceCollectionViewCell.swift in Sources */,
+				A91341B41F057E6B00B21EEA /* ServicerCollectionViewCell.swift in Sources */,
 				D2EE5D1B1F0590D1008B86A1 /* ServicerRepository.swift in Sources */,
 				D290D9B41F02EA9C007B44D6 /* ProfileController.swift in Sources */,
 				D22409DE1F040C34006848A0 /* Review.swift in Sources */,
 				D22E779A1F0AB8690009DD4E /* BudgetMessage.swift in Sources */,
-				D290D9B21F02EA7A007B44D6 /* SalesController.swift in Sources */,
+				D290D9B21F02EA7A007B44D6 /* BudgetsController.swift in Sources */,
 				D22409DA1F0409E7006848A0 /* Servicer.swift in Sources */,
-				D290D9B01F02EA4F007B44D6 /* WishlistController.swift in Sources */,
+				D290D9B01F02EA4F007B44D6 /* FavoritesController.swift in Sources */,
 				D22E77921F0AAB290009DD4E /* Budget.swift in Sources */,
 				D22E77941F0AAB980009DD4E /* EstablishmentServicer.swift in Sources */,
 				D22E77981F0AB7110009DD4E /* Service.swift in Sources */,
