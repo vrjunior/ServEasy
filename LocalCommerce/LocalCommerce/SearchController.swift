@@ -29,6 +29,10 @@ class SearchController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //fix searchbar
+        self.fixSearchBar()
+        
         self.mapView.delegate = self
         searchBar.delegate = self
         
@@ -70,6 +74,29 @@ class SearchController: UIViewController {
         
         
         self.determineMyCurrentLocation()
+        
+    }
+    
+    func fixSearchBar() {
+        //adding searchbar on navigation bar
+        self.navigationItem.titleView = searchBar
+        
+        //changing placeholder and label color
+        let textFieldInsideSearchBar = self.searchBar.value(forKey: "searchField") as? UITextField
+        textFieldInsideSearchBar?.textColor = UIColor.primaryColor
+        
+        let textFieldInsideSearchBarLabel = textFieldInsideSearchBar!.value(forKey: "placeholderLabel") as? UILabel
+        textFieldInsideSearchBarLabel?.textColor = UIColor.primaryColor
+        
+        
+        //changing icon's color
+        if let glassIconView = textFieldInsideSearchBar?.leftView as? UIImageView {
+            
+            //Magnifying glass
+            glassIconView.image = glassIconView.image?.withRenderingMode(.alwaysTemplate)
+            glassIconView.tintColor = UIColor.primaryColor
+        
+        }
     }
     
     func determineMyCurrentLocation() {

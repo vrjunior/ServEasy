@@ -15,11 +15,11 @@
         <scene sceneID="Iw5-iM-WyW">
             <objects>
                 <navigationController storyboardIdentifier="Search" id="hwC-Fh-X5S" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="14d-Q4-6dW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="14d-Q4-6dW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.34901960780000002" green="0.76078431369999999" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.34901960780000002" green="0.76078431369999999" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="MDa-Gd-0gD" kind="relationship" relationship="rootViewController" id="aaO-Kp-TlC"/>
@@ -32,34 +32,35 @@
         <!--Search-->
         <scene sceneID="4bD-x1-RB6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i3Y-TB-cgR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="MDa-Gd-0gD" userLabel="Search" customClass="SearchController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HXg-Ge-IEk"/>
                         <viewControllerLayoutGuide type="bottom" id="GFb-3h-3W2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DeQ-kP-TlZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="KHj-Ie-mCV">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
-                                <color key="barTintColor" red="0.34901960784313724" green="0.76078431372549016" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHj-Ie-mCV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </searchBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VJE-r1-jYp" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="108" width="375" height="222.5"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VJE-r1-jYp" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="44" width="375" height="201"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWe-tQ-DcL">
-                                <rect key="frame" x="334" y="300.5" width="25" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWe-tQ-DcL">
+                                <rect key="frame" x="334" y="215" width="25" height="25"/>
                                 <state key="normal" image="gps-location"/>
                                 <connections>
                                     <action selector="locationSync:" destination="MDa-Gd-0gD" eventType="touchUpInside" id="WYe-nE-DFr"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a1b-aL-qcH">
-                                <rect key="frame" x="0.0" y="318" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="282.5" width="375" height="271.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a4c-D5-a57">
                                     <size key="itemSize" width="125" height="189"/>
@@ -69,7 +70,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="commerce" id="Q0C-FV-mo2" customClass="ServicerCollectionViewCell" customModule="LocalCommerce" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="125" height="189"/>
+                                        <rect key="frame" x="0.0" y="41.5" width="125" height="189"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="125" height="189"/>
@@ -108,28 +109,25 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="VJE-r1-jYp" firstAttribute="height" secondItem="DeQ-kP-TlZ" secondAttribute="height" multiplier="0.3333" id="07W-W2-Ac1" userLabel="Map View Height"/>
-                            <constraint firstAttribute="trailing" secondItem="KHj-Ie-mCV" secondAttribute="trailing" id="4Qw-sR-86L"/>
                             <constraint firstAttribute="trailing" secondItem="a1b-aL-qcH" secondAttribute="trailing" id="Bgi-bD-H5B"/>
-                            <constraint firstItem="VJE-r1-jYp" firstAttribute="top" secondItem="KHj-Ie-mCV" secondAttribute="bottom" id="DU5-kq-pOu"/>
                             <constraint firstAttribute="trailing" secondItem="VJE-r1-jYp" secondAttribute="trailing" id="MPg-8t-MJN"/>
                             <constraint firstItem="a1b-aL-qcH" firstAttribute="leading" secondItem="DeQ-kP-TlZ" secondAttribute="leading" id="UWi-Uk-mtu"/>
                             <constraint firstItem="GFb-3h-3W2" firstAttribute="top" secondItem="a1b-aL-qcH" secondAttribute="bottom" id="ZGy-Zc-z4W"/>
                             <constraint firstItem="bWe-tQ-DcL" firstAttribute="bottom" secondItem="VJE-r1-jYp" secondAttribute="bottom" constant="-5" id="aOI-ym-RRV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bWe-tQ-DcL" secondAttribute="trailing" id="gLx-iD-MNn"/>
                             <constraint firstItem="VJE-r1-jYp" firstAttribute="leading" secondItem="DeQ-kP-TlZ" secondAttribute="leading" id="gO3-yb-ypo"/>
-                            <constraint firstItem="KHj-Ie-mCV" firstAttribute="top" secondItem="HXg-Ge-IEk" secondAttribute="bottom" id="h3f-Kk-LAx"/>
-                            <constraint firstItem="KHj-Ie-mCV" firstAttribute="leading" secondItem="DeQ-kP-TlZ" secondAttribute="leading" id="jez-oO-iAO"/>
                             <constraint firstItem="a1b-aL-qcH" firstAttribute="height" secondItem="DeQ-kP-TlZ" secondAttribute="height" multiplier="0.45" id="ucj-BV-DUH"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" image="tabBarItem:YAV-aq-96i:image" id="YAV-aq-96i" userLabel="Search"/>
-                    <navigationItem key="navigationItem" title="Explore" id="NmY-pe-Nli"/>
+                    <navigationItem key="navigationItem" id="NmY-pe-Nli"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="VJE-r1-jYp" id="CZH-5M-bpw"/>
                         <outlet property="searchBar" destination="KHj-Ie-mCV" id="5Di-bQ-wXR"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i3Y-TB-cgR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1436" y="-397.15142428785612"/>
         </scene>
