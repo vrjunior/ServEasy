@@ -14,7 +14,7 @@
         <scene sceneID="Iw5-iM-WyW">
             <objects>
                 <navigationController storyboardIdentifier="Search" id="hwC-Fh-X5S" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="14d-Q4-6dW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="14d-Q4-6dW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -41,7 +41,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHj-Ie-mCV">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="279" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -100,7 +100,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Explore" translatesAutoresizingMaskIntoConstraints="NO" id="Ikg-9Z-hgy">
-                                                            <rect key="frame" x="0.0" y="0.0" width="125" height="94.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="125" height="95"/>
                                                         </imageView>
                                                     </subviews>
                                                 </view>
@@ -149,7 +149,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" image="Explore" selectedImage="Explore Highlight" id="YAV-aq-96i" userLabel="Search"/>
-                    <navigationItem key="navigationItem" id="NmY-pe-Nli"/>
+                    <navigationItem key="navigationItem" id="NmY-pe-Nli">
+                        <barButtonItem key="rightBarButtonItem" image="Filter" id="s6T-uq-Bq1">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="VJE-r1-jYp" id="CZH-5M-bpw"/>
@@ -164,6 +168,7 @@
     <resources>
         <image name="Explore" width="25" height="25"/>
         <image name="Explore Highlight" width="25" height="25"/>
+        <image name="Filter" width="25" height="25"/>
         <image name="gps-location" width="25" height="25"/>
     </resources>
     <color key="tintColor" red="0.84313725490000002" green="0.29411764709999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
