@@ -33,9 +33,9 @@ class SearchFilterViewController: UIViewController {
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "filter", for: indexPath) as! ProductTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "filter", for: indexPath) as! SearchFilterTableViewCell
             
-            //cell.productName.text = array[indexPath.row]
+            cell.category.text = "TsT"
             
             
             return cell

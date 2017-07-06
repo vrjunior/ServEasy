@@ -6,66 +6,122 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Search Filter View Controller-->
         <scene sceneID="Lh3-Cw-CdJ">
             <objects>
-              <viewController id="2U4-Lf-NWK" customClass="SearchFilterViewController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
-                  <layoutGuides>
-                      <viewControllerLayoutGuide type="top" id="zQY-I7-ugx"/>
-                      <viewControllerLayoutGuide type="bottom" id="Ly1-HR-kH1"/>
-                  </layoutGuides>
-                  <view key="view" contentMode="scaleToFill" id="WrR-5y-XGE">
-                      <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                      <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                      <subviews>
-                          <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NeU-tT-JEW">
-                              <rect key="frame" x="16" y="130" width="343" height="198"/>
-                              <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                              <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                              <prototypes>
-                                  <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="filter" id="KYo-RK-uJz" customClass="SearchFilterTableViewCell" customModule="LocalCommerce" customModuleProvider="target">
-                                      <rect key="frame" x="0.0" y="28" width="343" height="44"/>
-                                      <autoresizingMask key="autoresizingMask"/>
-                                      <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KYo-RK-uJz" id="4Rd-Hb-uBd">
-                                          <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
-                                          <autoresizingMask key="autoresizingMask"/>
-                                          <subviews>
-                                              <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3CK-L6-jUu">
-                                                  <rect key="frame" x="0.0" y="0.0" width="343" height="50.5"/>
-                                                  <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                  <constraints>
-                                                      <constraint firstAttribute="height" constant="50" id="CjR-gz-745"/>
-                                                  </constraints>
-                                              </view>
-                                          </subviews>
-                                          <constraints>
-                                              <constraint firstItem="3CK-L6-jUu" firstAttribute="centerY" secondItem="4Rd-Hb-uBd" secondAttribute="centerY" id="Ch5-mr-Cf6"/>
-                                              <constraint firstItem="3CK-L6-jUu" firstAttribute="top" secondItem="4Rd-Hb-uBd" secondAttribute="top" id="Ezb-uH-ndw"/>
-                                              <constraint firstItem="3CK-L6-jUu" firstAttribute="leading" secondItem="4Rd-Hb-uBd" secondAttribute="leading" id="JDc-yh-pZb"/>
-                                              <constraint firstAttribute="trailing" secondItem="3CK-L6-jUu" secondAttribute="trailing" id="LKI-17-7QG"/>
-                                              <constraint firstAttribute="bottom" secondItem="3CK-L6-jUu" secondAttribute="bottom" id="xh2-GI-P4R"/>
-                                          </constraints>
-                                      </tableViewCellContentView>
-                                      <connections>
-                                          <outlet property="filterCellHeight" destination="CjR-gz-745" id="3u8-a9-Tbk"/>
-                                      </connections>
-                                  </tableViewCell>
-                              </prototypes>
-                              <connections>
-                                  <outlet property="dataSource" destination="2U4-Lf-NWK" id="faB-GC-LXL"/>
-                                  <outlet property="delegate" destination="2U4-Lf-NWK" id="oc5-xI-Wvg"/>
-                              </connections>
-                          </tableView>
-                      </subviews>
-                      <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                  </view>
-              </viewController>
-              <placeholder placeholderIdentifier="IBFirstResponder" id="huz-nf-gjC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="2U4-Lf-NWK" customClass="SearchFilterViewController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zQY-I7-ugx"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ly1-HR-kH1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WrR-5y-XGE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NeU-tT-JEW">
+                                <rect key="frame" x="0.0" y="130" width="375" height="208"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="filter" rowHeight="72" id="KYo-RK-uJz" customClass="SearchFilterTableViewCell" customModule="LocalCommerce" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KYo-RK-uJz" id="4Rd-Hb-uBd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="71.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Favoroite Highlight" translatesAutoresizingMaskIntoConstraints="NO" id="YP8-IN-Yoe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="71.5" height="71.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="YP8-IN-Yoe" secondAttribute="height" multiplier="1:1" id="HLu-Nc-dTh"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beleza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cR7-Gr-EB6">
+                                                    <rect key="frame" x="81.5" y="25" width="51.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cR7-Gr-EB6" firstAttribute="leading" secondItem="YP8-IN-Yoe" secondAttribute="trailing" constant="10" id="4FR-AM-TWV"/>
+                                                <constraint firstAttribute="bottom" secondItem="YP8-IN-Yoe" secondAttribute="bottom" id="BiQ-2K-7TT"/>
+                                                <constraint firstItem="YP8-IN-Yoe" firstAttribute="top" secondItem="4Rd-Hb-uBd" secondAttribute="top" id="QnM-j7-LdT"/>
+                                                <constraint firstItem="YP8-IN-Yoe" firstAttribute="leading" secondItem="4Rd-Hb-uBd" secondAttribute="leading" id="hlx-x0-kCt"/>
+                                                <constraint firstItem="cR7-Gr-EB6" firstAttribute="centerY" secondItem="4Rd-Hb-uBd" secondAttribute="centerY" id="mcA-Eu-n84"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="Category" destination="cR7-Gr-EB6" id="ly0-Rz-6eB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2U4-Lf-NWK" id="faB-GC-LXL"/>
+                                    <outlet property="delegate" destination="2U4-Lf-NWK" id="oc5-xI-Wvg"/>
+                                </connections>
+                            </tableView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4Hm-h1-Hfq">
+                                <rect key="frame" x="14" y="614" width="347" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.41176470588235292" green="0.78431372549019607" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Local" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RV4-1c-Yoz">
+                                <rect key="frame" x="145" y="460" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distância" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXf-JT-n1Y">
+                                <rect key="frame" x="145" y="547" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selecione a distância máxima" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5w-oJ-S5p">
+                                <rect key="frame" x="16" y="580" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Avaliação" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLZ-oG-Itp">
+                                <rect key="frame" x="145" y="367" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serviços" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAn-Ws-RjV">
+                                <rect key="frame" x="155" y="28" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Insira o local para o serviço" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZC-eA-rYG">
+                                <rect key="frame" x="16" y="489" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="huz-nf-gjC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2224.8000000000002" y="-397.15142428785612"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Favoroite Highlight" width="25" height="25"/>
+    </resources>
 </document>
