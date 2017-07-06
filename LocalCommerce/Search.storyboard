@@ -148,7 +148,7 @@
                             <constraint firstItem="10I-GI-GZt" firstAttribute="top" secondItem="HXg-Ge-IEk" secondAttribute="bottom" id="tYT-eY-0EX"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Explore" image="Explore" id="YAV-aq-96i" userLabel="Search"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="Explore" selectedImage="Explore Highlight" id="YAV-aq-96i" userLabel="Search"/>
                     <navigationItem key="navigationItem" id="NmY-pe-Nli"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -163,6 +163,7 @@
     </scenes>
     <resources>
         <image name="Explore" width="25" height="25"/>
+        <image name="Explore Highlight" width="25" height="25"/>
         <image name="gps-location" width="25" height="25"/>
     </resources>
     <color key="tintColor" red="0.84313725490000002" green="0.29411764709999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>

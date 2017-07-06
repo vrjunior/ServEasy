@@ -63,7 +63,7 @@
                             <constraint firstAttribute="trailing" secondItem="EJZ-Jz-DFC" secondAttribute="trailing" constant="-16" id="tPn-1O-uc7"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Budgets" image="Promotion" id="UPq-L8-DH9" userLabel="Sales"/>
+                    <tabBarItem key="tabBarItem" title="Budgets" image="Budget" selectedImage="Budget Highlight" id="UPq-L8-DH9" userLabel="Sales"/>
                     <navigationItem key="navigationItem" title="Budgets" id="SOh-Go-lbc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -75,7 +75,7 @@
         <scene sceneID="KrY-eS-eae">
             <objects>
                 <navigationController storyboardIdentifier="Budgets" id="54h-8o-BqC" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hu2-PQ-Y8Q">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hu2-PQ-Y8Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -89,6 +89,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Promotion" width="25" height="25"/>
+        <image name="Budget" width="25" height="25"/>
+        <image name="Budget Highlight" width="25" height="25"/>
     </resources>
 </document>
