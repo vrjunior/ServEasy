@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Servicer Controller-->
         <scene sceneID="AR4-lc-Ckr">
             <objects>
-                <viewController id="lbY-FW-iGf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Servicer" id="lbY-FW-iGf" customClass="ServicerController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aue-W3-cqx"/>
                         <viewControllerLayoutGuide type="bottom" id="W2a-2f-vpE"/>
@@ -20,12 +21,163 @@
                     <view key="view" contentMode="scaleToFill" id="vz1-VQ-5xY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brj-lm-mtx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vce-Gj-lLn">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Vce-Gj-lLn" secondAttribute="height" multiplier="16:9" id="awq-zK-5Hj"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CTj-gx-JDp">
+                                        <rect key="frame" x="297" y="228" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oficina do João" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnz-6F-tAg">
+                                        <rect key="frame" x="17" y="228" width="202" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        <color key="textColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oficina mecânica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9h-HQ-jkR">
+                                        <rect key="frame" x="17" y="262" width="167" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWX-Ko-SfI">
+                                        <rect key="frame" x="17" y="300" width="15" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                                        <color key="textColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Christmas Star Filled-100" translatesAutoresizingMaskIntoConstraints="NO" id="FiZ-Sq-gmZ">
+                                        <rect key="frame" x="42" y="296" width="28" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aberto agora" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDc-NM-IRK">
+                                        <rect key="frame" x="102" y="300" width="146" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Address Filled-100" translatesAutoresizingMaskIntoConstraints="NO" id="Qsd-EW-wId">
+                                        <rect key="frame" x="17" y="343" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R. Giuseppe Máximo Scolfaro, 190" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKt-Lx-Wc6">
+                                        <rect key="frame" x="54" y="336" width="303" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Car Filled-100" translatesAutoresizingMaskIntoConstraints="NO" id="gDA-1x-tcM">
+                                        <rect key="frame" x="17" y="383" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8 min dirigindo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRe-wS-8qv">
+                                        <rect key="frame" x="54" y="377" width="194" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Phone Filled-100" translatesAutoresizingMaskIntoConstraints="NO" id="DwR-TR-beU">
+                                        <rect key="frame" x="17" y="423" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(19) 99281-2440" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wn-B3-dYv">
+                                        <rect key="frame" x="54" y="417" width="194" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2db-e6-Bf4">
+                                        <rect key="frame" x="0.0" y="474" width="375" height="148"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Campinas - SP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZ4-DB-glV">
+                                        <rect key="frame" x="54" y="357" width="303" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fcn-zD-g3B">
+                                        <rect key="frame" x="8" y="414" width="359" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vcA-dc-8UU">
+                                        <rect key="frame" x="8" y="379" width="359" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Teb-tQ-HxY">
+                                        <rect key="frame" x="8" y="329" width="359" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Vce-Gj-lLn" firstAttribute="top" secondItem="brj-lm-mtx" secondAttribute="top" id="TX0-pE-jcE"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWM-E3-Nmm">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fF1-kT-MsJ">
+                                        <rect key="frame" x="81" y="5" width="212" height="38"/>
+                                        <color key="backgroundColor" red="0.34901960784313724" green="0.76078431372549016" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fF1-kT-MsJ" secondAttribute="height" multiplier="106:19" id="cUk-f6-g27"/>
+                                        </constraints>
+                                        <state key="normal" title="Pedir Orçamento">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="fF1-kT-MsJ" firstAttribute="centerX" secondItem="MWM-E3-Nmm" secondAttribute="centerX" id="Q2q-d4-LRm"/>
+                                    <constraint firstAttribute="width" secondItem="MWM-E3-Nmm" secondAttribute="height" multiplier="375:49" id="V8c-mD-uYF"/>
+                                    <constraint firstItem="fF1-kT-MsJ" firstAttribute="centerY" secondItem="MWM-E3-Nmm" secondAttribute="centerY" id="hdr-F4-Zi1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MWM-E3-Nmm" secondAttribute="trailing" id="AWT-Eo-x1a"/>
+                            <constraint firstItem="W2a-2f-vpE" firstAttribute="top" secondItem="MWM-E3-Nmm" secondAttribute="bottom" id="N4V-Xg-BqJ"/>
+                            <constraint firstAttribute="trailing" secondItem="brj-lm-mtx" secondAttribute="trailing" id="cB2-ZM-IAq"/>
+                            <constraint firstItem="Vce-Gj-lLn" firstAttribute="leading" secondItem="vz1-VQ-5xY" secondAttribute="leading" id="fmv-NH-cMo"/>
+                            <constraint firstAttribute="trailing" secondItem="Vce-Gj-lLn" secondAttribute="trailing" id="gOt-te-Tnn"/>
+                            <constraint firstItem="MWM-E3-Nmm" firstAttribute="top" secondItem="brj-lm-mtx" secondAttribute="bottom" id="guM-7a-v0P"/>
+                            <constraint firstItem="brj-lm-mtx" firstAttribute="top" secondItem="aue-W3-cqx" secondAttribute="bottom" id="lSE-SC-cmh"/>
+                            <constraint firstItem="brj-lm-mtx" firstAttribute="leading" secondItem="vz1-VQ-5xY" secondAttribute="leading" id="vRC-VV-OQu"/>
+                            <constraint firstItem="MWM-E3-Nmm" firstAttribute="leading" secondItem="vz1-VQ-5xY" secondAttribute="leading" id="ycj-rm-G7f"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kc0-MX-OkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2" y="-236"/>
+            <point key="canvasLocation" x="-2.3999999999999999" y="-236.13193403298354"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-Address Filled-100" width="100" height="100"/>
+        <image name="icons8-Car Filled-100" width="100" height="100"/>
+        <image name="icons8-Christmas Star Filled-100" width="100" height="100"/>
+        <image name="icons8-Phone Filled-100" width="100" height="100"/>
+    </resources>
 </document>
