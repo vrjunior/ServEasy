@@ -113,6 +113,7 @@
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="placeholder" destination="dXm-CU-pJg" id="6yU-bI-Ze3"/>
+                                                    <segue destination="jgn-6i-6IM" kind="show" id="INb-id-hrv"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -163,6 +164,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3Y-TB-cgR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1436" y="-397.15142428785612"/>
+        </scene>
+        <!--Servicer-->
+        <scene sceneID="ijt-mO-a9g">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Servicer" storyboardName="Servicer" referencedIdentifier="Servicer" id="jgn-6i-6IM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bvy-Nb-5OJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2236" y="-398"/>
         </scene>
     </scenes>
     <resources>

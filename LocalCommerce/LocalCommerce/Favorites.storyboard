@@ -13,9 +13,10 @@
         <scene sceneID="os8-s0-2vO">
             <objects>
                 <navigationController storyboardIdentifier="Favorites" id="Deu-nx-i8I" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a5X-4J-QLJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="a5X-4J-QLJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.34901960780000002" green="0.76078431369999999" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="dsN-9u-abs" kind="relationship" relationship="rootViewController" id="1gW-ro-wMY"/>
