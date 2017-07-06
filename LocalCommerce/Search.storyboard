@@ -14,7 +14,7 @@
         <scene sceneID="Iw5-iM-WyW">
             <objects>
                 <navigationController storyboardIdentifier="Search" id="hwC-Fh-X5S" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="14d-Q4-6dW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="14d-Q4-6dW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -153,6 +153,9 @@
                     <navigationItem key="navigationItem" id="NmY-pe-Nli">
                         <barButtonItem key="rightBarButtonItem" image="Filter" id="s6T-uq-Bq1">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="Vti-Hu-Ttj" kind="show" id="MYl-MY-HHu"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -165,13 +168,21 @@
             </objects>
             <point key="canvasLocation" x="1436" y="-397.15142428785612"/>
         </scene>
+        <!--Filter-->
+        <scene sceneID="T65-3c-wGk">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Filter" storyboardName="Filter" id="Vti-Hu-Ttj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZRH-wn-Lnt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2250" y="-423"/>
+        </scene>
         <!--Servicer-->
         <scene sceneID="ijt-mO-a9g">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="Servicer" storyboardName="Servicer" referencedIdentifier="Servicer" id="jgn-6i-6IM" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bvy-Nb-5OJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2236" y="-398"/>
+            <point key="canvasLocation" x="2250" y="-376"/>
         </scene>
     </scenes>
     <resources>

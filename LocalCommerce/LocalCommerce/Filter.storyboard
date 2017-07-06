@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2U4-Lf-NWK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,58 +12,58 @@
         <!--Search Filter View Controller-->
         <scene sceneID="Lh3-Cw-CdJ">
             <objects>
-              <viewController id="2U4-Lf-NWK" customClass="SearchFilterViewController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
-                  <layoutGuides>
-                      <viewControllerLayoutGuide type="top" id="zQY-I7-ugx"/>
-                      <viewControllerLayoutGuide type="bottom" id="Ly1-HR-kH1"/>
-                  </layoutGuides>
-                  <view key="view" contentMode="scaleToFill" id="WrR-5y-XGE">
-                      <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                      <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                      <subviews>
-                          <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NeU-tT-JEW">
-                              <rect key="frame" x="16" y="130" width="343" height="198"/>
-                              <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                              <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                              <prototypes>
-                                  <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="filter" id="KYo-RK-uJz" customClass="SearchFilterTableViewCell" customModule="LocalCommerce" customModuleProvider="target">
-                                      <rect key="frame" x="0.0" y="28" width="343" height="44"/>
-                                      <autoresizingMask key="autoresizingMask"/>
-                                      <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KYo-RK-uJz" id="4Rd-Hb-uBd">
-                                          <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
-                                          <autoresizingMask key="autoresizingMask"/>
-                                          <subviews>
-                                              <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3CK-L6-jUu">
-                                                  <rect key="frame" x="0.0" y="0.0" width="343" height="50.5"/>
-                                                  <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                  <constraints>
-                                                      <constraint firstAttribute="height" constant="50" id="CjR-gz-745"/>
-                                                  </constraints>
-                                              </view>
-                                          </subviews>
-                                          <constraints>
-                                              <constraint firstItem="3CK-L6-jUu" firstAttribute="centerY" secondItem="4Rd-Hb-uBd" secondAttribute="centerY" id="Ch5-mr-Cf6"/>
-                                              <constraint firstItem="3CK-L6-jUu" firstAttribute="top" secondItem="4Rd-Hb-uBd" secondAttribute="top" id="Ezb-uH-ndw"/>
-                                              <constraint firstItem="3CK-L6-jUu" firstAttribute="leading" secondItem="4Rd-Hb-uBd" secondAttribute="leading" id="JDc-yh-pZb"/>
-                                              <constraint firstAttribute="trailing" secondItem="3CK-L6-jUu" secondAttribute="trailing" id="LKI-17-7QG"/>
-                                              <constraint firstAttribute="bottom" secondItem="3CK-L6-jUu" secondAttribute="bottom" id="xh2-GI-P4R"/>
-                                          </constraints>
-                                      </tableViewCellContentView>
-                                      <connections>
-                                          <outlet property="filterCellHeight" destination="CjR-gz-745" id="3u8-a9-Tbk"/>
-                                      </connections>
-                                  </tableViewCell>
-                              </prototypes>
-                              <connections>
-                                  <outlet property="dataSource" destination="2U4-Lf-NWK" id="faB-GC-LXL"/>
-                                  <outlet property="delegate" destination="2U4-Lf-NWK" id="oc5-xI-Wvg"/>
-                              </connections>
-                          </tableView>
-                      </subviews>
-                      <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                  </view>
-              </viewController>
-              <placeholder placeholderIdentifier="IBFirstResponder" id="huz-nf-gjC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="Filter" id="2U4-Lf-NWK" customClass="SearchFilterViewController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zQY-I7-ugx"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ly1-HR-kH1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WrR-5y-XGE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NeU-tT-JEW">
+                                <rect key="frame" x="16" y="130" width="343" height="198"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="filter" id="KYo-RK-uJz" customClass="SearchFilterTableViewCell" customModule="LocalCommerce" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KYo-RK-uJz" id="4Rd-Hb-uBd">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3CK-L6-jUu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="50.5"/>
+                                                    <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="CjR-gz-745"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3CK-L6-jUu" firstAttribute="centerY" secondItem="4Rd-Hb-uBd" secondAttribute="centerY" id="Ch5-mr-Cf6"/>
+                                                <constraint firstItem="3CK-L6-jUu" firstAttribute="top" secondItem="4Rd-Hb-uBd" secondAttribute="top" id="Ezb-uH-ndw"/>
+                                                <constraint firstItem="3CK-L6-jUu" firstAttribute="leading" secondItem="4Rd-Hb-uBd" secondAttribute="leading" id="JDc-yh-pZb"/>
+                                                <constraint firstAttribute="trailing" secondItem="3CK-L6-jUu" secondAttribute="trailing" id="LKI-17-7QG"/>
+                                                <constraint firstAttribute="bottom" secondItem="3CK-L6-jUu" secondAttribute="bottom" id="xh2-GI-P4R"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="filterCellHeight" destination="CjR-gz-745" id="3u8-a9-Tbk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2U4-Lf-NWK" id="faB-GC-LXL"/>
+                                    <outlet property="delegate" destination="2U4-Lf-NWK" id="oc5-xI-Wvg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="huz-nf-gjC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2224.8000000000002" y="-397.15142428785612"/>
         </scene>
