@@ -177,37 +177,38 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KYo-RK-uJz" customClass="SearchFilterTableViewCell" customModule="LocalCommerce" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="filter" id="KYo-RK-uJz" customClass="SearchFilterTableViewCell" customModule="LocalCommerce" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KYo-RK-uJz" id="4Rd-Hb-uBd">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PSC-mj-lAY">
-                                                    <rect key="frame" x="150" y="11" width="42" height="20.5"/>
-                                                    <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="w7L-ed-Gj9">
-                                                            <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e72-h6-PGh">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                    </subviews>
-                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3CK-L6-jUu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="50.5"/>
+                                                    <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="CjR-gz-745"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="PSC-mj-lAY" firstAttribute="centerY" secondItem="4Rd-Hb-uBd" secondAttribute="centerY" id="IZ2-eU-XWG"/>
-                                                <constraint firstItem="PSC-mj-lAY" firstAttribute="centerX" secondItem="4Rd-Hb-uBd" secondAttribute="centerX" id="xgT-1a-ixd"/>
+                                                <constraint firstItem="3CK-L6-jUu" firstAttribute="centerY" secondItem="4Rd-Hb-uBd" secondAttribute="centerY" id="Ch5-mr-Cf6"/>
+                                                <constraint firstItem="3CK-L6-jUu" firstAttribute="top" secondItem="4Rd-Hb-uBd" secondAttribute="top" id="Ezb-uH-ndw"/>
+                                                <constraint firstItem="3CK-L6-jUu" firstAttribute="leading" secondItem="4Rd-Hb-uBd" secondAttribute="leading" id="JDc-yh-pZb"/>
+                                                <constraint firstAttribute="trailing" secondItem="3CK-L6-jUu" secondAttribute="trailing" id="LKI-17-7QG"/>
+                                                <constraint firstAttribute="bottom" secondItem="3CK-L6-jUu" secondAttribute="bottom" id="xh2-GI-P4R"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="filterCellHeight" destination="CjR-gz-745" id="3u8-a9-Tbk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2U4-Lf-NWK" id="faB-GC-LXL"/>
+                                    <outlet property="delegate" destination="2U4-Lf-NWK" id="oc5-xI-Wvg"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
