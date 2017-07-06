@@ -65,12 +65,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWe-tQ-DcL">
-                                        <rect key="frame" x="350" y="304.5" width="25" height="25"/>
+                                        <rect key="frame" x="345" y="299.5" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="F83-YO-JRU"/>
                                             <constraint firstAttribute="width" constant="25" id="gwW-hk-HS1"/>
                                         </constraints>
-                                        <state key="normal" image="gps-location"/>
+                                        <state key="normal" image="My Location"/>
                                         <connections>
                                             <action selector="locationSync:" destination="MDa-Gd-0gD" eventType="touchUpInside" id="WYe-nE-DFr"/>
                                         </connections>
@@ -132,11 +132,11 @@
                                     <constraint firstItem="a1b-aL-qcH" firstAttribute="leading" secondItem="10I-GI-GZt" secondAttribute="leading" id="Foi-DP-FcH"/>
                                     <constraint firstItem="ma7-Oq-4XG" firstAttribute="bottom" secondItem="VJE-r1-jYp" secondAttribute="bottom" id="I0k-Yt-TEm"/>
                                     <constraint firstAttribute="trailing" secondItem="VJE-r1-jYp" secondAttribute="trailing" id="JMQ-Hu-gxz"/>
-                                    <constraint firstItem="bWe-tQ-DcL" firstAttribute="trailing" secondItem="VJE-r1-jYp" secondAttribute="trailing" id="O1n-pl-VZb"/>
+                                    <constraint firstItem="bWe-tQ-DcL" firstAttribute="trailing" secondItem="VJE-r1-jYp" secondAttribute="trailing" constant="-5" id="O1n-pl-VZb"/>
                                     <constraint firstAttribute="trailing" secondItem="ma7-Oq-4XG" secondAttribute="trailing" id="TJs-B9-8vF"/>
                                     <constraint firstAttribute="trailing" secondItem="a1b-aL-qcH" secondAttribute="trailing" id="hYh-Br-f6o"/>
                                     <constraint firstAttribute="bottom" secondItem="a1b-aL-qcH" secondAttribute="bottom" id="qCV-su-c5b"/>
-                                    <constraint firstItem="bWe-tQ-DcL" firstAttribute="bottom" secondItem="ma7-Oq-4XG" secondAttribute="top" id="qEF-fZ-ogi"/>
+                                    <constraint firstItem="bWe-tQ-DcL" firstAttribute="bottom" secondItem="ma7-Oq-4XG" secondAttribute="top" constant="-5" id="qEF-fZ-ogi"/>
                                     <constraint firstItem="ma7-Oq-4XG" firstAttribute="leading" secondItem="10I-GI-GZt" secondAttribute="leading" id="uYR-2B-qp1"/>
                                 </constraints>
                             </view>
@@ -189,7 +189,7 @@
         <image name="Explore" width="25" height="25"/>
         <image name="Explore Highlight" width="25" height="25"/>
         <image name="Filter" width="25" height="25"/>
-        <image name="gps-location" width="25" height="25"/>
+        <image name="My Location" width="25" height="25"/>
     </resources>
     <color key="tintColor" red="0.84313725490000002" green="0.29411764709999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>
