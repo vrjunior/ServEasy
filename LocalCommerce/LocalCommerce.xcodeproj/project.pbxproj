@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2EF1AB1AD48FE469D0D69E7D /* libPods-LocalCommerce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAECDFA06305EE598C75EFB /* libPods-LocalCommerce.a */; };
 		A91341B41F057E6B00B21EEA /* ServicerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91341B31F057E6B00B21EEA /* ServicerCollectionViewCell.swift */; };
+		A91341B61F0EAC1600B21EEA /* SearchFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91341B51F0EAC1600B21EEA /* SearchFilterViewController.swift */; };
+		A91341B81F0EBBE100B21EEA /* SearchFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91341B71F0EBBE100B21EEA /* SearchFilterTableViewCell.swift */; };
 		A935D19E1F042D3000510B0A /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A935D19D1F042D3000510B0A /* ProductTableViewCell.swift */; };
 		D22409DA1F0409E7006848A0 /* Servicer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22409D91F0409E7006848A0 /* Servicer.swift */; };
 		D22409DC1F040BE6006848A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22409DB1F040BE6006848A0 /* User.swift */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		78DEBD75B1AAFE33A2CED470 /* Pods-LocalCommerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalCommerce.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocalCommerce/Pods-LocalCommerce.release.xcconfig"; sourceTree = "<group>"; };
 		A91341B31F057E6B00B21EEA /* ServicerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicerCollectionViewCell.swift; sourceTree = "<group>"; };
+		A91341B51F0EAC1600B21EEA /* SearchFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFilterViewController.swift; sourceTree = "<group>"; };
+		A91341B71F0EBBE100B21EEA /* SearchFilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFilterTableViewCell.swift; sourceTree = "<group>"; };
 		A935D19D1F042D3000510B0A /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		D22409D91F0409E7006848A0 /* Servicer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Servicer.swift; sourceTree = "<group>"; };
 		D22409DB1F040BE6006848A0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				D290D9951F02E15F007B44D6 /* SearchController.swift */,
+				A91341B51F0EAC1600B21EEA /* SearchFilterViewController.swift */,
+				A91341B71F0EBBE100B21EEA /* SearchFilterTableViewCell.swift */,
 				A91341B31F057E6B00B21EEA /* ServicerCollectionViewCell.swift */,
 				D290D9AF1F02EA4F007B44D6 /* FavoritesController.swift */,
 				A935D19D1F042D3000510B0A /* ProductTableViewCell.swift */,
@@ -312,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A91341B41F057E6B00B21EEA /* ServicerCollectionViewCell.swift in Sources */,
+				A91341B61F0EAC1600B21EEA /* SearchFilterViewController.swift in Sources */,
 				D2EE5D1B1F0590D1008B86A1 /* ServicerRepository.swift in Sources */,
 				D290D9B41F02EA9C007B44D6 /* ProfileController.swift in Sources */,
 				D22409DE1F040C34006848A0 /* Review.swift in Sources */,
@@ -319,6 +326,7 @@
 				D290D9B21F02EA7A007B44D6 /* BudgetsController.swift in Sources */,
 				D22409DA1F0409E7006848A0 /* Servicer.swift in Sources */,
 				D290D9B01F02EA4F007B44D6 /* FavoritesController.swift in Sources */,
+				A91341B81F0EBBE100B21EEA /* SearchFilterTableViewCell.swift in Sources */,
 				D22E77921F0AAB290009DD4E /* Budget.swift in Sources */,
 				D22E77941F0AAB980009DD4E /* EstablishmentServicer.swift in Sources */,
 				D22E77981F0AB7110009DD4E /* Service.swift in Sources */,
