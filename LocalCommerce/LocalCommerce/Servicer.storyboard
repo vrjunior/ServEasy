@@ -7,10 +7,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Servicer Controller-->
+        <!--Title-->
         <scene sceneID="AR4-lc-Ckr">
             <objects>
                 <viewController storyboardIdentifier="Servicer" id="lbY-FW-iGf" customClass="ServicerController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
@@ -129,7 +130,7 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Vce-Gj-lLn" firstAttribute="top" secondItem="brj-lm-mtx" secondAttribute="top" id="TX0-pE-jcE"/>
+                                    <constraint firstItem="Vce-Gj-lLn" firstAttribute="top" secondItem="brj-lm-mtx" secondAttribute="top" id="3DE-W8-rvY"/>
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWM-E3-Nmm">
@@ -145,6 +146,9 @@
                                         <state key="normal" title="Pedir Orçamento">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="budgetButton:" destination="lbY-FW-iGf" eventType="touchUpInside" id="F4H-hu-DTb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -168,16 +172,59 @@
                             <constraint firstItem="MWM-E3-Nmm" firstAttribute="leading" secondItem="vz1-VQ-5xY" secondAttribute="leading" id="ycj-rm-G7f"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="c0a-nB-P6x">
+                        <rightBarButtonItems>
+                            <barButtonItem image="icons8-Upload-50 (1)" id="jma-Xb-Cjh">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
+                            <barButtonItem image="Favorite" id="dcD-ij-hHY">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="scrollView" destination="brj-lm-mtx" id="K3d-ZA-i2n"/>
+                        <outlet property="servicerAdress" destination="hKt-Lx-Wc6" id="wUw-ti-Fa8"/>
+                        <outlet property="servicerCategory" destination="I9h-HQ-jkR" id="fwW-kg-toq"/>
+                        <outlet property="servicerCity" destination="wZ4-DB-glV" id="vnW-CN-GOH"/>
+                        <outlet property="servicerImage" destination="Vce-Gj-lLn" id="3F1-bC-uBA"/>
+                        <outlet property="servicerIsOpen" destination="zDc-NM-IRK" id="ckJ-IA-Hta"/>
+                        <outlet property="servicerLogo" destination="CTj-gx-JDp" id="Yrd-V8-yHU"/>
+                        <outlet property="servicerName" destination="fnz-6F-tAg" id="oLv-0d-Kxh"/>
+                        <outlet property="servicerPhone" destination="9wn-B3-dYv" id="bc0-a0-oOq"/>
+                        <outlet property="servicerRate" destination="hWX-Ko-SfI" id="Ixd-z4-gub"/>
+                        <outlet property="servicerTimeDistance" destination="gRe-wS-8qv" id="rAd-Ph-GfA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kc0-MX-OkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="936.79999999999995" y="-236.13193403298354"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QKJ-3o-6UG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AlH-A4-sWk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cGJ-qN-hsg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lbY-FW-iGf" kind="relationship" relationship="rootViewController" id="f9X-Wx-zJ3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cpZ-dZ-Qlx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2.3999999999999999" y="-236.13193403298354"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Favorite" width="25" height="25"/>
         <image name="icons8-Address Filled-100" width="100" height="100"/>
         <image name="icons8-Car Filled-100" width="100" height="100"/>
         <image name="icons8-Christmas Star Filled-100" width="100" height="100"/>
         <image name="icons8-Phone Filled-100" width="100" height="100"/>
+        <image name="icons8-Upload-50 (1)" width="25" height="25"/>
     </resources>
 </document>
