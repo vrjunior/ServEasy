@@ -13,7 +13,7 @@
         <scene sceneID="os8-s0-2vO">
             <objects>
                 <navigationController storyboardIdentifier="Favorites" id="Deu-nx-i8I" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="a5X-4J-QLJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a5X-4J-QLJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -106,7 +106,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorites" image="Favorite" id="buQ-G3-bcO" userLabel="Favorites"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="Favorite" selectedImage="Favoroite Highlight" id="buQ-G3-bcO" userLabel="Favorites"/>
                     <navigationItem key="navigationItem" title="Favorites" id="8NN-4r-qAy"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -117,5 +117,6 @@
     </scenes>
     <resources>
         <image name="Favorite" width="25" height="25"/>
+        <image name="Favoroite Highlight" width="25" height="25"/>
     </resources>
 </document>

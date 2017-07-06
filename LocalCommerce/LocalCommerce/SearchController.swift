@@ -30,6 +30,10 @@ class SearchController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //change the tint color of tabbar
+        self.tabBarController?.tabBar.tintColor = UIColor.primaryColor
+
+        
         //fix searchbar
         self.fixSearchBar()
         
