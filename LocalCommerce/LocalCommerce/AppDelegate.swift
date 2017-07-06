@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        UINavigationBar.appearance().barStyle = UIBarStyle.blackOpaque
+        
         GMSServices.provideAPIKey("AIzaSyAXZNtNtrIZgZ4ejXqNvoG0afx_FOJK2R8")
         
         return true
