@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2EF1AB1AD48FE469D0D69E7D /* libPods-LocalCommerce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAECDFA06305EE598C75EFB /* libPods-LocalCommerce.a */; };
+		3F9282251F0D885E009E0AA6 /* Servicer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9282241F0D885E009E0AA6 /* Servicer.storyboard */; };
+		3FB283551F0EC86F007C614A /* ServicerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB283541F0EC86F007C614A /* ServicerController.swift */; };
+		3FB283571F0ECCB5007C614A /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB283561F0ECCB5007C614A /* Filter.storyboard */; };
 		A91341B41F057E6B00B21EEA /* ServicerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91341B31F057E6B00B21EEA /* ServicerCollectionViewCell.swift */; };
 		A91341B61F0EAC1600B21EEA /* SearchFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91341B51F0EAC1600B21EEA /* SearchFilterViewController.swift */; };
 		A91341B81F0EBBE100B21EEA /* SearchFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91341B71F0EBBE100B21EEA /* SearchFilterTableViewCell.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F9282241F0D885E009E0AA6 /* Servicer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Servicer.storyboard; sourceTree = "<group>"; };
+		3FB283541F0EC86F007C614A /* ServicerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicerController.swift; sourceTree = "<group>"; };
+		3FB283561F0ECCB5007C614A /* Filter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
 		78DEBD75B1AAFE33A2CED470 /* Pods-LocalCommerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalCommerce.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocalCommerce/Pods-LocalCommerce.release.xcconfig"; sourceTree = "<group>"; };
 		A91341B31F057E6B00B21EEA /* ServicerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicerCollectionViewCell.swift; sourceTree = "<group>"; };
 		A91341B51F0EAC1600B21EEA /* SearchFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFilterViewController.swift; sourceTree = "<group>"; };
@@ -149,10 +155,12 @@
 			children = (
 				D290D9971F02E15F007B44D6 /* Main.storyboard */,
 				D290D9A51F02E204007B44D6 /* Search.storyboard */,
+				3F9282241F0D885E009E0AA6 /* Servicer.storyboard */,
 				D290D9A71F02E245007B44D6 /* Favorites.storyboard */,
 				D290D9AA1F02E277007B44D6 /* Budgets.storyboard */,
 				D290D9AC1F02E290007B44D6 /* Profile.storyboard */,
 				D290D99C1F02E15F007B44D6 /* LaunchScreen.storyboard */,
+				3FB283561F0ECCB5007C614A /* Filter.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -168,6 +176,7 @@
 				A935D19D1F042D3000510B0A /* ProductTableViewCell.swift */,
 				D290D9B11F02EA7A007B44D6 /* BudgetsController.swift */,
 				D290D9B31F02EA9C007B44D6 /* ProfileController.swift */,
+				3FB283541F0EC86F007C614A /* ServicerController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -253,6 +262,8 @@
 			files = (
 				D290D99E1F02E15F007B44D6 /* LaunchScreen.storyboard in Resources */,
 				D290D9AB1F02E277007B44D6 /* Budgets.storyboard in Resources */,
+				3FB283571F0ECCB5007C614A /* Filter.storyboard in Resources */,
+				3F9282251F0D885E009E0AA6 /* Servicer.storyboard in Resources */,
 				D290D9B61F02F4D5007B44D6 /* Podfile in Resources */,
 				D290D99B1F02E15F007B44D6 /* Assets.xcassets in Resources */,
 				D290D9A61F02E204007B44D6 /* Search.storyboard in Resources */,
@@ -307,7 +318,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -334,6 +345,7 @@
 				D290D9961F02E15F007B44D6 /* SearchController.swift in Sources */,
 				D296002A1F0D7E3E00CDFB1B /* UIColor.swift in Sources */,
 				A935D19E1F042D3000510B0A /* ProductTableViewCell.swift in Sources */,
+				3FB283551F0EC86F007C614A /* ServicerController.swift in Sources */,
 				D290D9941F02E15F007B44D6 /* AppDelegate.swift in Sources */,
 				D22409DC1F040BE6006848A0 /* User.swift in Sources */,
 				D22E77961F0AABE70009DD4E /* NonEstablishmentServicer.swift in Sources */,

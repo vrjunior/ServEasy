@@ -12,19 +12,6 @@ class SearchFilterTableViewCell: UITableViewCell {
     
     @IBOutlet weak var filterCellHeight: NSLayoutConstraint!
     
-    var isExpanded:Bool = false
-    {
-        didSet
-        {
-            if !isExpanded {
-                self.filterCellHeight.constant = 0.0
-                
-            } else {
-                self.filterCellHeight.constant = 128.0
-            }
-        }
-    }
-
 
     override func awakeFromNib() {
         super.awakeFromNib()
