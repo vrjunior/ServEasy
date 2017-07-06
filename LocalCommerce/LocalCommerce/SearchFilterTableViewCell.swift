@@ -9,6 +9,9 @@
 import UIKit
 
 class SearchFilterTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var filterCellHeight: NSLayoutConstraint!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
