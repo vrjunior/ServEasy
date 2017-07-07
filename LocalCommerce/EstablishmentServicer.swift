@@ -15,6 +15,10 @@ class EstablishmentServicer: Servicer {
     public var openingTime:(hour: Int, minute: Int, second: Int)?
     public var closingTime:(hour: Int, minute: Int, second: Int)?
     public var location:CLLocationCoordinate2D?
+    public var addressStreet:String?
+    public var addressNumber: Int?
+    public var addressCity: String?
+    public var addressUF: String?
     public var facadeImages: UIImage?
     
     public func isOpen() -> Bool {

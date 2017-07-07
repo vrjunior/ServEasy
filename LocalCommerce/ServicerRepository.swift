@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-class ServicerRepository {
+class ServicerRepository: Repository {
     func getServicersByLocation(location: CLLocationCoordinate2D, radius: Double) -> [Servicer] {
         
         return [Servicer]()
