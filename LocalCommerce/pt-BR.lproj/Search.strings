@@ -1,0 +1,9 @@
+
+/* Class = "UISearchBar"; placeholder = "Search"; ObjectID = "KHj-Ie-mCV"; */
+"KHj-Ie-mCV.placeholder" = "Buscar";
+
+/* Class = "UILabel"; text = "Near Services"; ObjectID = "ma7-Oq-4XG"; */
+"ma7-Oq-4XG.text" = "Serviços próximos";
+
+/* Class = "UITabBarItem"; title = "Explore"; ObjectID = "YAV-aq-96i"; */
+"YAV-aq-96i.title" = "Explorar";

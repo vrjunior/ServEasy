@@ -283,12 +283,12 @@ extension SearchController: UICollectionViewDataSource {
                 
                 let servicerLocation = CLLocation(latitude: estLocation.latitude, longitude: estLocation.longitude)
                 
-                let distanceKm = mapLocation.distance(from: servicerLocation) / 1000
+                let distanceKm = mapLocation.distance(from: servicerLocation) / 1000  
                 
                 cell.servicerDistancy.text = " \(String(format: "%.1f", distanceKm)) km"
             }
             
-            cell.servicerInfo.text = estServicer.isOpen() ? "Open" : "Close"
+            cell.servicerInfo.text = estServicer.isOpen() ? "OPEN".localized : "CLOSED".localized
         }
         
     
