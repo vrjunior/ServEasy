@@ -38,6 +38,7 @@
 		D290D9B41F02EA9C007B44D6 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290D9B31F02EA9C007B44D6 /* ProfileController.swift */; };
 		D290D9B61F02F4D5007B44D6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D290D9B51F02F4D5007B44D6 /* Podfile */; };
 		D296002A1F0D7E3E00CDFB1B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29600291F0D7E3E00CDFB1B /* UIColor.swift */; };
+		D2B474F91F0F0FFC0058DDEA /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B474F81F0F0FFC0058DDEA /* UIButton.swift */; };
 		D2EE5D1B1F0590D1008B86A1 /* ServicerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EE5D1A1F0590D1008B86A1 /* ServicerRepository.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		D290D9B31F02EA9C007B44D6 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		D290D9B51F02F4D5007B44D6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
 		D29600291F0D7E3E00CDFB1B /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		D2B474F81F0F0FFC0058DDEA /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		D2EE5D1A1F0590D1008B86A1 /* ServicerRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicerRepository.swift; sourceTree = "<group>"; };
 		DDAECDFA06305EE598C75EFB /* libPods-LocalCommerce.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LocalCommerce.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAC84DABA769EFCE96DDBA6 /* Pods-LocalCommerce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalCommerce.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocalCommerce/Pods-LocalCommerce.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		D290D9A91F02E250007B44D6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D2B474F81F0F0FFC0058DDEA /* UIButton.swift */,
 				D290D9971F02E15F007B44D6 /* Main.storyboard */,
 				D290D9A51F02E204007B44D6 /* Search.storyboard */,
 				3F9282241F0D885E009E0AA6 /* Servicer.storyboard */,
@@ -347,6 +350,7 @@
 				A935D19E1F042D3000510B0A /* ProductTableViewCell.swift in Sources */,
 				3FB283551F0EC86F007C614A /* ServicerController.swift in Sources */,
 				D290D9941F02E15F007B44D6 /* AppDelegate.swift in Sources */,
+				D2B474F91F0F0FFC0058DDEA /* UIButton.swift in Sources */,
 				D22409DC1F040BE6006848A0 /* User.swift in Sources */,
 				D22E77961F0AABE70009DD4E /* NonEstablishmentServicer.swift in Sources */,
 			);
