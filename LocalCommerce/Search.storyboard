@@ -15,7 +15,7 @@
         <scene sceneID="Iw5-iM-WyW">
             <objects>
                 <navigationController storyboardIdentifier="Search" id="hwC-Fh-X5S" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="14d-Q4-6dW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="14d-Q4-6dW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -162,7 +162,11 @@
                                                     <constraint firstItem="Wjm-t9-698" firstAttribute="centerY" secondItem="Y9S-WC-cV8" secondAttribute="centerY" id="y5s-Uy-jQ7"/>
                                                 </constraints>
                                                 <connections>
-                                                    <outlet property="placeholder" destination="dXm-CU-pJg" id="6yU-bI-Ze3"/>
+                                                    <outlet property="servicerCategory" destination="gcO-Gj-ZKs" id="qB3-3K-cZx"/>
+                                                    <outlet property="servicerDistancy" destination="Y9S-WC-cV8" id="G8r-3O-ejb"/>
+                                                    <outlet property="servicerInfo" destination="nLa-CU-dpL" id="jB1-nT-WWA"/>
+                                                    <outlet property="servicerName" destination="dXm-CU-pJg" id="qjZ-HY-la8"/>
+                                                    <outlet property="thumbnail" destination="Ikg-9Z-hgy" id="NwV-JZ-ZAI"/>
                                                     <segue destination="jgn-6i-6IM" kind="show" id="INb-id-hrv"/>
                                                 </connections>
                                             </collectionViewCell>

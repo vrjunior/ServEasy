@@ -9,6 +9,10 @@
 import UIKit
 
 class ServicerCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var placeholder: UILabel!
     
+    @IBOutlet weak var thumbnail: UIImageView!
+    @IBOutlet weak var servicerName: UILabel!
+    @IBOutlet weak var servicerCategory: UILabel!
+    @IBOutlet weak var servicerDistancy: UILabel!
+    @IBOutlet weak var servicerInfo: UILabel!
 }

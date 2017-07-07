@@ -1,0 +1,38 @@
+"EstablishmentService" : [
+    {
+      "id":1,
+      "name": "Oficina do João",
+      "rating":4.5,
+      "phone":"(19) 997906497",
+      "thumbnailUrl": "https://i.imgur.com/PRp9SCX.jpg",
+      "categoryName": "Mecânica",
+      "locationLatitude":-22.8131436,
+      "locationLongitude":-47.0640835,
+      "openingHour": 7,
+      "openingMinute": 0,
+      "closingHour": 17,
+      "closingMinute": 0,
+      "addressStreet": "Rua A",
+      "addressNumber": 190,
+      "addressCity": "Campinas",
+      "addressUF": "SP"
+    },
+    {
+      "id":1,
+      "name": "Jô Cabeleleira",
+      "rating":5,
+      "phone":"(19) 997906497",
+      "thumbnailUrl": "https://i.imgur.com/my8Gauf.png",
+      "categoryName": "Beleza",
+      "locationLatitude":-22.8135178,
+      "locationLongitude":-47.0640335,
+      "openingHour": 7,
+      "openingMinute": 0,
+      "closingHour": 17,
+      "closingMinute": 0,
+      "addressStreet": "Rua B",
+      "addressNumber": 15,
+      "addressCity": "Campinas",
+      "addressUF": "SP"
+    }
+  ]

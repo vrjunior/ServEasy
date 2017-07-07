@@ -15,7 +15,8 @@ class SearchController: UIViewController {
 
     // For test
     var array = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
-    
+    var nearServices:[Servicer] = [Servicer]()
+    var servicerRepository = ServicerRepository()
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mapView: GMSMapView!
@@ -79,6 +80,8 @@ class SearchController: UIViewController {
         
         self.determineMyCurrentLocation()
         
+        self.updateNearServices()
+        
     }
     
     func fixSearchBar() {
@@ -122,6 +125,12 @@ class SearchController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func updateNearServices() {
+        //updating near services
+        self.nearServices = self.servicerRepository.getServicersByLocation(location: self.myMarkerPoint.position, radius: 20)
+        
     }
         
 }
@@ -215,6 +224,8 @@ extension SearchController: UICollectionViewDelegate {
 
 extension SearchController: UICollectionViewDataSource {
     
+    
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
         return 1
@@ -224,7 +235,7 @@ extension SearchController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
        
-        return array.count
+        return self.nearServices.count
         
     }
 
@@ -233,8 +244,37 @@ extension SearchController: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Servicer", for: indexPath as IndexPath) as! ServicerCollectionViewCell
         
-        cell.placeholder.text = "Loja " + array[indexPath.row]
-        cell.layer.cornerRadius = 9
+        let currentServicer = nearServices[indexPath.row]
+        
+        if let url = URL(string: currentServicer.thumbnailUrl!) {
+            URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
+                
+                if error != nil {
+                    print(String(describing:error))
+                    return
+                }
+                
+                // a imagem recebida presica ser preenchida na main queue
+                DispatchQueue.main.async(execute: { () -> Void in
+                    let image = UIImage(data: data!)
+                    cell.thumbnail.image = image
+                })
+                
+            }).resume()
+        }
+        
+        cell.servicerName.text = currentServicer.name
+        cell.servicerCategory.text = currentServicer.categoryName
+        if(currentServicer is EstablishmentServicer) {
+            let estServicer = currentServicer as! EstablishmentServicer
+            
+            if let estLocation = estServicer.location {
+                cell.servicerDistancy.text = " \(GMSGeometryDistance(self.myMarkerPoint.position, estLocation) / 1000) km"
+            }
+            
+            cell.servicerInfo.text = estServicer.isOpen() ? "Open" : "Close"
+        }
+        
     
         
         return cell

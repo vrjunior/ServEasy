@@ -10,4 +10,19 @@ import Foundation
 
 class Repository {
     static var server:String = ""
+    
+    
+    func parseJSONFromData(jsonData: Data?) -> [String: AnyObject]?
+    {
+        if let data = jsonData {
+            do {
+                let jsonDictionary =  try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? [String: AnyObject]
+                return jsonDictionary
+            } catch let error {
+                print("Error processing json data: \(error.localizedDescription)")
+            }
+        }
+        
+        return nil
+    }
 }

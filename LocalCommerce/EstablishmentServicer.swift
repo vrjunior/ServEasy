@@ -12,8 +12,8 @@ import UIKit
 
 class EstablishmentServicer: Servicer {
     
-    public var openingTime:(hour: Int, minute: Int, second: Int)?
-    public var closingTime:(hour: Int, minute: Int, second: Int)?
+    public var openingTime:(hour: Int, minute: Int)?
+    public var closingTime:(hour: Int, minute: Int)?
     public var location:CLLocationCoordinate2D?
     public var addressStreet:String?
     public var addressNumber: Int?
