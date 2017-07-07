@@ -29,7 +29,7 @@
         <!--Favorites-->
         <scene sceneID="YW3-zY-m3Q">
             <objects>
-                <viewController id="dsN-9u-abs" customClass="FavoritesController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dsN-9u-abs" customClass="FavoritesController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tvv-kW-OEw"/>
                         <viewControllerLayoutGuide type="bottom" id="uqM-1M-3Yb"/>
@@ -38,16 +38,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="191" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uNx-jO-4DX">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uNx-jO-4DX">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="product" rowHeight="191" id="nDs-Nx-2P6" customClass="ProductTableViewCell" customModule="LocalCommerce">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="191"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Servicer" rowHeight="195" id="nDs-Nx-2P6" userLabel="Servicer" customClass="ProductTableViewCell" customModule="LocalCommerce">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="195"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDs-Nx-2P6" id="RaD-IE-tQ4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="190.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="194.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Re-bY-6GM">
@@ -106,6 +105,12 @@
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uNx-jO-4DX" secondAttribute="trailing" id="7SA-AF-pfq"/>
+                            <constraint firstItem="uqM-1M-3Yb" firstAttribute="top" secondItem="uNx-jO-4DX" secondAttribute="bottom" id="BPM-cu-bNQ"/>
+                            <constraint firstItem="uNx-jO-4DX" firstAttribute="top" secondItem="tvv-kW-OEw" secondAttribute="bottom" id="Xgc-bf-dcI"/>
+                            <constraint firstItem="uNx-jO-4DX" firstAttribute="leading" secondItem="6T3-W8-bsy" secondAttribute="leading" id="scf-ad-vpD"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorites" image="Favorite" selectedImage="Favoroite Highlight" id="buQ-G3-bcO" userLabel="Favorites"/>
                     <navigationItem key="navigationItem" title="Favorites" id="8NN-4r-qAy"/>

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sales-->
+        <!--Budgets-->
         <scene sceneID="nWT-Zd-8km">
             <objects>
-                <viewController id="03q-cT-5Il" userLabel="Sales" customClass="BudgetsController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="03q-cT-5Il" customClass="BudgetsController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uO3-8s-EJ7"/>
                         <viewControllerLayoutGuide type="bottom" id="h1z-pg-ECL"/>

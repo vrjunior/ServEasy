@@ -32,7 +32,7 @@ extension FavoritesController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "product", for: indexPath) as! ProductTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Servicer", for: indexPath) as! ProductTableViewCell
         
         cell.productName.text = array[indexPath.row]
         
