@@ -2,6 +2,9 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
+## Apple System file
+.DS_Store
+
 ## Build generated
 build/
 DerivedData/
@@ -27,7 +30,6 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
-*.DS_Store
 
 ## Playgrounds
 timeline.xctimeline
