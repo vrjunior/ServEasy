@@ -27,6 +27,19 @@ class SearchController: UIViewController {
     var currentMapZoom: Float = 15 //initial zoom
     var newSearchLocation:CLGeocoder? = CLGeocoder()
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
+    var mapMyPosition: CLLocationCoordinate2D {
+        get {
+            return self.myMarkerPoint.position
+        }
+        set {
+            self.myMarkerPoint.position = newValue
+            self.updateNearServices()
+            self.collectionView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,8 +93,6 @@ class SearchController: UIViewController {
         
         self.determineMyCurrentLocation()
         
-        self.updateNearServices()
-        
     }
     
     func fixSearchBar() {
@@ -130,7 +141,6 @@ class SearchController: UIViewController {
     func updateNearServices() {
         //updating near services
         self.nearServices = self.servicerRepository.getServicersByLocation(location: self.myMarkerPoint.position, radius: 20)
-        
     }
         
 }
@@ -148,7 +158,7 @@ extension SearchController: CLLocationManagerDelegate {
         self.mapView.camera = GMSCameraPosition(target: coordinate, zoom: self.currentMapZoom, bearing: 0, viewingAngle: 0)
         
         // Creates a marker in the center of the map.
-        self.myMarkerPoint.position = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        self.mapMyPosition = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
         
         //saving current zoom to next update
         self.currentMapZoom = self.mapView.camera.zoom
@@ -171,7 +181,7 @@ extension SearchController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
         
         self.locationManager.stopUpdatingLocation()
-        self.myMarkerPoint.position = position.target
+        self.mapMyPosition = position.target
     }
 }
 
@@ -269,7 +279,13 @@ extension SearchController: UICollectionViewDataSource {
             let estServicer = currentServicer as! EstablishmentServicer
             
             if let estLocation = estServicer.location {
-                cell.servicerDistancy.text = " \(GMSGeometryDistance(self.myMarkerPoint.position, estLocation) / 1000) km"
+                let mapLocation = CLLocation(latitude: self.myMarkerPoint.position.latitude, longitude: self.myMarkerPoint.position.longitude)
+                
+                let servicerLocation = CLLocation(latitude: estLocation.latitude, longitude: estLocation.longitude)
+                
+                let distanceKm = mapLocation.distance(from: servicerLocation) / 1000
+                
+                cell.servicerDistancy.text = " \(String(format: "%.1f", distanceKm)) km"
             }
             
             cell.servicerInfo.text = estServicer.isOpen() ? "Open" : "Close"

@@ -214,6 +214,7 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="collectionView" destination="a1b-aL-qcH" id="jnR-rQ-a2S"/>
                         <outlet property="mapView" destination="VJE-r1-jYp" id="CZH-5M-bpw"/>
                         <outlet property="searchBar" destination="KHj-Ie-mCV" id="5Di-bQ-wXR"/>
                     </connections>
