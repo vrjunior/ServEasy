@@ -48,18 +48,18 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWX-Ko-SfI">
-                                        <rect key="frame" x="17" y="300" width="15" height="21"/>
+                                        <rect key="frame" x="17" y="300" width="33" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
                                         <color key="textColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-Christmas Star Filled-100" translatesAutoresizingMaskIntoConstraints="NO" id="FiZ-Sq-gmZ">
-                                        <rect key="frame" x="42" y="296" width="28" height="28"/>
+                                        <rect key="frame" x="58" y="296" width="28" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aberto agora" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDc-NM-IRK">
-                                        <rect key="frame" x="102" y="300" width="146" height="21"/>
+                                        <rect key="frame" x="116" y="300" width="146" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
@@ -151,7 +151,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QBE-kC-3qb">
-                                        <rect key="frame" x="85" y="300" width="2" height="21"/>
+                                        <rect key="frame" x="100" y="300" width="2" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
@@ -166,6 +166,9 @@
                                     <constraint firstItem="I9h-HQ-jkR" firstAttribute="leading" secondItem="fnz-6F-tAg" secondAttribute="leading" id="hsl-KJ-Qod"/>
                                     <constraint firstItem="fnz-6F-tAg" firstAttribute="leading" secondItem="brj-lm-mtx" secondAttribute="leading" constant="17" id="sO6-Hb-9jR"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="lbY-FW-iGf" id="r7N-hg-zeC"/>
+                                </connections>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWM-E3-Nmm">
                                 <rect key="frame" x="0.0" y="1618" width="375" height="49"/>

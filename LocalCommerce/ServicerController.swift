@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ServicerController : UIViewController {
     
@@ -23,7 +24,7 @@ class ServicerController : UIViewController {
     @IBOutlet weak var servicerCity: UILabel!
     @IBOutlet weak var servicerIsOpen: UILabel!
     
-    
+    public var myMapLocation : CLLocationCoordinate2D?
     public var currentServicer:Servicer?
     
     @IBAction func budgetButton(_ sender: Any) {
@@ -40,8 +41,27 @@ class ServicerController : UIViewController {
         self.tabBarController?.tabBar.isHidden = true
         
         if let servicer = currentServicer {
-            print(servicer.name)
+            print(servicer.name!)
+            self.servicerName.text = servicer.name
+            self.servicerPhone.text = servicer.phone
+            self.servicerRate.text = String(describing: servicer.rating!)
+            print(servicer.rating!)
+            if servicer is EstablishmentServicer{
+                let eServicer = servicer as! EstablishmentServicer
+                self.servicerAdress.text = eServicer.addressStreet
+                self.servicerCity.text = eServicer.addressCity
+                self.servicerCategory.text = eServicer.category?.name
+                
+                
+                if let mapLocation = myMapLocation{
+                    let distanceKm = eServicer.getKmDistance(fromPosition: mapLocation)
+                    
+                }
+                
+            }
         }
+        
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {

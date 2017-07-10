@@ -8,7 +8,6 @@
 
 import Foundation
 import CoreLocation
-import UIKit
 
 class EstablishmentServicer: Servicer {
     
@@ -19,7 +18,7 @@ class EstablishmentServicer: Servicer {
     public var addressNumber: Int?
     public var addressCity: String?
     public var addressUF: String?
-    public var facadeImages: UIImage?
+    public var facadeImagesUrls: [String]?
     
     public func isOpen() -> Bool {
         return true
@@ -28,6 +27,16 @@ class EstablishmentServicer: Servicer {
     public func setLocation(latitude: Double, longitude: Double) {
         
         self.location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+    
+    public func getKmDistance(fromPosition coordinate:CLLocationCoordinate2D) -> Double{
+        let mapLocation = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        
+        let servicerLocation = CLLocation(latitude: self.location!.latitude, longitude: self.location!.longitude)
+        
+        let distanceKm = mapLocation.distance(from: servicerLocation) / 1000
+        
+        return distanceKm
     }
     
 }

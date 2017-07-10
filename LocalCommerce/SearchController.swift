@@ -133,6 +133,7 @@ class SearchController: UIViewController {
             let servicer = sender as! Servicer
             
             servicerController.currentServicer =  servicer
+            servicerController.myMapLocation = self.myMapLocation
         }
     }
     
@@ -290,11 +291,7 @@ extension SearchController: UICollectionViewDataSource {
             let estServicer = currentServicer as! EstablishmentServicer
             
             if let estLocation = estServicer.location {
-                let mapLocation = CLLocation(latitude: self.myMapLocation.latitude, longitude: self.myMapLocation.longitude)
-                
-                let servicerLocation = CLLocation(latitude: estLocation.latitude, longitude: estLocation.longitude)
-                
-                let distanceKm = mapLocation.distance(from: servicerLocation) / 1000  
+                let distanceKm = estServicer.getKmDistance(fromPosition: self.myMapLocation)
                 
                 cell.servicerDistancy.text = " \(String(format: "%.1f", distanceKm)) km"
                 
