@@ -68,7 +68,6 @@
 		D22E77991F0AB8690009DD4E /* BudgetMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetMessage.swift; sourceTree = "<group>"; };
 		D239EAB91F12F1DF003C6BEC /* RatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		D239EABA1F12F1DF003C6BEC /* RatingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingView.xib; sourceTree = "<group>"; };
-		D281E62A1F10227B003B3DED /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		D281E62B1F10227B003B3DED /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		D281E62D1F1022DF003B3DED /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D281E62E1F1024AD003B3DED /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -427,7 +426,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				D290D9981F02E15F007B44D6 /* Base */,
-				D281E62A1F10227B003B3DED /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

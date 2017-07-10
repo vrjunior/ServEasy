@@ -150,6 +150,19 @@ class SearchController: UIViewController {
         self.nearServices = self.servicerRepository.getServicersByLocation(location: self.myMapLocation, radius: 20)
     }
     
+    func getMapVisibleRadiusInKM() -> Double? {
+        let center = CLLocation(latitude: self.myMapLocation.latitude, longitude: self.myMapLocation.longitude)
+        //getting northEast point
+        if let neCoordinate = self.mapView.cameraTargetBounds?.northEast {
+            let neLocation = CLLocation(latitude: neCoordinate.latitude, longitude: neCoordinate.longitude)
+            
+            return center.distance(from: neLocation) / 1000
+        }
+        
+        return nil
+        
+    }
+    
 }
 
 extension SearchController: CLLocationManagerDelegate {
