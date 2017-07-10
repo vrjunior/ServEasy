@@ -190,7 +190,6 @@
                                                     <outlet property="servicerInfo" destination="nLa-CU-dpL" id="jB1-nT-WWA"/>
                                                     <outlet property="servicerName" destination="dXm-CU-pJg" id="qjZ-HY-la8"/>
                                                     <outlet property="thumbnail" destination="Ikg-9Z-hgy" id="NwV-JZ-ZAI"/>
-                                                    <segue destination="jgn-6i-6IM" kind="show" id="INb-id-hrv"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -242,6 +241,7 @@
                         <outlet property="collectionView" destination="a1b-aL-qcH" id="jnR-rQ-a2S"/>
                         <outlet property="mapView" destination="VJE-r1-jYp" id="CZH-5M-bpw"/>
                         <outlet property="searchBar" destination="KHj-Ie-mCV" id="5Di-bQ-wXR"/>
+                        <segue destination="jgn-6i-6IM" kind="show" identifier="servicerSegue" id="CVk-Mc-fhn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3Y-TB-cgR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -259,8 +259,8 @@
         <!--Servicer-->
         <scene sceneID="ijt-mO-a9g">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Servicer" storyboardName="Servicer" referencedIdentifier="Servicer" id="jgn-6i-6IM" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bvy-Nb-5OJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="Servicer" storyboardName="Servicer" referencedIdentifier="Servicer" id="jgn-6i-6IM" sceneMemberID="viewController"/>
             </objects>
             <point key="canvasLocation" x="2250" y="-376"/>
         </scene>

@@ -25,6 +25,8 @@ class SearchController: UIViewController {
     var currentMapZoom: Float = 15 //initial zoom
     var newSearchLocation:CLGeocoder? = CLGeocoder()
     
+    let servicerSegue = "servicerSegue"
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     
@@ -119,6 +121,19 @@ class SearchController: UIViewController {
         }
         
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == self.servicerSegue) {
+            
+            //getting the controller
+            let servicerController = segue.destination as! ServicerController
+            
+            //casting the sender to servicer
+            let servicer = sender as! Servicer
+            
+            servicerController.currentServicer =  servicer
+        }
     }
     
     @IBAction func locationSync(_ sender: UIButton) {
@@ -216,8 +231,9 @@ extension SearchController: UISearchDisplayDelegate{
 
 
 extension SearchController: UICollectionViewDelegate {
-
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: self.servicerSegue, sender: self.nearServices[indexPath.row])
+    }
 }
 
 
