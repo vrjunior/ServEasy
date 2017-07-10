@@ -10,3 +10,4 @@
 "CLOSED" = "Fechado";
 "MY_LOCATION" = "Minha localização";
 "MY_CURRENT_LOCATION" = "Minha localização atual";
+"DISTANCE_MSG" = "A %.1f km do seu ponto atual";

@@ -20,7 +20,7 @@ class ServicerRepository: Repository {
         if let jsonDictionary = self.parseJSONFromData(jsonData: jsonData as Data?) {
             
             
-            let estServiceDictionaries = jsonDictionary["EstablishmentService"] as! [[String: AnyObject]]
+            let estServiceDictionaries = jsonDictionary["EstablishmentServicer"] as! [[String: AnyObject]]
             
             
             for esDictionary in estServiceDictionaries {
@@ -49,6 +49,30 @@ class ServicerRepository: Repository {
                 establishmentService.addressUF = esDictionary["addressUF"] as? String!
                 
                 services.append(establishmentService)
+            }
+            
+            let nonEstServiceDictionaries = jsonDictionary["NonEstablishmentServicer"] as! [[String: AnyObject]]
+            
+            for nesDictionary in nonEstServiceDictionaries{
+                let nonEstablishmentService = NonEstablishmentServicer()
+                
+                nonEstablishmentService.name = nesDictionary["name"] as? String!
+                nonEstablishmentService.phone = nesDictionary["phone"] as? String!
+                nonEstablishmentService.rating = nesDictionary["rating"] as? Float!
+                nonEstablishmentService.thumbnailUrl = nesDictionary["thumbnailUrl"] as? String!
+                
+                let categoryDic = nesDictionary["category"] as! [String:AnyObject]
+                let categoryId = categoryDic["id"] as! Int
+                let categoryName = categoryDic["name"] as! String
+                nonEstablishmentService.category = Category(id: categoryId, name: categoryName)
+                
+              
+                //essas duas linhas tenho ctz que estao erradas!
+                
+                nonEstablishmentService.servedCities?.append((nesDictionary["addressCity"] as? String!)!)
+                nonEstablishmentService.servedUFCities?.append((nesDictionary["addressUF"] as? String!)!)
+                
+                services.append(nonEstablishmentService)
             }
             
             

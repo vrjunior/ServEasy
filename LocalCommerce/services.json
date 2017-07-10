@@ -1,5 +1,5 @@
 {
-  "EstablishmentService" : [
+  "EstablishmentServicer" : [
     {
       "id":1,
       "name": "Oficina do João",
@@ -36,5 +36,19 @@
       "addressCity": "Campinas",
       "addressUF": "SP"
     }
-  ]
+  ],
+  "NonEstablishmentServicer" : [
+    {
+                                "id":3,
+                                "name": "João Pinta",
+                                "rating":3.9,
+                                "phone":"(19) 997906499",
+                                "thumbnailUrl": "https://i.imgur.com/PRp9SCX.jpg",
+                                "category": { "id":3, "name":"Pintor" },
+                                "cities": ["Campinas", "São Paulo", "Ubá"],
+                                "addressUF": ["SP", "SP", "MG"]
+    }
+
+    
+   ]
 }

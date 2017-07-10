@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreLocation
+import GoogleMaps
 
 class EstablishmentServicer: Servicer {
     
@@ -28,6 +29,7 @@ class EstablishmentServicer: Servicer {
         
         self.location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
+    
     
     public func getKmDistance(fromPosition coordinate:CLLocationCoordinate2D) -> Double{
         let mapLocation = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)

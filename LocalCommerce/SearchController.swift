@@ -306,6 +306,14 @@ extension SearchController: UICollectionViewDataSource {
             }
             
             cell.servicerInfo.text = estServicer.isOpen() ? "OPEN".localized : "CLOSED".localized
+        }else{
+            let nestServicer = currentServicer as! NonEstablishmentServicer
+            
+            let marker = GMSMarker()
+            marker.icon = nestServicer.category?.getMarkerIcon()
+            marker.title = nestServicer.name
+            marker.snippet = nestServicer.category?.name
+            
         }
         
     

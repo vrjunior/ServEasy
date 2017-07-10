@@ -55,7 +55,22 @@ class ServicerController : UIViewController {
                 
                 if let mapLocation = myMapLocation{
                     let distanceKm = eServicer.getKmDistance(fromPosition: mapLocation)
-                    
+                    self.servicerTimeDistance.text = String(format: "DISTANCE_MSG".localized, distanceKm)
+                }
+                
+            }else if servicer is NonEstablishmentServicer{
+                let neServicer = servicer as! NonEstablishmentServicer
+                
+                self.servicerTimeDistance.text = "\(String(describing: servicer.name)) works on your area"
+                var cities:String = "Better"
+            
+                //dando erro em self.servicerCity.text
+                //VALMIR SALVA NOIS! E VE O JSON
+                if let servedCities = neServicer.servedCities {
+                    for city in servedCities{
+                        cities += String(city) + " "
+                    }
+                    self.servicerCity.text = cities
                 }
                 
             }
