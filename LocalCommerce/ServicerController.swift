@@ -32,6 +32,10 @@ class ServicerController : UIViewController {
     
     
     override func viewDidLoad() {
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = true
     }
     
