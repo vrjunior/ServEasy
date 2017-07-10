@@ -147,8 +147,24 @@ class SearchController: UIViewController {
     }
     
     func updateNearServices() {
-        //updating near services
-        self.nearServices = self.servicerRepository.getServicersByLocation(location: self.myMapLocation, radius: 20)
+        let currentRadius = self.getMapVisibleRadiusInKM()
+        print(currentRadius)
+        
+        self.nearServices = self.servicerRepository.getServicersByLocation(location: self.myMapLocation, radius: currentRadius)
+    }
+    
+    func getMapVisibleRadiusInKM() -> Double {
+        let center = CLLocation(latitude: self.myMapLocation.latitude, longitude: self.myMapLocation.longitude)
+        //getting northEast point
+        let farRightPosition = self.mapView.projection.visibleRegion().farRight
+        
+        let farRight = CLLocation(latitude: farRightPosition.latitude, longitude: farRightPosition.longitude)
+        
+        let gms = GMSMarker(position: farRightPosition)
+        gms.map = self.mapView
+        
+        return center.distance(from: farRight) / 1000
+        
     }
     
 }
@@ -182,6 +198,11 @@ extension SearchController: GMSMapViewDelegate {
         //center the camera to marker stay on center
         self.mapView.animate(toLocation: coordinate)
     }*/
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        self.mapView.selectedMarker = marker
+        return true
+    }
     
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
         
