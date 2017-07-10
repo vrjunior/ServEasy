@@ -255,6 +255,7 @@ extension SearchController: UICollectionViewDataSource {
                 // a imagem recebida presica ser preenchida na main queue
                 DispatchQueue.main.async(execute: { () -> Void in
                     let image = UIImage(data: data!)
+                    cell.thumbnail.backgroundColor = UIColor.clear
                     cell.thumbnail.image = image
                 })
                 
