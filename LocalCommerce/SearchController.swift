@@ -196,6 +196,11 @@ extension SearchController: GMSMapViewDelegate {
         self.mapView.animate(toLocation: coordinate)
     }*/
     
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        self.mapView.selectedMarker = marker
+        return true
+    }
+    
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
         
         self.locationManager.stopUpdatingLocation()
