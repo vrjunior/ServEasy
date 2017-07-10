@@ -8,3 +8,5 @@
 
 "OPEN" = "Aberto";
 "CLOSED" = "Fechado";
+"MY_LOCATION" = "Minha localização";
+"MY_CURRENT_LOCATION" = "Minha localização atual";
