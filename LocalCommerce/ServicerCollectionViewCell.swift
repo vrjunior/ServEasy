@@ -13,6 +13,7 @@ class ServicerCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var thumbnail: UIImageView!
     @IBOutlet weak var servicerName: UILabel!
     @IBOutlet weak var servicerCategory: UILabel!
+    @IBOutlet weak var ratingView: RatingView!
     @IBOutlet weak var servicerDistancy: UILabel!
     @IBOutlet weak var servicerInfo: UILabel!
 }

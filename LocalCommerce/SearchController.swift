@@ -275,6 +275,11 @@ extension SearchController: UICollectionViewDataSource {
         
         cell.servicerName.text = currentServicer.name
         cell.servicerCategory.text = currentServicer.categoryName
+        
+        if let rating = currentServicer.rating {
+            cell.ratingView.setRating(rating: rating)
+        }
+        
         if(currentServicer is EstablishmentServicer) {
             let estServicer = currentServicer as! EstablishmentServicer
             

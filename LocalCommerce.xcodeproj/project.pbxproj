@@ -24,6 +24,8 @@
 		D22E77961F0AABE70009DD4E /* NonEstablishmentServicer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22E77951F0AABE70009DD4E /* NonEstablishmentServicer.swift */; };
 		D22E77981F0AB7110009DD4E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22E77971F0AB7110009DD4E /* Service.swift */; };
 		D22E779A1F0AB8690009DD4E /* BudgetMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22E77991F0AB8690009DD4E /* BudgetMessage.swift */; };
+		D239EABB1F12F1DF003C6BEC /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D239EAB91F12F1DF003C6BEC /* RatingView.swift */; };
+		D239EABC1F12F1DF003C6BEC /* RatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D239EABA1F12F1DF003C6BEC /* RatingView.xib */; };
 		D281E6261F1021D9003B3DED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D281E6281F1021D9003B3DED /* Localizable.strings */; };
 		D281E62F1F1024AD003B3DED /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D281E62E1F1024AD003B3DED /* String.swift */; };
 		D281E6301F10270B003B3DED /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D281E6321F10270B003B3DED /* Search.storyboard */; };
@@ -64,6 +66,8 @@
 		D22E77951F0AABE70009DD4E /* NonEstablishmentServicer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonEstablishmentServicer.swift; sourceTree = "<group>"; };
 		D22E77971F0AB7110009DD4E /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		D22E77991F0AB8690009DD4E /* BudgetMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetMessage.swift; sourceTree = "<group>"; };
+		D239EAB91F12F1DF003C6BEC /* RatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		D239EABA1F12F1DF003C6BEC /* RatingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingView.xib; sourceTree = "<group>"; };
 		D281E62A1F10227B003B3DED /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		D281E62B1F10227B003B3DED /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		D281E62D1F1022DF003B3DED /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -130,6 +134,15 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		D239EABD1F12F206003C6BEC /* Rating View */ = {
+			isa = PBXGroup;
+			children = (
+				D239EAB91F12F1DF003C6BEC /* RatingView.swift */,
+				D239EABA1F12F1DF003C6BEC /* RatingView.xib */,
+			);
+			name = "Rating View";
+			sourceTree = "<group>";
+		};
 		D290D9871F02E15F007B44D6 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				D2B474FA1F0F18470058DDEA /* Overrides */,
+				D239EABD1F12F206003C6BEC /* Rating View */,
 				D290D9971F02E15F007B44D6 /* Main.storyboard */,
 				D281E6321F10270B003B3DED /* Search.storyboard */,
 				3F9282241F0D885E009E0AA6 /* Servicer.storyboard */,
@@ -297,6 +311,7 @@
 				D2B474FF1F0F3AC20058DDEA /* services.json in Resources */,
 				D290D99B1F02E15F007B44D6 /* Assets.xcassets in Resources */,
 				D281E6301F10270B003B3DED /* Search.storyboard in Resources */,
+				D239EABC1F12F1DF003C6BEC /* RatingView.xib in Resources */,
 				D290D9991F02E15F007B44D6 /* Main.storyboard in Resources */,
 				D290D9AD1F02E290007B44D6 /* Profile.storyboard in Resources */,
 				D290D9A81F02E245007B44D6 /* Favorites.storyboard in Resources */,
@@ -366,6 +381,7 @@
 				D22E779A1F0AB8690009DD4E /* BudgetMessage.swift in Sources */,
 				D281E62F1F1024AD003B3DED /* String.swift in Sources */,
 				D290D9B21F02EA7A007B44D6 /* BudgetsController.swift in Sources */,
+				D239EABB1F12F1DF003C6BEC /* RatingView.swift in Sources */,
 				D22409DA1F0409E7006848A0 /* Servicer.swift in Sources */,
 				D290D9B01F02EA4F007B44D6 /* FavoritesController.swift in Sources */,
 				D2B474FD1F0F187C0058DDEA /* Repository.swift in Sources */,
