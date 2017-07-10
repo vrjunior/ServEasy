@@ -13,8 +13,6 @@ import GoogleMaps
 
 class SearchController: UIViewController {
 
-    // For test
-    var array = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     var nearServices:[Servicer] = [Servicer]()
     var servicerRepository = ServicerRepository()
     
@@ -22,11 +20,26 @@ class SearchController: UIViewController {
     @IBOutlet weak var mapView: GMSMapView!
     
     var locationManager: CLLocationManager = CLLocationManager()
+    
     var currentLocation: CLLocation!
-    var myMarkerPoint: GMSMarker = GMSMarker()
     var currentMapZoom: Float = 15 //initial zoom
     var newSearchLocation:CLGeocoder? = CLGeocoder()
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
+    var _myMapLocation: CLLocationCoordinate2D!
+    var myMapLocation: CLLocationCoordinate2D {
+        get {
+            return _myMapLocation
+        }
+        set {
+            self._myMapLocation = newValue
+            self.updateNearServices()
+            self.mapView.clear()
+            self.collectionView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,15 +53,7 @@ class SearchController: UIViewController {
         
         self.mapView.delegate = self
         searchBar.delegate = self
-        
-        
-        //setting market info
-        self.myMarkerPoint.title = "My location"
-        self.myMarkerPoint.snippet = "Current location"
-        
-        //adding current position marker to map
-        self.myMarkerPoint.map = self.mapView
-        
+    
         //defining style to hide poi on google maps
         let myStyle = "[" +
             "  {" +
@@ -79,8 +84,6 @@ class SearchController: UIViewController {
         
         
         self.determineMyCurrentLocation()
-        
-        self.updateNearServices()
         
     }
     
@@ -129,10 +132,9 @@ class SearchController: UIViewController {
     
     func updateNearServices() {
         //updating near services
-        self.nearServices = self.servicerRepository.getServicersByLocation(location: self.myMarkerPoint.position, radius: 20)
-        
+        self.nearServices = self.servicerRepository.getServicersByLocation(location: self.myMapLocation, radius: 20)
     }
-        
+    
 }
 
 extension SearchController: CLLocationManagerDelegate {
@@ -146,9 +148,6 @@ extension SearchController: CLLocationManagerDelegate {
         let coordinate = self.currentLocation.coordinate
         
         self.mapView.camera = GMSCameraPosition(target: coordinate, zoom: self.currentMapZoom, bearing: 0, viewingAngle: 0)
-        
-        // Creates a marker in the center of the map.
-        self.myMarkerPoint.position = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
         
         //saving current zoom to next update
         self.currentMapZoom = self.mapView.camera.zoom
@@ -171,7 +170,7 @@ extension SearchController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
         
         self.locationManager.stopUpdatingLocation()
-        self.myMarkerPoint.position = position.target
+        self.myMapLocation = position.target
     }
 }
 
@@ -257,6 +256,7 @@ extension SearchController: UICollectionViewDataSource {
                 // a imagem recebida presica ser preenchida na main queue
                 DispatchQueue.main.async(execute: { () -> Void in
                     let image = UIImage(data: data!)
+                    cell.thumbnail.backgroundColor = UIColor.clear
                     cell.thumbnail.image = image
                 })
                 
@@ -264,15 +264,35 @@ extension SearchController: UICollectionViewDataSource {
         }
         
         cell.servicerName.text = currentServicer.name
-        cell.servicerCategory.text = currentServicer.categoryName
+        cell.servicerCategory.text = currentServicer.category?.name
+        
+        if let rating = currentServicer.rating {
+            cell.ratingView.setRating(rating: rating)
+        }
+        
         if(currentServicer is EstablishmentServicer) {
             let estServicer = currentServicer as! EstablishmentServicer
             
             if let estLocation = estServicer.location {
-                cell.servicerDistancy.text = " \(GMSGeometryDistance(self.myMarkerPoint.position, estLocation) / 1000) km"
+                let mapLocation = CLLocation(latitude: self.myMapLocation.latitude, longitude: self.myMapLocation.longitude)
+                
+                let servicerLocation = CLLocation(latitude: estLocation.latitude, longitude: estLocation.longitude)
+                
+                let distanceKm = mapLocation.distance(from: servicerLocation) / 1000  
+                
+                cell.servicerDistancy.text = " \(String(format: "%.1f", distanceKm)) km"
+                
+                //TODO I don't know if here is the best place to create the markers
+                let marker = GMSMarker()
+                marker.icon = estServicer.category?.getMarkerIcon()
+                marker.title = estServicer.name
+                marker.snippet = estServicer.category?.name
+                marker.position = estLocation
+                
+                marker.map = self.mapView
             }
             
-            cell.servicerInfo.text = estServicer.isOpen() ? "Open" : "Close"
+            cell.servicerInfo.text = estServicer.isOpen() ? "OPEN".localized : "CLOSED".localized
         }
         
     
