@@ -147,20 +147,23 @@ class SearchController: UIViewController {
     }
     
     func updateNearServices() {
-        //updating near services
-        self.nearServices = self.servicerRepository.getServicersByLocation(location: self.myMapLocation, radius: 20)
+        let currentRadius = self.getMapVisibleRadiusInKM()
+        print(currentRadius)
+        
+        self.nearServices = self.servicerRepository.getServicersByLocation(location: self.myMapLocation, radius: currentRadius)
     }
     
-    func getMapVisibleRadiusInKM() -> Double? {
+    func getMapVisibleRadiusInKM() -> Double {
         let center = CLLocation(latitude: self.myMapLocation.latitude, longitude: self.myMapLocation.longitude)
         //getting northEast point
-        if let neCoordinate = self.mapView.cameraTargetBounds?.northEast {
-            let neLocation = CLLocation(latitude: neCoordinate.latitude, longitude: neCoordinate.longitude)
-            
-            return center.distance(from: neLocation) / 1000
-        }
+        let farRightPosition = self.mapView.projection.visibleRegion().farRight
         
-        return nil
+        let farRight = CLLocation(latitude: farRightPosition.latitude, longitude: farRightPosition.longitude)
+        
+        let gms = GMSMarker(position: farRightPosition)
+        gms.map = self.mapView
+        
+        return center.distance(from: farRight) / 1000
         
     }
     
