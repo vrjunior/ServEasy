@@ -30,7 +30,13 @@ class ServicerRepository: Repository {
                 establishmentService.phone = esDictionary["phone"] as? String!
                 establishmentService.rating = esDictionary["rating"] as? Float!
                 establishmentService.thumbnailUrl = esDictionary["thumbnailUrl"] as? String!
-                establishmentService.categoryName = esDictionary["categoryName"] as? String!
+                
+                
+                //TODO remove this force unwraper
+                let categoryDic = esDictionary["category"] as! [String:AnyObject]
+                let categoryId = categoryDic["id"] as! Int
+                let categoryName = categoryDic["name"] as! String
+                establishmentService.category = Category(id: categoryId, name: categoryName)
                 
                 let llatitude = esDictionary["locationLatitude"] as? Double!
                 let llongitude = esDictionary["locationLongitude"] as? Double!

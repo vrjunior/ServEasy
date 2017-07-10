@@ -36,6 +36,7 @@ class SearchController: UIViewController {
         set {
             self._myMapLocation = newValue
             self.updateNearServices()
+            self.mapView.clear()
             self.collectionView.reloadData()
         }
     }
@@ -133,7 +134,7 @@ class SearchController: UIViewController {
         //updating near services
         self.nearServices = self.servicerRepository.getServicersByLocation(location: self.myMapLocation, radius: 20)
     }
-        
+    
 }
 
 extension SearchController: CLLocationManagerDelegate {
@@ -263,7 +264,7 @@ extension SearchController: UICollectionViewDataSource {
         }
         
         cell.servicerName.text = currentServicer.name
-        cell.servicerCategory.text = currentServicer.categoryName
+        cell.servicerCategory.text = currentServicer.category?.name
         
         if let rating = currentServicer.rating {
             cell.ratingView.setRating(rating: rating)
@@ -280,6 +281,15 @@ extension SearchController: UICollectionViewDataSource {
                 let distanceKm = mapLocation.distance(from: servicerLocation) / 1000  
                 
                 cell.servicerDistancy.text = " \(String(format: "%.1f", distanceKm)) km"
+                
+                //TODO I don't know if here is the best place to create the markers
+                let marker = GMSMarker()
+                marker.icon = estServicer.category?.getMarkerIcon()
+                marker.title = estServicer.name
+                marker.snippet = estServicer.category?.name
+                marker.position = estLocation
+                
+                marker.map = self.mapView
             }
             
             cell.servicerInfo.text = estServicer.isOpen() ? "OPEN".localized : "CLOSED".localized
