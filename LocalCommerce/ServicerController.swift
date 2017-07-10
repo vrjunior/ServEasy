@@ -23,13 +23,14 @@ class ServicerController : UIViewController {
     @IBOutlet weak var servicerCity: UILabel!
     @IBOutlet weak var servicerIsOpen: UILabel!
     
+    
+    public var currentServicer:Servicer?
+    
     @IBAction func budgetButton(_ sender: Any) {
         
     }
     
-    
-    
-    
+
     
     override func viewDidLoad() {
         
@@ -37,6 +38,10 @@ class ServicerController : UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = true
+        
+        if let servicer = currentServicer {
+            print(servicer.name)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
