@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  LocalCommerce
+
+  Created by vrjunior on 07/07/17.
+  Copyright © 2017 Valmir Junior. All rights reserved.
+*/
+
+"OPEN" = "Aberto";
+"CLOSED" = "Fechado";
+"MY_LOCATION" = "Minha localização";
+"MY_CURRENT_LOCATION" = "Minha localização atual";

@@ -13,7 +13,7 @@ class Servicer {
     public var cnpj:String?
     public var rating: Float?
     public var phone: String?
-    public var categoryName: String?
+    public var category: Category?
     public var thumbnailUrl: String?
     
 }

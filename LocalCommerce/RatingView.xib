@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RatingView" customModule="LocalCommerce" customModuleProvider="target">
+            <connections>
+                <outletCollection property="stars" destination="eUg-9T-aCX" collectionClass="NSMutableArray" id="Iww-DW-Rgf"/>
+                <outletCollection property="stars" destination="MxL-Z7-Dcc" collectionClass="NSMutableArray" id="5BB-Oc-g9y"/>
+                <outletCollection property="stars" destination="WOU-4w-jbd" collectionClass="NSMutableArray" id="sQp-Rp-a43"/>
+                <outletCollection property="stars" destination="Y67-Yq-ipr" collectionClass="NSMutableArray" id="taK-x5-TlN"/>
+                <outletCollection property="stars" destination="1QJ-4f-27A" collectionClass="NSMutableArray" id="PWr-4V-XI9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="bHk-4U-krw">
+            <rect key="frame" x="0.0" y="0.0" width="322" height="58"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUg-9T-aCX">
+                    <rect key="frame" x="0.0" y="0.0" width="58" height="58"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="eUg-9T-aCX" secondAttribute="height" multiplier="1:1" id="4M6-bo-N0d"/>
+                    </constraints>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.11924913194444445" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" image="emptyStar"/>
+                    <connections>
+                        <action selector="starPressedWithSender:" destination="-1" eventType="touchUpInside" id="cMr-R1-goE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxL-Z7-Dcc">
+                    <rect key="frame" x="62" y="0.0" width="58" height="58"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="MxL-Z7-Dcc" secondAttribute="height" multiplier="1:1" id="YDM-0b-XN0"/>
+                    </constraints>
+                    <state key="normal" image="emptyStar"/>
+                    <connections>
+                        <action selector="starPressedWithSender:" destination="-1" eventType="touchUpInside" id="7hw-cF-sZn"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOU-4w-jbd">
+                    <rect key="frame" x="124" y="0.0" width="58" height="58"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="WOU-4w-jbd" secondAttribute="height" multiplier="1:1" id="yPZ-Qa-P04"/>
+                    </constraints>
+                    <state key="normal" image="emptyStar"/>
+                    <connections>
+                        <action selector="starPressedWithSender:" destination="-1" eventType="touchUpInside" id="vpy-Gn-R8e"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y67-Yq-ipr">
+                    <rect key="frame" x="186" y="0.0" width="58" height="58"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Y67-Yq-ipr" secondAttribute="height" multiplier="1:1" id="B4X-iL-EPd"/>
+                    </constraints>
+                    <state key="normal" image="emptyStar"/>
+                    <connections>
+                        <action selector="starPressedWithSender:" destination="-1" eventType="touchUpInside" id="05d-z8-IEx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QJ-4f-27A">
+                    <rect key="frame" x="248" y="0.0" width="58" height="58"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="1QJ-4f-27A" secondAttribute="height" multiplier="1:1" id="haY-Fp-ITX"/>
+                    </constraints>
+                    <state key="normal" image="emptyStar"/>
+                    <connections>
+                        <action selector="starPressedWithSender:" destination="-1" eventType="touchUpInside" id="ACH-QO-UYk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="eUg-9T-aCX" firstAttribute="top" secondItem="bHk-4U-krw" secondAttribute="top" id="0SI-Je-ANy"/>
+                <constraint firstItem="1QJ-4f-27A" firstAttribute="height" secondItem="Y67-Yq-ipr" secondAttribute="height" id="5Km-lc-KKk"/>
+                <constraint firstItem="WOU-4w-jbd" firstAttribute="leading" secondItem="MxL-Z7-Dcc" secondAttribute="trailing" constant="4" id="Cvt-IS-ZhM"/>
+                <constraint firstItem="MxL-Z7-Dcc" firstAttribute="leading" secondItem="eUg-9T-aCX" secondAttribute="trailing" constant="4" id="E3w-KM-yNc"/>
+                <constraint firstItem="Y67-Yq-ipr" firstAttribute="leading" secondItem="WOU-4w-jbd" secondAttribute="trailing" constant="4" id="HAO-M1-aAB"/>
+                <constraint firstItem="WOU-4w-jbd" firstAttribute="height" secondItem="MxL-Z7-Dcc" secondAttribute="height" id="RDC-6e-2Mt"/>
+                <constraint firstItem="MxL-Z7-Dcc" firstAttribute="height" secondItem="eUg-9T-aCX" secondAttribute="height" id="V7m-W1-CSu"/>
+                <constraint firstItem="eUg-9T-aCX" firstAttribute="leading" secondItem="bHk-4U-krw" secondAttribute="leading" id="WJ0-Y3-Ggt"/>
+                <constraint firstItem="MxL-Z7-Dcc" firstAttribute="top" secondItem="eUg-9T-aCX" secondAttribute="top" id="Xff-zA-BJE"/>
+                <constraint firstItem="1QJ-4f-27A" firstAttribute="leading" secondItem="Y67-Yq-ipr" secondAttribute="trailing" constant="4" id="fjf-96-V8N"/>
+                <constraint firstItem="Y67-Yq-ipr" firstAttribute="height" secondItem="WOU-4w-jbd" secondAttribute="height" id="hkC-OX-6PC"/>
+                <constraint firstItem="eUg-9T-aCX" firstAttribute="height" secondItem="bHk-4U-krw" secondAttribute="height" id="jaM-IW-eWU"/>
+                <constraint firstItem="WOU-4w-jbd" firstAttribute="top" secondItem="MxL-Z7-Dcc" secondAttribute="top" id="m1z-oI-zpa"/>
+                <constraint firstItem="1QJ-4f-27A" firstAttribute="top" secondItem="Y67-Yq-ipr" secondAttribute="top" id="qsD-Hb-EC5"/>
+                <constraint firstItem="Y67-Yq-ipr" firstAttribute="top" secondItem="WOU-4w-jbd" secondAttribute="top" id="xIi-KA-sUJ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="O8i-F8-N8B" appends="YES" id="X5W-e3-Jdc"/>
+            </connections>
+            <point key="canvasLocation" x="-20" y="-333"/>
+        </view>
+        <tapGestureRecognizer id="O8i-F8-N8B">
+            <connections>
+                <action selector="viewTapped:" destination="-1" id="4QI-Pw-Wvt"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="emptyStar" width="100" height="100"/>
+    </resources>
+</document>
