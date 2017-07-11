@@ -34,7 +34,7 @@ class ServicerController : UIViewController {
 
     
     override func viewDidLoad() {
-        
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,14 +61,14 @@ class ServicerController : UIViewController {
             }else if servicer is NonEstablishmentServicer{
                 let neServicer = servicer as! NonEstablishmentServicer
                 
-                self.servicerTimeDistance.text = "\(String(describing: servicer.name)) works on your area"
-                var cities:String = "Better"
+                self.servicerTimeDistance.text = "\(servicer.name ?? "") works on your area"
+                var cities:String = String()
             
                 //dando erro em self.servicerCity.text
                 //VALMIR SALVA NOIS! E VE O JSON
                 if let servedCities = neServicer.servedCities {
-                    for city in servedCities{
-                        cities += String(city) + " "
+                    for city in servedCities {
+                        cities += city + " "
                     }
                     self.servicerCity.text = cities
                 }
