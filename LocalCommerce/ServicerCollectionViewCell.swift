@@ -16,4 +16,5 @@ class ServicerCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var ratingView: RatingView!
     @IBOutlet weak var servicerDistancy: UILabel!
     @IBOutlet weak var servicerInfo: UILabel!
+    @IBOutlet weak var separatorView: UIView!
 }

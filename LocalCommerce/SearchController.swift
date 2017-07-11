@@ -37,8 +37,8 @@ class SearchController: UIViewController {
         }
         set {
             self._myMapLocation = newValue
-            self.updateNearServices()
             self.mapView.clear()
+            self.updateNearServices()
             self.collectionView.reloadData()
         }
     }
@@ -148,7 +148,6 @@ class SearchController: UIViewController {
     
     func updateNearServices() {
         let currentRadius = self.getMapVisibleRadiusInKM()
-        print(currentRadius)
         
         self.nearServices = self.servicerRepository.getServicersByLocation(location: self.myMapLocation, radius: currentRadius)
     }
@@ -160,9 +159,7 @@ class SearchController: UIViewController {
         
         let farRight = CLLocation(latitude: farRightPosition.latitude, longitude: farRightPosition.longitude)
         
-        let gms = GMSMarker(position: farRightPosition)
-        gms.map = self.mapView
-        
+        //return the distance in km
         return center.distance(from: farRight) / 1000
         
     }
@@ -204,8 +201,13 @@ extension SearchController: GMSMapViewDelegate {
         return true
     }
     
-    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+    //func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
         
+    //    self.locationManager.stopUpdatingLocation()
+    //    self.myMapLocation = position.target
+    //}
+    
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
         self.locationManager.stopUpdatingLocation()
         self.myMapLocation = position.target
     }
@@ -324,16 +326,13 @@ extension SearchController: UICollectionViewDataSource {
                 marker.position = estLocation
                 
                 marker.map = self.mapView
+                cell.separatorView.isHidden = false
+                cell.servicerInfo.text = estServicer.isOpen() ? "OPEN".localized : "CLOSED".localized
             }
-            
-            cell.servicerInfo.text = estServicer.isOpen() ? "OPEN".localized : "CLOSED".localized
-        }else{
-            let nestServicer = currentServicer as! NonEstablishmentServicer
-            
-            let marker = GMSMarker()
-            marker.icon = nestServicer.category?.getMarkerIcon()
-            marker.title = nestServicer.name
-            marker.snippet = nestServicer.category?.name
+        } else if currentServicer is NonEstablishmentServicer {
+            cell.servicerDistancy.text = "WORKS_ON_AREA".localized
+            cell.separatorView.isHidden = true
+            cell.servicerInfo.text = ""
             
         }
         

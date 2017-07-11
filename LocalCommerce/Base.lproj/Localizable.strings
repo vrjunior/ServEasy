@@ -11,3 +11,4 @@
 "MY_LOCATION" = "My Location";
 "MY_CURRENT_LOCATION" = "My current location";
 "DISTANCE_MSG" = "%.1f km from your point";
+"WORKS_ON_AREA" = "Works on this area";

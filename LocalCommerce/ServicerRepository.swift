@@ -69,8 +69,10 @@ class ServicerRepository: Repository {
               
                 //essas duas linhas tenho ctz que estao erradas!
                 
-                nonEstablishmentService.servedCities?.append((nesDictionary["addressCity"] as? String!)!)
-                nonEstablishmentService.servedUFCities?.append((nesDictionary["addressUF"] as? String!)!)
+                let nesCities = nesDictionary["cities"] as? [String]!
+                let nesCitiesUF = nesDictionary["citiesUF"] as? [String]!
+                nonEstablishmentService.servedCities = nesCities
+                nonEstablishmentService.servedUFCities = nesCitiesUF
                 
                 services.append(nonEstablishmentService)
             }
