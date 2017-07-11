@@ -12,10 +12,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Servicer-->
         <scene sceneID="AR4-lc-Ckr">
             <objects>
-                <viewController storyboardIdentifier="Servicer" id="lbY-FW-iGf" customClass="ServicerController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Servicer" title="Servicer" id="lbY-FW-iGf" customClass="ServicerController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aue-W3-cqx"/>
                         <viewControllerLayoutGuide type="bottom" id="W2a-2f-vpE"/>
@@ -327,7 +327,7 @@
                             <constraint firstItem="W2a-2f-vpE" firstAttribute="top" secondItem="brj-lm-mtx" secondAttribute="bottom" id="xs2-UZ-5Tv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="c0a-nB-P6x">
+                    <navigationItem key="navigationItem" title="Servicer" id="c0a-nB-P6x">
                         <rightBarButtonItems>
                             <barButtonItem image="shareNavigationIcon" id="jma-Xb-Cjh">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
