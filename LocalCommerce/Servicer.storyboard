@@ -333,8 +333,11 @@
                             <barButtonItem image="shareNavigationIcon" id="jma-Xb-Cjh">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </barButtonItem>
-                            <barButtonItem image="Favorite" id="dcD-ij-hHY">
+                            <barButtonItem image="favorite" id="dcD-ij-hHY">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="onTapFavoriteButton:" destination="lbY-FW-iGf" id="1pA-rN-IGN"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -342,6 +345,7 @@
                     <size key="freeformSize" width="375" height="1200"/>
                     <connections>
                         <outlet property="addressIcon" destination="Qsd-EW-wId" id="b5z-06-xkz"/>
+                        <outlet property="favoriteButton" destination="dcD-ij-hHY" id="t0H-2a-7qY"/>
                         <outlet property="scrollView" destination="brj-lm-mtx" id="K3d-ZA-i2n"/>
                         <outlet property="servicerAdress" destination="hKt-Lx-Wc6" id="wUw-ti-Fa8"/>
                         <outlet property="servicerCategory" destination="I9h-HQ-jkR" id="fwW-kg-toq"/>
@@ -379,8 +383,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Favorite" width="25" height="25"/>
         <image name="addressIcon" width="100" height="100"/>
+        <image name="favorite" width="25" height="25"/>
         <image name="phoneIcon" width="100" height="100"/>
         <image name="routeIcon" width="16" height="16"/>
         <image name="shareNavigationIcon" width="25" height="25"/>

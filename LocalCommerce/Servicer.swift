@@ -9,6 +9,7 @@
 import Foundation
 
 class Servicer {
+    public var id:Int?
     public var name:String?
     public var cnpj:String?
     public var rating: Float?

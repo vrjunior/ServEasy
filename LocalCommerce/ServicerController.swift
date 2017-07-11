@@ -8,9 +8,12 @@
 
 import UIKit
 import CoreLocation
+import CoreData
 
 class ServicerController : UIViewController {
     
+    
+    @IBOutlet weak var favoriteButton: UIBarButtonItem!
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var servicerImage: UIImageView!
@@ -24,17 +27,26 @@ class ServicerController : UIViewController {
     @IBOutlet weak var servicerCity: UILabel!
     @IBOutlet weak var servicerIsOpen: UILabel!
     
+    
     @IBOutlet weak var addressIcon: UIImageView!
     public var myMapLocation : CLLocationCoordinate2D?
     public var currentServicer:Servicer?
+    
+    let favoriteAccessLayer = FavoriteAccessLayer()
+    var isFavorite: Bool = false
     
     @IBAction func budgetButton(_ sender: Any) {
         
     }
     
-
-    
     override func viewDidLoad() {
+        
+        //check if servicer is favorite
+        self.isFavorite = self.favoriteAccessLayer.isServicerFavorite(id: self.currentServicer!.id!)
+        if(isFavorite) {
+            self.favoriteButton.image = UIImage(named: "favoriteFilled")
+        }
+        
         if let servicer = currentServicer {
             print(servicer.name!)
             self.servicerName.text = servicer.name
@@ -91,5 +103,40 @@ class ServicerController : UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
     }
+    
+    @IBAction func onTapFavoriteButton(_ sender: UIBarButtonItem) {
+        if(isFavorite) {
+            let formartedMsg = String.init(format: "UNFAVORITE_ALERT_MSG".localized, self.currentServicer!.name!)
+            
+            let alert = UIAlertController(title: "UNFAVORITE_ALERT_TITLE".localized, message: formartedMsg, preferredStyle: .alert)
+        
+            alert.addAction(UIAlertAction(title: "CANCEL".localized, style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "UNFAVORITE".localized, style: .destructive, handler: { action in
+                switch action.style{
+                case .default:
+                    print("default")
+                    
+                case .cancel:
+                    print("cancel")
+                    
+                case .destructive:
+                    self.favoriteAccessLayer.unfavoriteServicer(byId: self.currentServicer!.id!)
+                    self.favoriteButton.image = UIImage(named: "favorite")
+                    self.isFavorite = false
+                }
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+        else {
+            self.favoriteAccessLayer.favoriteServicer(byId: self.currentServicer!.id!)
+            self.favoriteButton.image = UIImage(named: "favoriteFilled")
+            self.isFavorite = true
+        }
+    }
+    
+    
+    
     
 }

@@ -45,6 +45,7 @@
 		D296002A1F0D7E3E00CDFB1B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29600291F0D7E3E00CDFB1B /* UIColor.swift */; };
 		D2B2D4FA1F153C6800DDFB46 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D2B2D4F81F153C6800DDFB46 /* Model.xcdatamodeld */; };
 		D2B2D5091F15408800DDFB46 /* CoraDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B2D5081F15408800DDFB46 /* CoraDataManager.swift */; };
+		D2B2D5111F155DE800DDFB46 /* FavoriteAccessLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B2D5101F155DE800DDFB46 /* FavoriteAccessLayer.swift */; };
 		D2B474F91F0F0FFC0058DDEA /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B474F81F0F0FFC0058DDEA /* UIButton.swift */; };
 		D2B474FD1F0F187C0058DDEA /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B474FC1F0F187C0058DDEA /* Repository.swift */; };
 		D2B474FF1F0F3AC20058DDEA /* services.json in Resources */ = {isa = PBXBuildFile; fileRef = D2B474FE1F0F3AC20058DDEA /* services.json */; };
@@ -95,6 +96,7 @@
 		D29600291F0D7E3E00CDFB1B /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		D2B2D4F91F153C6800DDFB46 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		D2B2D5081F15408800DDFB46 /* CoraDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoraDataManager.swift; sourceTree = "<group>"; };
+		D2B2D5101F155DE800DDFB46 /* FavoriteAccessLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteAccessLayer.swift; sourceTree = "<group>"; };
 		D2B474F81F0F0FFC0058DDEA /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		D2B474FC1F0F187C0058DDEA /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		D2B474FE1F0F3AC20058DDEA /* services.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = services.json; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				D2B474FE1F0F3AC20058DDEA /* services.json */,
 				D2EE5D1A1F0590D1008B86A1 /* ServicerRepository.swift */,
 				D2B474FC1F0F187C0058DDEA /* Repository.swift */,
+				D2B2D5101F155DE800DDFB46 /* FavoriteAccessLayer.swift */,
 			);
 			name = Repositories;
 			sourceTree = "<group>";
@@ -380,7 +383,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -393,6 +396,7 @@
 				A91341B41F057E6B00B21EEA /* ServicerCollectionViewCell.swift in Sources */,
 				A91341B61F0EAC1600B21EEA /* SearchFilterViewController.swift in Sources */,
 				D2EE5D1B1F0590D1008B86A1 /* ServicerRepository.swift in Sources */,
+				D2B2D5111F155DE800DDFB46 /* FavoriteAccessLayer.swift in Sources */,
 				D290D9B41F02EA9C007B44D6 /* ProfileController.swift in Sources */,
 				D22409DE1F040C34006848A0 /* Review.swift in Sources */,
 				D22E779A1F0AB8690009DD4E /* BudgetMessage.swift in Sources */,

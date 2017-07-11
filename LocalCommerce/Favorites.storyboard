@@ -112,7 +112,7 @@
                             <constraint firstItem="uNx-jO-4DX" firstAttribute="leading" secondItem="6T3-W8-bsy" secondAttribute="leading" id="scf-ad-vpD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorites" image="Favorite" selectedImage="Favoroite Highlight" id="buQ-G3-bcO" userLabel="Favorites"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="favorite" id="buQ-G3-bcO" userLabel="Favorites"/>
                     <navigationItem key="navigationItem" title="Favorites" id="8NN-4r-qAy"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -122,7 +122,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Favorite" width="25" height="25"/>
-        <image name="Favoroite Highlight" width="25" height="25"/>
+        <image name="favorite" width="25" height="25"/>
     </resources>
 </document>
