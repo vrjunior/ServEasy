@@ -26,16 +26,43 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EJZ-Jz-DFC">
-                                <rect key="frame" x="-16" y="153" width="407" height="457"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="126" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EJZ-Jz-DFC">
+                                <rect key="frame" x="0.0" y="153" width="375" height="465"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fLQ-TS-3Vy">
-                                        <rect key="frame" x="0.0" y="28" width="407" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="budgetCell" selectionStyle="default" indentationWidth="10" rowHeight="126" id="fLQ-TS-3Vy">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="126"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fLQ-TS-3Vy" id="CUT-iX-IER">
-                                            <rect key="frame" x="0.0" y="0.0" width="407" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="125.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cvO-Vs-Eml">
+                                                    <rect key="frame" x="8" y="11" width="124" height="102"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pintura das paredes da sala" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZo-fw-TZY">
+                                                    <rect key="frame" x="140" y="11" width="220" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prazo: 22/07/2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v76-Gp-0T0">
+                                                    <rect key="frame" x="140" y="92" width="140" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pintura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBB-yV-Zos">
+                                                    <rect key="frame" x="140" y="37" width="55" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -51,20 +78,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="h1z-pg-ECL" firstAttribute="top" secondItem="EJZ-Jz-DFC" secondAttribute="bottom" constant="8" id="4Z0-PB-lrH"/>
+                            <constraint firstItem="h1z-pg-ECL" firstAttribute="top" secondItem="EJZ-Jz-DFC" secondAttribute="bottom" id="4Z0-PB-lrH"/>
                             <constraint firstItem="1dn-O5-4se" firstAttribute="centerX" secondItem="1J0-8O-9uH" secondAttribute="centerX" id="LIk-ca-DPU"/>
                             <constraint firstItem="1dn-O5-4se" firstAttribute="top" secondItem="Ugl-zf-ae7" secondAttribute="bottom" id="LaF-WM-E2c"/>
                             <constraint firstItem="EJZ-Jz-DFC" firstAttribute="top" secondItem="1dn-O5-4se" secondAttribute="bottom" constant="17" id="PEw-TF-Z8A"/>
-                            <constraint firstItem="EJZ-Jz-DFC" firstAttribute="leading" secondItem="1J0-8O-9uH" secondAttribute="leading" constant="-16" id="RGD-Lv-Ou5"/>
+                            <constraint firstItem="EJZ-Jz-DFC" firstAttribute="leading" secondItem="1J0-8O-9uH" secondAttribute="leading" id="RGD-Lv-Ou5"/>
                             <constraint firstItem="Ugl-zf-ae7" firstAttribute="top" secondItem="uO3-8s-EJ7" secondAttribute="bottom" id="XZg-CL-hdq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ugl-zf-ae7" secondAttribute="trailing" constant="-16" id="bNP-yS-JAN"/>
                             <constraint firstItem="h1z-pg-ECL" firstAttribute="top" secondItem="Ugl-zf-ae7" secondAttribute="bottom" constant="510" id="l3w-FW-Hks"/>
                             <constraint firstItem="Ugl-zf-ae7" firstAttribute="leading" secondItem="1J0-8O-9uH" secondAttribute="leadingMargin" constant="-16" id="sk3-eg-C7g"/>
-                            <constraint firstAttribute="trailing" secondItem="EJZ-Jz-DFC" secondAttribute="trailing" constant="-16" id="tPn-1O-uc7"/>
+                            <constraint firstAttribute="trailing" secondItem="EJZ-Jz-DFC" secondAttribute="trailing" id="tPn-1O-uc7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Budgets" image="Budget" selectedImage="Budget Highlight" id="UPq-L8-DH9" userLabel="Sales"/>
-                    <navigationItem key="navigationItem" title="Budgets" id="SOh-Go-lbc"/>
+                    <navigationItem key="navigationItem" title="Budgets" id="SOh-Go-lbc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gWz-hj-Qfq">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADW-Tc-rph" userLabel="First Responder" sceneMemberID="firstResponder"/>

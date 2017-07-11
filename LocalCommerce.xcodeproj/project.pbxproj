@@ -11,6 +11,7 @@
 		3F9282251F0D885E009E0AA6 /* Servicer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9282241F0D885E009E0AA6 /* Servicer.storyboard */; };
 		3FB283551F0EC86F007C614A /* ServicerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB283541F0EC86F007C614A /* ServicerController.swift */; };
 		3FB283571F0ECCB5007C614A /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB283561F0ECCB5007C614A /* Filter.storyboard */; };
+		3FFBA8FE1F154D7D005A315D /* NewBudget.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFBA8FD1F154D7D005A315D /* NewBudget.storyboard */; };
 		A91341B41F057E6B00B21EEA /* ServicerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91341B31F057E6B00B21EEA /* ServicerCollectionViewCell.swift */; };
 		A91341B61F0EAC1600B21EEA /* SearchFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91341B51F0EAC1600B21EEA /* SearchFilterViewController.swift */; };
 		A91341B81F0EBBE100B21EEA /* SearchFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91341B71F0EBBE100B21EEA /* SearchFilterTableViewCell.swift */; };
@@ -52,6 +53,7 @@
 		3F9282241F0D885E009E0AA6 /* Servicer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Servicer.storyboard; sourceTree = "<group>"; };
 		3FB283541F0EC86F007C614A /* ServicerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicerController.swift; sourceTree = "<group>"; };
 		3FB283561F0ECCB5007C614A /* Filter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
+		3FFBA8FD1F154D7D005A315D /* NewBudget.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewBudget.storyboard; sourceTree = "<group>"; };
 		78DEBD75B1AAFE33A2CED470 /* Pods-LocalCommerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalCommerce.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocalCommerce/Pods-LocalCommerce.release.xcconfig"; sourceTree = "<group>"; };
 		A91341B31F057E6B00B21EEA /* ServicerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicerCollectionViewCell.swift; sourceTree = "<group>"; };
 		A91341B51F0EAC1600B21EEA /* SearchFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFilterViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				3F9282241F0D885E009E0AA6 /* Servicer.storyboard */,
 				D290D9A71F02E245007B44D6 /* Favorites.storyboard */,
 				D290D9AA1F02E277007B44D6 /* Budgets.storyboard */,
+				3FFBA8FD1F154D7D005A315D /* NewBudget.storyboard */,
 				D290D9AC1F02E290007B44D6 /* Profile.storyboard */,
 				D290D99C1F02E15F007B44D6 /* LaunchScreen.storyboard */,
 				3FB283561F0ECCB5007C614A /* Filter.storyboard */,
@@ -305,6 +308,7 @@
 				D281E6261F1021D9003B3DED /* Localizable.strings in Resources */,
 				D290D9AB1F02E277007B44D6 /* Budgets.storyboard in Resources */,
 				3FB283571F0ECCB5007C614A /* Filter.storyboard in Resources */,
+				3FFBA8FE1F154D7D005A315D /* NewBudget.storyboard in Resources */,
 				3F9282251F0D885E009E0AA6 /* Servicer.storyboard in Resources */,
 				D290D9B61F02F4D5007B44D6 /* Podfile in Resources */,
 				D2B474FF1F0F3AC20058DDEA /* services.json in Resources */,
@@ -362,7 +366,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
