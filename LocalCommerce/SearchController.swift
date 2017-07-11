@@ -329,7 +329,7 @@ extension SearchController: UICollectionViewDataSource {
                 cell.separatorView.isHidden = false
                 cell.servicerInfo.text = estServicer.isOpen() ? "OPEN".localized : "CLOSED".localized
             }
-        } else if currentServicer is NonEstablishmentServicer {
+        } else {
             cell.servicerDistancy.text = "WORKS_ON_AREA".localized
             cell.separatorView.isHidden = true
             cell.servicerInfo.text = ""
