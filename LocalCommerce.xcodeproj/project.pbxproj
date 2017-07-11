@@ -42,6 +42,8 @@
 		D290D9B41F02EA9C007B44D6 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D290D9B31F02EA9C007B44D6 /* ProfileController.swift */; };
 		D290D9B61F02F4D5007B44D6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D290D9B51F02F4D5007B44D6 /* Podfile */; };
 		D296002A1F0D7E3E00CDFB1B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29600291F0D7E3E00CDFB1B /* UIColor.swift */; };
+		D2B2D4FA1F153C6800DDFB46 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D2B2D4F81F153C6800DDFB46 /* Model.xcdatamodeld */; };
+		D2B2D5091F15408800DDFB46 /* CoraDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B2D5081F15408800DDFB46 /* CoraDataManager.swift */; };
 		D2B474F91F0F0FFC0058DDEA /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B474F81F0F0FFC0058DDEA /* UIButton.swift */; };
 		D2B474FD1F0F187C0058DDEA /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B474FC1F0F187C0058DDEA /* Repository.swift */; };
 		D2B474FF1F0F3AC20058DDEA /* services.json in Resources */ = {isa = PBXBuildFile; fileRef = D2B474FE1F0F3AC20058DDEA /* services.json */; };
@@ -89,6 +91,8 @@
 		D290D9B31F02EA9C007B44D6 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		D290D9B51F02F4D5007B44D6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
 		D29600291F0D7E3E00CDFB1B /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		D2B2D4F91F153C6800DDFB46 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		D2B2D5081F15408800DDFB46 /* CoraDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoraDataManager.swift; sourceTree = "<group>"; };
 		D2B474F81F0F0FFC0058DDEA /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		D2B474FC1F0F187C0058DDEA /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		D2B474FE1F0F3AC20058DDEA /* services.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = services.json; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 		D22409D81F0409BE006848A0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D2B2D4FB1F153D5800DDFB46 /* CoreData */,
 				D22409D91F0409E7006848A0 /* Servicer.swift */,
 				D22409DB1F040BE6006848A0 /* User.swift */,
 				D22409DD1F040C34006848A0 /* Review.swift */,
@@ -207,6 +212,15 @@
 				3FB283541F0EC86F007C614A /* ServicerController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D2B2D4FB1F153D5800DDFB46 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D2B2D4F81F153C6800DDFB46 /* Model.xcdatamodeld */,
+				D2B2D5081F15408800DDFB46 /* CoraDataManager.swift */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		D2B474FA1F0F18470058DDEA /* Overrides */ = {
@@ -381,8 +395,10 @@
 				D281E62F1F1024AD003B3DED /* String.swift in Sources */,
 				D290D9B21F02EA7A007B44D6 /* BudgetsController.swift in Sources */,
 				D239EABB1F12F1DF003C6BEC /* RatingView.swift in Sources */,
+				D2B2D5091F15408800DDFB46 /* CoraDataManager.swift in Sources */,
 				D22409DA1F0409E7006848A0 /* Servicer.swift in Sources */,
 				D290D9B01F02EA4F007B44D6 /* FavoritesController.swift in Sources */,
+				D2B2D4FA1F153C6800DDFB46 /* Model.xcdatamodeld in Sources */,
 				D2B474FD1F0F187C0058DDEA /* Repository.swift in Sources */,
 				A91341B81F0EBBE100B21EEA /* SearchFilterTableViewCell.swift in Sources */,
 				D22E77921F0AAB290009DD4E /* Budget.swift in Sources */,
@@ -591,6 +607,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D2B2D4F81F153C6800DDFB46 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D2B2D4F91F153C6800DDFB46 /* Model.xcdatamodel */,
+			);
+			currentVersion = D2B2D4F91F153C6800DDFB46 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = ../Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D290D9881F02E15F007B44D6 /* Project object */;
 }
