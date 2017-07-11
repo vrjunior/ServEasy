@@ -24,6 +24,7 @@ class ServicerController : UIViewController {
     @IBOutlet weak var servicerCity: UILabel!
     @IBOutlet weak var servicerIsOpen: UILabel!
     
+    @IBOutlet weak var addressIcon: UIImageView!
     public var myMapLocation : CLLocationCoordinate2D?
     public var currentServicer:Servicer?
     
@@ -34,12 +35,6 @@ class ServicerController : UIViewController {
 
     
     override func viewDidLoad() {
-    
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.tabBar.isHidden = true
-        
         if let servicer = currentServicer {
             print(servicer.name!)
             self.servicerName.text = servicer.name
@@ -61,20 +56,34 @@ class ServicerController : UIViewController {
             }else if servicer is NonEstablishmentServicer{
                 let neServicer = servicer as! NonEstablishmentServicer
                 
+                self.addressIcon.isHidden = true
+                self.servicerAdress.isHidden = true
+                self.servicerCity.isHidden = true
+                
+                
                 self.servicerTimeDistance.text = "\(servicer.name ?? "") works on your area"
                 var cities:String = String()
-            
-                //dando erro em self.servicerCity.text
-                //VALMIR SALVA NOIS! E VE O JSON
-                if let servedCities = neServicer.servedCities {
-                    for city in servedCities {
-                        cities += city + " "
-                    }
-                    self.servicerCity.text = cities
-                }
                 
+                if let servedCities = neServicer.servedCities {
+                    if let servedUFCities = neServicer.servedUFCities{
+                        
+                        for i in 0 ..< servedUFCities.count{
+                            cities += servedCities[i] + " - " + servedUFCities[i]
+                            if i < servedUFCities.count - 1{
+                                cities += ", "
+                            }
+                        }
+                        
+                    }
+                    
+                }
+                self.servicerTimeDistance.text = cities
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
         
         
     }

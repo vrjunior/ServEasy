@@ -236,6 +236,7 @@
                                             <constraint firstItem="gRe-wS-8qv" firstAttribute="leading" secondItem="gDA-1x-tcM" secondAttribute="trailing" constant="13" id="XUt-KR-s8i"/>
                                             <constraint firstItem="Vce-Gj-lLn" firstAttribute="width" secondItem="ak6-gm-S6y" secondAttribute="width" id="YHl-Il-tma"/>
                                             <constraint firstItem="JHY-CL-GIP" firstAttribute="top" secondItem="2db-e6-Bf4" secondAttribute="bottom" constant="12" id="ZII-Ar-nMR"/>
+                                            <constraint firstItem="vcA-dc-8UU" firstAttribute="top" secondItem="zDc-NM-IRK" secondAttribute="bottom" priority="250" constant="6" id="aIv-j6-We9"/>
                                             <constraint firstItem="gDA-1x-tcM" firstAttribute="top" secondItem="vcA-dc-8UU" secondAttribute="bottom" constant="6" id="bYD-XJ-U3G"/>
                                             <constraint firstItem="hWX-Ko-SfI" firstAttribute="leading" secondItem="ak6-gm-S6y" secondAttribute="leadingMargin" id="chx-e9-ewS"/>
                                             <constraint firstItem="hKt-Lx-Wc6" firstAttribute="leading" secondItem="Qsd-EW-wId" secondAttribute="trailing" constant="14" id="d1m-ks-ejR"/>
@@ -340,6 +341,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1200"/>
                     <connections>
+                        <outlet property="addressIcon" destination="Qsd-EW-wId" id="b5z-06-xkz"/>
                         <outlet property="scrollView" destination="brj-lm-mtx" id="K3d-ZA-i2n"/>
                         <outlet property="servicerAdress" destination="hKt-Lx-Wc6" id="wUw-ti-Fa8"/>
                         <outlet property="servicerCategory" destination="I9h-HQ-jkR" id="fwW-kg-toq"/>
