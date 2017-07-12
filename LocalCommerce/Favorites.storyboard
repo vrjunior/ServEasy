@@ -18,6 +18,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="a5X-4J-QLJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.34901960780000002" green="0.76078431369999999" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
@@ -136,11 +137,20 @@
                     <connections>
                         <outlet property="searchBar" destination="SOM-cf-pET" id="HLl-u2-RTR"/>
                         <outlet property="tableView" destination="uNx-jO-4DX" id="yHu-Zg-okq"/>
+                        <segue destination="jJi-dG-I6e" kind="show" identifier="servicerSegue" id="ODW-kV-r8H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tR2-oc-FmP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="517.60000000000002" y="237.93103448275863"/>
+        </scene>
+        <!--Servicer-->
+        <scene sceneID="mlT-L5-7NU">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Servicer" storyboardName="Servicer" referencedIdentifier="Servicer" id="jJi-dG-I6e" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XRd-E0-3HG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1351" y="237"/>
         </scene>
     </scenes>
     <resources>
