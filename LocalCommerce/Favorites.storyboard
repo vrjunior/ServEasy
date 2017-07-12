@@ -114,6 +114,9 @@
                     <tabBarItem key="tabBarItem" title="Favorites" image="favorite" id="buQ-G3-bcO" userLabel="Favorites"/>
                     <navigationItem key="navigationItem" title="Favorites" id="8NN-4r-qAy"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="uNx-jO-4DX" id="yHu-Zg-okq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tR2-oc-FmP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,7 +11,7 @@ import CoreLocation
 
 class FavoritesController: UIViewController {
     
-    var array = ["Moscow", "Saint Petersburg", "Novosibirsk"]
+    @IBOutlet weak var tableView: UITableView!
     
     var locationManager: CLLocationManager = CLLocationManager()
     var currentLocation: CLLocation = CLLocation()
@@ -22,7 +22,11 @@ class FavoritesController: UIViewController {
     override func viewDidLoad() {
         self.locationManager.delegate = self
         self.locationManager.requestLocation()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         self.favoriteServicers = self.favoriteAccessLayer.getFavoritesServicers()
+        self.tableView.reloadData()
     }
     
 }
