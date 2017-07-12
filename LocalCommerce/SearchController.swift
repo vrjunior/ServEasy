@@ -216,6 +216,18 @@ extension SearchController: GMSMapViewDelegate {
 extension SearchController: UISearchBarDelegate {
     
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.searchBar.setShowsCancelButton(true, animated: true)
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        self.searchBar.setShowsCancelButton(false, animated: true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar.endEditing(true)
+    }
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         //getting the geocode from searchtext
         self.newSearchLocation?.geocodeAddressString(searchBar.text!, completionHandler: { (placemarks, error) in

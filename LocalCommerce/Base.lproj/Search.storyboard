@@ -222,6 +222,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="10I-GI-GZt" firstAttribute="leading" secondItem="DeQ-kP-TlZ" secondAttribute="leading" id="5pn-U3-jx8"/>
                             <constraint firstAttribute="trailing" secondItem="10I-GI-GZt" secondAttribute="trailing" id="CmH-jQ-wDy"/>
