@@ -34,7 +34,7 @@ class SearchFilterViewController: UIViewController {
         }
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-<<<<<<< HEAD
+
             switch (section) {
                 case 0:
                     return 6
@@ -48,9 +48,7 @@ class SearchFilterViewController: UIViewController {
                     return 0
             }
 
-=======
-            return 1
->>>>>>> d7c497840ceb96e27be73960d4daf941c0d6c990
+        
         }
         
         
