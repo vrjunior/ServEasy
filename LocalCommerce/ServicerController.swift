@@ -108,7 +108,7 @@ class ServicerController : UIViewController {
         if(isFavorite) {
             let formartedMsg = String.init(format: "UNFAVORITE_ALERT_MSG".localized, self.currentServicer!.name!)
             
-            let alert = UIAlertController(title: "UNFAVORITE_ALERT_TITLE".localized, message: formartedMsg, preferredStyle: .alert)
+            let alert = UIAlertController(title: "UNFAVORITE_ALERT_TITLE".localized, message: formartedMsg, preferredStyle: .actionSheet)
         
             alert.addAction(UIAlertAction(title: "CANCEL".localized, style: .cancel, handler: nil))
             alert.addAction(UIAlertAction(title: "UNFAVORITE".localized, style: .destructive, handler: { action in

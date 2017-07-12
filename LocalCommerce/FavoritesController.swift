@@ -20,8 +20,18 @@ class FavoritesController: UIViewController {
     var favoriteAccessLayer = FavoriteAccessLayer()
     
     override func viewDidLoad() {
-        self.locationManager.delegate = self
-        self.locationManager.requestLocation()
+        //removing empty cells
+        self.tableView.tableFooterView = UIView()
+        //adding color to separator
+        self.tableView.separatorColor = UIColor.primaryColor
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,8 +44,10 @@ class FavoritesController: UIViewController {
 extension FavoritesController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        self.locationManager.stopUpdatingLocation()
         if let location = locations.first {
             self.currentLocation = location
+            self.tableView.reloadData()
         }
     }
     
