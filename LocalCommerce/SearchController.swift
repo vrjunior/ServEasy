@@ -37,8 +37,8 @@ class SearchController: UIViewController {
         }
         set {
             self._myMapLocation = newValue
-            self.updateNearServices()
             self.mapView.clear()
+            self.updateNearServices()
             self.collectionView.reloadData()
         }
     }
@@ -133,6 +133,7 @@ class SearchController: UIViewController {
             let servicer = sender as! Servicer
             
             servicerController.currentServicer =  servicer
+            servicerController.myMapLocation = self.myMapLocation
         }
     }
     
@@ -146,8 +147,21 @@ class SearchController: UIViewController {
     }
     
     func updateNearServices() {
-        //updating near services
-        self.nearServices = self.servicerRepository.getServicersByLocation(location: self.myMapLocation, radius: 20)
+        let currentRadius = self.getMapVisibleRadiusInKM()
+        
+        self.nearServices = self.servicerRepository.getServicersByLocation(location: self.myMapLocation, radius: currentRadius)
+    }
+    
+    func getMapVisibleRadiusInKM() -> Double {
+        let center = CLLocation(latitude: self.myMapLocation.latitude, longitude: self.myMapLocation.longitude)
+        //getting northEast point
+        let farRightPosition = self.mapView.projection.visibleRegion().farRight
+        
+        let farRight = CLLocation(latitude: farRightPosition.latitude, longitude: farRightPosition.longitude)
+        
+        //return the distance in km
+        return center.distance(from: farRight) / 1000
+        
     }
     
 }
@@ -157,10 +171,10 @@ extension SearchController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         //getting the last location
-        self.currentLocation = locations.first
+        currentLocation = locations.first
         
         //getting the current coordinate
-        let coordinate = self.currentLocation.coordinate
+        let coordinate = currentLocation.coordinate
         
         self.mapView.camera = GMSCameraPosition(target: coordinate, zoom: self.currentMapZoom, bearing: 0, viewingAngle: 0)
         
@@ -182,8 +196,18 @@ extension SearchController: GMSMapViewDelegate {
         self.mapView.animate(toLocation: coordinate)
     }*/
     
-    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        self.mapView.selectedMarker = marker
+        return true
+    }
+    
+    //func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
         
+    //    self.locationManager.stopUpdatingLocation()
+    //    self.myMapLocation = position.target
+    //}
+    
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
         self.locationManager.stopUpdatingLocation()
         self.myMapLocation = position.target
     }
@@ -290,11 +314,7 @@ extension SearchController: UICollectionViewDataSource {
             let estServicer = currentServicer as! EstablishmentServicer
             
             if let estLocation = estServicer.location {
-                let mapLocation = CLLocation(latitude: self.myMapLocation.latitude, longitude: self.myMapLocation.longitude)
-                
-                let servicerLocation = CLLocation(latitude: estLocation.latitude, longitude: estLocation.longitude)
-                
-                let distanceKm = mapLocation.distance(from: servicerLocation) / 1000  
+                let distanceKm = estServicer.getKmDistance(fromPosition: self.myMapLocation)
                 
                 cell.servicerDistancy.text = " \(String(format: "%.1f", distanceKm)) km"
                 
@@ -306,9 +326,14 @@ extension SearchController: UICollectionViewDataSource {
                 marker.position = estLocation
                 
                 marker.map = self.mapView
+                cell.separatorView.isHidden = false
+                cell.servicerInfo.text = estServicer.isOpen() ? "OPEN".localized : "CLOSED".localized
             }
+        } else {
+            cell.servicerDistancy.text = "WORKS_ON_AREA".localized
+            cell.separatorView.isHidden = true
+            cell.servicerInfo.text = ""
             
-            cell.servicerInfo.text = estServicer.isOpen() ? "OPEN".localized : "CLOSED".localized
         }
         
     

@@ -11,7 +11,10 @@ import CoreLocation
 
 class ServicerRepository: Repository {
     func getServicersByLocation(location: CLLocationCoordinate2D, radius: Double) -> [Servicer] {
-        
+        return self.getAllServicersMockado()
+    }
+    
+    func getAllServicersMockado() -> [Servicer] {
         var services: [Servicer] = [Servicer]()
         
         let jsonFile = Bundle.main.path(forResource: "services", ofType: "json")
@@ -20,12 +23,13 @@ class ServicerRepository: Repository {
         if let jsonDictionary = self.parseJSONFromData(jsonData: jsonData as Data?) {
             
             
-            let estServiceDictionaries = jsonDictionary["EstablishmentService"] as! [[String: AnyObject]]
+            let estServiceDictionaries = jsonDictionary["EstablishmentServicer"] as! [[String: AnyObject]]
             
             
             for esDictionary in estServiceDictionaries {
                 let establishmentService = EstablishmentServicer()
                 
+                establishmentService.id = esDictionary["id"] as? Int!
                 establishmentService.name = esDictionary["name"] as? String!
                 establishmentService.phone = esDictionary["phone"] as? String!
                 establishmentService.rating = esDictionary["rating"] as? Float!
@@ -51,15 +55,56 @@ class ServicerRepository: Repository {
                 services.append(establishmentService)
             }
             
+            let nonEstServiceDictionaries = jsonDictionary["NonEstablishmentServicer"] as! [[String: AnyObject]]
+            
+            for nesDictionary in nonEstServiceDictionaries{
+                let nonEstablishmentService = NonEstablishmentServicer()
+                
+                nonEstablishmentService.id = nesDictionary["id"] as? Int!
+                nonEstablishmentService.name = nesDictionary["name"] as? String!
+                nonEstablishmentService.phone = nesDictionary["phone"] as? String!
+                nonEstablishmentService.rating = nesDictionary["rating"] as? Float!
+                nonEstablishmentService.thumbnailUrl = nesDictionary["thumbnailUrl"] as? String!
+                
+                let categoryDic = nesDictionary["category"] as! [String:AnyObject]
+                let categoryId = categoryDic["id"] as! Int
+                let categoryName = categoryDic["name"] as! String
+                nonEstablishmentService.category = Category(id: categoryId, name: categoryName)
+                
+                
+                //essas duas linhas tenho ctz que estao erradas!
+                
+                let nesCities = nesDictionary["cities"] as? [String]!
+                let nesCitiesUF = nesDictionary["citiesUF"] as? [String]!
+                nonEstablishmentService.servedCities = nesCities
+                nonEstablishmentService.servedUFCities = nesCitiesUF
+                
+                services.append(nonEstablishmentService)
+            }
+            
             
         }
         
         return services
+
     }
     
     func getServicesReviews(commerceId: Int) -> [Review] {
         
         return [Review]()
     }    
+    
+    func getServicer(byId id:Int) -> Servicer? {
+        //mockado
+        let servicers = self.getAllServicersMockado()
+        
+        for service in servicers {
+            if(service.id == id) {
+                return service
+            }
+        }
+        
+        return nil
+    }
     
 }

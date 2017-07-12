@@ -1,5 +1,5 @@
 {
-  "EstablishmentService" : [
+  "EstablishmentServicer" : [
     {
       "id":1,
       "name": "Oficina do João",
@@ -22,7 +22,7 @@
       "id":2,
       "name": "Jô Cabelereira",
       "rating":5,
-      "phone":"(19) 997906497",
+      "phone":"(19) 997906498",
       "thumbnailUrl": "https://i.imgur.com/my8Gauf.png",
       "category": { "id":1, "name":"Beleza" },
       "locationLatitude":-22.8135178,
@@ -36,5 +36,17 @@
       "addressCity": "Campinas",
       "addressUF": "SP"
     }
-  ]
+  ],
+  "NonEstablishmentServicer" : [
+    {
+    "id":3,
+    "name": "João Pinta",
+    "rating":3.9,
+    "phone":"(19) 997906499",
+    "thumbnailUrl": "https://i.imgur.com/PRp9SCX.jpg",
+    "category": { "id":3, "name":"Pintor" },
+    "cities": ["Campinas", "São Paulo", "Ubá"],
+    "citiesUF": ["SP", "SP", "MG"]
+    }
+   ]
 }

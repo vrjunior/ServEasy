@@ -42,24 +42,24 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Servicer" rowHeight="195" id="nDs-Nx-2P6" userLabel="Servicer" customClass="ProductTableViewCell" customModule="LocalCommerce">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Servicer" rowHeight="195" id="nDs-Nx-2P6" userLabel="Servicer" customClass="ServicerTableViewCell" customModule="LocalCommerce" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="195"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDs-Nx-2P6" id="RaD-IE-tQ4">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="194.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Re-bY-6GM">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YN6-0e-JwV" userLabel="Thumbnail">
+                                                    <rect key="frame" x="8" y="31" width="161" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Re-bY-6GM" userLabel="Servicer Name">
                                                     <rect key="frame" x="177" y="31" width="125" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YN6-0e-JwV">
-                                                    <rect key="frame" x="8" y="31" width="161" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40r-YU-v8e">
                                                     <rect key="frame" x="177" y="75" width="42" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -81,15 +81,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15n-dB-bxQ">
-                                                    <rect key="frame" x="310" y="31" width="46" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
-                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="productName" destination="4Re-bY-6GM" id="567-ha-Njd"/>
+                                            <outlet property="servicerCategory" destination="40r-YU-v8e" id="r9L-vi-bJT"/>
+                                            <outlet property="servicerDistancy" destination="0Oe-Vp-aUX" id="2ig-Lj-o0a"/>
+                                            <outlet property="servicerInfo" destination="8oh-Zk-Usd" id="jcR-Il-0zM"/>
+                                            <outlet property="servicerName" destination="4Re-bY-6GM" id="ihP-yQ-LEG"/>
+                                            <outlet property="thumbnail" destination="YN6-0e-JwV" id="8Z5-tH-5K3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -112,9 +111,12 @@
                             <constraint firstItem="uNx-jO-4DX" firstAttribute="leading" secondItem="6T3-W8-bsy" secondAttribute="leading" id="scf-ad-vpD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorites" image="Favorite" selectedImage="Favoroite Highlight" id="buQ-G3-bcO" userLabel="Favorites"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="favorite" id="buQ-G3-bcO" userLabel="Favorites"/>
                     <navigationItem key="navigationItem" title="Favorites" id="8NN-4r-qAy"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="uNx-jO-4DX" id="yHu-Zg-okq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tR2-oc-FmP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,7 +124,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Favorite" width="25" height="25"/>
-        <image name="Favoroite Highlight" width="25" height="25"/>
+        <image name="favorite" width="25" height="25"/>
     </resources>
 </document>
