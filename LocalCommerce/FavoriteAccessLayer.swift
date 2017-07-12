@@ -11,7 +11,8 @@ import UIKit
 
 class FavoriteAccessLayer {
 
-    let context = CoreDataManager.shared.persistentContainer.viewContext
+    let servicerRepository = ServicerRepository()
+    
     
     public func favoriteServicer(byId id:Int) {
         
@@ -22,7 +23,7 @@ class FavoriteAccessLayer {
         // 1
         let managedContext = appDelegate.persistentContainer.viewContext
         
-        let entity = NSEntityDescription.entity(forEntityName: "Favorites", in: managedContext)!
+        let entity = NSEntityDescription.entity(forEntityName: "Favorite", in: managedContext)!
         
         let favorite = NSManagedObject(entity: entity, insertInto: managedContext)
         
@@ -36,11 +37,11 @@ class FavoriteAccessLayer {
     }
     
     public func isServicerFavorite(id: Int) -> Bool {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Favorites")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Favorite")
         let predicate = NSPredicate(format: "idServicer == %ld", id)
         fetchRequest.predicate = predicate
         do {
-            let fetchResults =  try self.context.fetch(fetchRequest) as? [NSManagedObject]
+            let fetchResults =  try CoreDataManager.shared.performFetchRequest(request: fetchRequest) as? [NSManagedObject]
             if fetchResults!.count > 0 {
                 return true
             }
@@ -52,21 +53,45 @@ class FavoriteAccessLayer {
     }
     
     public func unfavoriteServicer(byId id:Int) {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Favorites")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Favorite")
         let predicate = NSPredicate(format: "idServicer == %ld", id)
         fetchRequest.predicate = predicate
         do {
-            let fetchResults =  try self.context.fetch(fetchRequest) as? [NSManagedObject]
+            let fetchResults =  try CoreDataManager.shared.performFetchRequest(request: fetchRequest) as? [NSManagedObject]
             if let objects = fetchResults {
                 for object in objects {
-                    self.context.delete(object)
+                    CoreDataManager.shared.delete(object: object)
                 }
             }
         }
         catch let error {
             print(error)
         }
-                
+    }
+    
+    public func getFavoritesServicers() -> [Servicer] {
+        var servicers = [Servicer]()
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Favorite")
+        do {
+            let results = try CoreDataManager.shared.performFetchRequest(request: fetchRequest)
+            
+            let favorites = results.map({(anyEntity) -> Favorite  in
+                return (anyEntity as? Favorite)!
+            })
+
+            for favorite in favorites {
+                let servicerElem = self.servicerRepository.getServicer(byId: Int(favorite.idServicer))
+                if let servicer = servicerElem {
+                    servicers.append(servicer)
+                }
+            }
+            
+        }
+        catch let error {
+            print(error)
+        }
+        return servicers
     }
     
     

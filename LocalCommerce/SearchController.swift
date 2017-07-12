@@ -171,10 +171,10 @@ extension SearchController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         //getting the last location
-        self.currentLocation = locations.first
+        currentLocation = locations.first
         
         //getting the current coordinate
-        let coordinate = self.currentLocation.coordinate
+        let coordinate = currentLocation.coordinate
         
         self.mapView.camera = GMSCameraPosition(target: coordinate, zoom: self.currentMapZoom, bearing: 0, viewingAngle: 0)
         

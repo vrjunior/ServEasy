@@ -8,11 +8,15 @@
 
 import UIKit
 
-class ProductTableViewCell: UITableViewCell {
+class ServicerTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var thumbnail: UIImageView!
 
-    @IBOutlet weak var productName: UILabel!
-
+    @IBOutlet weak var servicerName: UILabel!
+    @IBOutlet weak var servicerCategory: UILabel!
+    @IBOutlet weak var servicerDistancy: UILabel!
+    @IBOutlet weak var servicerInfo: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
