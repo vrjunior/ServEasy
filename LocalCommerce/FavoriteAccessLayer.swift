@@ -63,6 +63,9 @@ class FavoriteAccessLayer {
                     CoreDataManager.shared.delete(object: object)
                 }
             }
+            
+            CoreDataManager.shared.saveContext()
+    
         }
         catch let error {
             print(error)
