@@ -1,0 +1,9 @@
+
+/* Class = "UINavigationItem"; title = "Favorites"; ObjectID = "8NN-4r-qAy"; */
+"8NN-4r-qAy.title" = "Favoritos";
+
+/* Class = "UISearchBar"; placeholder = "Search"; ObjectID = "SOM-cf-pET"; */
+"SOM-cf-pET.placeholder" = "Buscar";
+
+/* Class = "UITabBarItem"; title = "Favorites"; ObjectID = "buQ-G3-bcO"; */
+"buQ-G3-bcO.title" = "Favoritos";
