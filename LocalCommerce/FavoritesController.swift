@@ -12,11 +12,16 @@ import CoreLocation
 class FavoritesController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var locationManager: CLLocationManager = CLLocationManager()
     var currentLocation: CLLocation = CLLocation()
+    let servicerSegue: String = "servicerSegue"
     
     var favoriteServicers = [Servicer]()
+    var filteredServicers = [Servicer]()
+    var isFiltering: Bool = false
+    
     var favoriteAccessLayer = FavoriteAccessLayer()
     
     override func viewDidLoad() {
@@ -24,6 +29,8 @@ class FavoritesController: UIViewController {
         self.tableView.tableFooterView = UIView()
         //adding color to separator
         self.tableView.separatorColor = UIColor.primaryColor
+        
+        self.fixSearchBar()
         
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.delegate = self
@@ -37,6 +44,58 @@ class FavoritesController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         self.favoriteServicers = self.favoriteAccessLayer.getFavoritesServicers()
         self.tableView.reloadData()
+    }
+    
+    func fixSearchBar() {
+        
+        self.searchBar.delegate = self
+        
+        //adding searchbar on navigation bar
+        self.navigationItem.titleView = searchBar
+        
+        //changing placeholder and label color
+        let textFieldInsideSearchBar = self.searchBar.value(forKey: "searchField") as? UITextField
+        textFieldInsideSearchBar?.textColor = UIColor.primaryColor
+        
+        let textFieldInsideSearchBarLabel = textFieldInsideSearchBar!.value(forKey: "placeholderLabel") as? UILabel
+        textFieldInsideSearchBarLabel?.textColor = UIColor.primaryColor
+        
+        
+        //changing icon's color
+        if let glassIconView = textFieldInsideSearchBar?.leftView as? UIImageView {
+            
+            //Magnifying glass
+            glassIconView.image = glassIconView.image?.withRenderingMode(.alwaysTemplate)
+            glassIconView.tintColor = UIColor.primaryColor
+            
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == self.servicerSegue) {
+            //getting the controller
+            let servicerController = segue.destination as! ServicerController
+            
+            //casting the sender to servicer
+            let servicer = sender as! Servicer
+            
+            servicerController.currentServicer =  servicer
+            servicerController.myMapLocation = self.currentLocation.coordinate
+        }
+    }
+    
+    func getCurrentServicer(atIndex index:Int) -> Servicer {
+        if(self.isFiltering) {
+            return filteredServicers[index]
+        }
+        return favoriteServicers[index]
+    }
+    
+    func getCountServicer() -> Int {
+        if(self.isFiltering) {
+            return filteredServicers.count
+        }
+        return favoriteServicers.count
     }
     
 }
@@ -56,22 +115,73 @@ extension FavoritesController: CLLocationManagerDelegate {
     }
 }
 
+extension FavoritesController: UISearchBarDelegate {
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.searchBar.setShowsCancelButton(true, animated: true)
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        self.searchBar.setShowsCancelButton(false, animated: true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar.endEditing(true)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if(searchText == "") {
+            self.isFiltering = false
+        }
+        else {
+            self.filteredServicers = favoriteServicers.filter { (servicer) -> Bool in
+                var contains = false
+                let searchFormated = self.getFormatedString(entryString: searchText)
+                
+                let servicerName = self.getFormatedString(entryString: servicer.name!)
+                let categoryName = self.getFormatedString(entryString: servicer.category!.name)
+                
+                contains = (servicerName.contains(searchFormated) || categoryName.contains(searchFormated))
+                
+                return contains
+            }
+            
+            self.isFiltering = true
+            self.tableView.reloadData()
+        }
+    }
+    
+    
+    //method to nomalize string before compair
+    func getFormatedString(entryString:String) -> String {
+        let lowercase = entryString.lowercased()
+        
+        //removing accents and special character
+        return lowercase.folding(options: .diacriticInsensitive, locale: .current)
+    }
+}
 
-extension FavoritesController: UITableViewDelegate, UITableViewDataSource {
+extension FavoritesController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: self.servicerSegue, sender: self.getCurrentServicer(atIndex: indexPath.row))
+    }
+}
+
+extension FavoritesController: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.favoriteServicers.count
+        return self.getCountServicer()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Servicer", for: indexPath) as! ServicerTableViewCell
         
-        let currentServicer = favoriteServicers[indexPath.row]
-        
+        let currentServicer = getCurrentServicer(atIndex: indexPath.row)
+    
         if let url = URL(string: currentServicer.thumbnailUrl!) {
             URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
                 

@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Explore-->
         <scene sceneID="Iw5-iM-WyW">
             <objects>
-                <navigationController storyboardIdentifier="Search" id="hwC-Fh-X5S" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Search" title="Explore" id="hwC-Fh-X5S" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="14d-Q4-6dW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -32,7 +32,7 @@
         <!--Search-->
         <scene sceneID="4bD-x1-RB6">
             <objects>
-                <viewController id="MDa-Gd-0gD" userLabel="Search" customClass="SearchController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Explore" id="MDa-Gd-0gD" userLabel="Search" customClass="SearchController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HXg-Ge-IEk"/>
                         <viewControllerLayoutGuide type="bottom" id="GFb-3h-3W2"/>
@@ -222,6 +222,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="10I-GI-GZt" firstAttribute="leading" secondItem="DeQ-kP-TlZ" secondAttribute="leading" id="5pn-U3-jx8"/>
                             <constraint firstAttribute="trailing" secondItem="10I-GI-GZt" secondAttribute="trailing" id="CmH-jQ-wDy"/>
@@ -230,7 +231,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" image="Explore" selectedImage="Explore Highlight" id="YAV-aq-96i" userLabel="Search"/>
-                    <navigationItem key="navigationItem" id="NmY-pe-Nli">
+                    <navigationItem key="navigationItem" title="Explore" id="NmY-pe-Nli">
                         <barButtonItem key="rightBarButtonItem" image="Filter" id="s6T-uq-Bq1">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
