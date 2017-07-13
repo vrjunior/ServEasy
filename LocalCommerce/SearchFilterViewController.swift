@@ -10,14 +10,41 @@ import UIKit
 
 class SearchFilterViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 200
+        
+        
+        self.tableView.backgroundColor = .clear
+        
+        
+        let rightButtonItem = UIBarButtonItem.init(
+            title: "Done",
+            style: .done,
+            target: self,
+            action: #selector(rightButtonAction)
+        )
+        
+        //action: #selector(addTapped)
+        
+        self.navigationItem.rightBarButtonItem = rightButtonItem
+
+
     }
     
     
+    func rightButtonAction(sender: UIBarButtonItem){
+    
+        print("done")
         
+    
+    }
+
+   
     
     
 
@@ -37,7 +64,7 @@ class SearchFilterViewController: UIViewController {
 
             switch (section) {
                 case 0:
-                    return 6
+                    return 10
                 case 1:
                     return 1
                 case 2:
@@ -51,27 +78,51 @@ class SearchFilterViewController: UIViewController {
         
         }
         
+        func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+            if let headerView = view as? UITableViewHeaderFooterView {
+                headerView.textLabel?.textAlignment = .center
+                headerView.textLabel?.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightHeavy)
+                headerView.textLabel?.textColor = UIColor.titleColor
+            }
+        }
         
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            var cell: UITableViewCell
             
+            var cell: UITableViewCell
             
             switch (indexPath.section) {
             case 0:
-                cell = tableView.dequeueReusableCell(withIdentifier: "filter", for: indexPath) as! SearchFilterTableViewCell
+                let categoryCell = tableView.dequeueReusableCell(withIdentifier: "filter", for: indexPath) as! CategoryFilterTableViewCell
+                
+                categoryCell.category.text = "alguma coisa"
+                
+                cell = categoryCell
+            
             case 1:
-                cell = tableView.dequeueReusableCell(withIdentifier: "distance", for: indexPath) as! SearchFilterTableViewCell
+                let ratingCell = tableView.dequeueReusableCell(withIdentifier: "rating", for: indexPath) as! RatingTableViewCell
+                
+                cell = ratingCell
+                
             case 2:
-                cell = tableView.dequeueReusableCell(withIdentifier: "local", for: indexPath) as! SearchFilterTableViewCell
+                let localCell = tableView.dequeueReusableCell(withIdentifier: "local", for: indexPath) as! LocalTableViewCell
+                
+                cell = localCell
+                
             case 3:
-                cell = tableView.dequeueReusableCell(withIdentifier: "filter", for: indexPath) as! SearchFilterTableViewCell
+                let distanceCell = tableView.dequeueReusableCell(withIdentifier: "distance", for: indexPath) as! DistanceTableViewCell
+            
+            
+                cell = distanceCell
+                
+                
+            
             default:
-                cell = tableView.dequeueReusableCell(withIdentifier: "filter", for: indexPath) as! SearchFilterTableViewCell
+                cell = tableView.dequeueReusableCell(withIdentifier: "filter", for: indexPath) as! CategoryFilterTableViewCell
             }
 
             
-            //cell.category.text = "TsT" + String(indexPath.section)
+            
             return cell
         }
 

@@ -15,8 +15,11 @@
 		3FFBA9001F155D98005A315D /* NewBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFBA8FF1F155D98005A315D /* NewBudgetViewController.swift */; };
 		A91341B41F057E6B00B21EEA /* ServicerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91341B31F057E6B00B21EEA /* ServicerCollectionViewCell.swift */; };
 		A91341B61F0EAC1600B21EEA /* SearchFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91341B51F0EAC1600B21EEA /* SearchFilterViewController.swift */; };
-		A91341B81F0EBBE100B21EEA /* SearchFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91341B71F0EBBE100B21EEA /* SearchFilterTableViewCell.swift */; };
+		A91341D91F16A91700B21EEA /* DistanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91341D81F16A91700B21EEA /* DistanceTableViewCell.swift */; };
+		A91341DB1F16A93B00B21EEA /* RatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91341DA1F16A93B00B21EEA /* RatingTableViewCell.swift */; };
 		A935D19E1F042D3000510B0A /* ServicerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A935D19D1F042D3000510B0A /* ServicerTableViewCell.swift */; };
+		A953163A1F16B01E000CB0B3 /* CategoryFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95316391F16B01E000CB0B3 /* CategoryFilterTableViewCell.swift */; };
+		A953163C1F16B1A9000CB0B3 /* LocalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953163B1F16B1A9000CB0B3 /* LocalTableViewCell.swift */; };
 		D22409DA1F0409E7006848A0 /* Servicer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22409D91F0409E7006848A0 /* Servicer.swift */; };
 		D22409DC1F040BE6006848A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22409DB1F040BE6006848A0 /* User.swift */; };
 		D22409DE1F040C34006848A0 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22409DD1F040C34006848A0 /* Review.swift */; };
@@ -62,8 +65,11 @@
 		78DEBD75B1AAFE33A2CED470 /* Pods-LocalCommerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalCommerce.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocalCommerce/Pods-LocalCommerce.release.xcconfig"; sourceTree = "<group>"; };
 		A91341B31F057E6B00B21EEA /* ServicerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicerCollectionViewCell.swift; sourceTree = "<group>"; };
 		A91341B51F0EAC1600B21EEA /* SearchFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFilterViewController.swift; sourceTree = "<group>"; };
-		A91341B71F0EBBE100B21EEA /* SearchFilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFilterTableViewCell.swift; sourceTree = "<group>"; };
+		A91341D81F16A91700B21EEA /* DistanceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceTableViewCell.swift; sourceTree = "<group>"; };
+		A91341DA1F16A93B00B21EEA /* RatingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingTableViewCell.swift; sourceTree = "<group>"; };
 		A935D19D1F042D3000510B0A /* ServicerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicerTableViewCell.swift; sourceTree = "<group>"; };
+		A95316391F16B01E000CB0B3 /* CategoryFilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryFilterTableViewCell.swift; sourceTree = "<group>"; };
+		A953163B1F16B1A9000CB0B3 /* LocalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalTableViewCell.swift; sourceTree = "<group>"; };
 		D22409D91F0409E7006848A0 /* Servicer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Servicer.swift; sourceTree = "<group>"; };
 		D22409DB1F040BE6006848A0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D22409DD1F040C34006848A0 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
@@ -119,6 +125,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A91341D71F16A8AA00B21EEA /* FilterCells */ = {
+			isa = PBXGroup;
+			children = (
+				A91341D81F16A91700B21EEA /* DistanceTableViewCell.swift */,
+				A95316391F16B01E000CB0B3 /* CategoryFilterTableViewCell.swift */,
+				A953163B1F16B1A9000CB0B3 /* LocalTableViewCell.swift */,
+				A91341DA1F16A93B00B21EEA /* RatingTableViewCell.swift */,
+			);
+			name = FilterCells;
+			sourceTree = "<group>";
+		};
 		D033B23E36B395ADE8D76BDC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,9 +225,9 @@
 		D290D9AE1F02E95C007B44D6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A91341D71F16A8AA00B21EEA /* FilterCells */,
 				D290D9951F02E15F007B44D6 /* SearchController.swift */,
 				A91341B51F0EAC1600B21EEA /* SearchFilterViewController.swift */,
-				A91341B71F0EBBE100B21EEA /* SearchFilterTableViewCell.swift */,
 				A91341B31F057E6B00B21EEA /* ServicerCollectionViewCell.swift */,
 				D290D9AF1F02EA4F007B44D6 /* FavoritesController.swift */,
 				A935D19D1F042D3000510B0A /* ServicerTableViewCell.swift */,
@@ -397,7 +414,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A91341B41F057E6B00B21EEA /* ServicerCollectionViewCell.swift in Sources */,
+				A953163C1F16B1A9000CB0B3 /* LocalTableViewCell.swift in Sources */,
 				A91341B61F0EAC1600B21EEA /* SearchFilterViewController.swift in Sources */,
+				A91341DB1F16A93B00B21EEA /* RatingTableViewCell.swift in Sources */,
 				D2EE5D1B1F0590D1008B86A1 /* ServicerRepository.swift in Sources */,
 				D2B2D5111F155DE800DDFB46 /* FavoriteAccessLayer.swift in Sources */,
 				D290D9B41F02EA9C007B44D6 /* ProfileController.swift in Sources */,
@@ -411,13 +430,14 @@
 				D290D9B01F02EA4F007B44D6 /* FavoritesController.swift in Sources */,
 				D2B2D4FA1F153C6800DDFB46 /* Model.xcdatamodeld in Sources */,
 				D2B474FD1F0F187C0058DDEA /* Repository.swift in Sources */,
-				A91341B81F0EBBE100B21EEA /* SearchFilterTableViewCell.swift in Sources */,
 				D22E77921F0AAB290009DD4E /* Budget.swift in Sources */,
 				D22E77941F0AAB980009DD4E /* EstablishmentServicer.swift in Sources */,
+				A953163A1F16B01E000CB0B3 /* CategoryFilterTableViewCell.swift in Sources */,
 				D22E77981F0AB7110009DD4E /* Service.swift in Sources */,
 				D22409E01F040C64006848A0 /* Category.swift in Sources */,
 				D290D9961F02E15F007B44D6 /* SearchController.swift in Sources */,
 				D296002A1F0D7E3E00CDFB1B /* UIColor.swift in Sources */,
+				A91341D91F16A91700B21EEA /* DistanceTableViewCell.swift in Sources */,
 				A935D19E1F042D3000510B0A /* ServicerTableViewCell.swift in Sources */,
 				3FFBA9001F155D98005A315D /* NewBudgetViewController.swift in Sources */,
 				3FB283551F0EC86F007C614A /* ServicerController.swift in Sources */,
