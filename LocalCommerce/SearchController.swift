@@ -25,6 +25,8 @@ class SearchController: UIViewController {
     var currentMapZoom: Float = 15 //initial zoom
     var newSearchLocation:CLGeocoder? = CLGeocoder()
     
+    var placemark:CLPlacemark?
+    
     let servicerSegue = "servicerSegue"
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -149,6 +151,11 @@ class SearchController: UIViewController {
     func updateNearServices() {
         let currentRadius = self.getMapVisibleRadiusInKM()
         
+        //let currentCity = self.placemark?.locality
+        //let currentUF = self.placemark?.administrativeArea
+        
+        //print(currentUF)
+        
         self.nearServices = self.servicerRepository.getServicersByLocation(location: self.myMapLocation, radius: currentRadius)
     }
     
@@ -170,8 +177,18 @@ extension SearchController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
+        CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: { (placemarks, error) -> Void in
+            if(error != nil) {
+                print("error placemark")
+            }
+            else {
+                self.placemark = placemarks?.first
+            }
+        })
+        
         //getting the last location
         currentLocation = locations.first
+        
         
         //getting the current coordinate
         let coordinate = currentLocation.coordinate
@@ -182,6 +199,7 @@ extension SearchController: CLLocationManagerDelegate {
         self.currentMapZoom = self.mapView.camera.zoom
         
     }
+
 }
 
 extension SearchController: GMSMapViewDelegate {

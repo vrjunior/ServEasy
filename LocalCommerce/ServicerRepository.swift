@@ -11,7 +11,28 @@ import CoreLocation
 
 class ServicerRepository: Repository {
     func getServicersByLocation(location: CLLocationCoordinate2D, radius: Double) -> [Servicer] {
-        return self.getAllServicersMockado()
+        
+        let location = CLLocation(latitude: location.latitude, longitude: location.longitude)
+        
+        let allServicers = self.getAllServicersMockado()
+        
+        let nearServicers = allServicers.filter( {(servicer) -> Bool in
+            if(servicer is EstablishmentServicer) {
+                let eServicer = servicer as! EstablishmentServicer
+                
+                let esLocation = CLLocation(latitude: eServicer.location!.latitude, longitude: eServicer.location!.longitude)
+                
+                let distanceKm = location.distance(from: esLocation) / 1000
+                
+                if(distanceKm <= radius) {
+                    return true
+                }
+            }
+            return false
+        })
+        
+        
+        return nearServicers
     }
     
     func getAllServicersMockado() -> [Servicer] {
