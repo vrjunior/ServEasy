@@ -16,5 +16,5 @@ class Servicer {
     public var phone: String?
     public var category: Category?
     public var thumbnailUrl: String?
-    
+    public var facadeImages:[String]?
 }

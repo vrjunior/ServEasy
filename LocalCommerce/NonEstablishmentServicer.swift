@@ -12,5 +12,4 @@ class NonEstablishmentServicer: Servicer {
     
     public var servedCities:[String]?
     public var servedUFCities:[String]?
-
 }

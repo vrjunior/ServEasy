@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import CoreData
+import Foundation
 
 class ServicerController : UIViewController {
     
@@ -16,7 +17,6 @@ class ServicerController : UIViewController {
     @IBOutlet weak var favoriteButton: UIBarButtonItem!
     
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var servicerImage: UIImageView!
     @IBOutlet weak var servicerLogo: UIImageView!
     @IBOutlet weak var servicerName: UILabel!
     @IBOutlet weak var servicerCategory: UILabel!
@@ -27,6 +27,9 @@ class ServicerController : UIViewController {
     @IBOutlet weak var servicerCity: UILabel!
     @IBOutlet weak var servicerIsOpen: UILabel!
     
+    @IBOutlet weak var imageScrollView: UIScrollView!
+    
+    @IBOutlet weak var pageControl: UIPageControl!
     
     @IBOutlet weak var addressIcon: UIImageView!
     public var myMapLocation : CLLocationCoordinate2D?
@@ -34,6 +37,8 @@ class ServicerController : UIViewController {
     
     let favoriteAccessLayer = FavoriteAccessLayer()
     var isFavorite: Bool = false
+    
+    let topImages:[UIImage?] = []
     
     @IBAction func budgetButton(_ sender: Any) {
         
@@ -53,17 +58,20 @@ class ServicerController : UIViewController {
             self.servicerPhone.text = servicer.phone
             self.servicerRate.text = String(describing: servicer.rating!)
             print(servicer.rating!)
+            self.getImages()
+            
             if servicer is EstablishmentServicer{
                 let eServicer = servicer as! EstablishmentServicer
                 self.servicerAdress.text = eServicer.addressStreet
                 self.servicerCity.text = eServicer.addressCity
                 self.servicerCategory.text = eServicer.category?.name
                 
-                
                 if let mapLocation = myMapLocation{
                     let distanceKm = eServicer.getKmDistance(fromPosition: mapLocation)
                     self.servicerTimeDistance.text = String(format: "DISTANCE_MSG".localized, distanceKm)
                 }
+                
+                
                 
             }else if servicer is NonEstablishmentServicer{
                 let neServicer = servicer as! NonEstablishmentServicer
@@ -89,10 +97,62 @@ class ServicerController : UIViewController {
                     }
                     
                 }
+                
                 self.servicerTimeDistance.text = cities
             }
         }
+        
+    
+        
+        
     }
+    
+    func getImages(){
+        if let urls = self.currentServicer?.facadeImages {
+            
+            var xOffset:CGFloat = 0
+            
+            for imageUrl in urls{
+                self.pageControl.currentPage = 0
+                self.pageControl.numberOfPages = urls.count
+                
+                if let url = URL(string: imageUrl) {
+                    URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
+                        
+                        if error != nil {
+                            print(String(describing:error))
+                            return
+                        }
+                        
+                        // a imagem recebida presica ser preenchida na main queue
+                        DispatchQueue.main.async(execute: { () -> Void in
+                            if let currentImage = UIImage(data: data!) {
+                                
+                                let imageView = UIImageView(image: currentImage)
+                                
+                                imageView.center = CGPoint(x:  self.view.frame.width / 2, y: self.imageScrollView.frame.height / 2)
+                                
+                                print(imageView.center)
+                                
+                                self.imageScrollView.addSubview(imageView)
+                                
+                                imageView.frame = (imageView.frame.offsetBy(dx: xOffset, dy: 0))
+                                
+                                xOffset += self.view.frame.width
+                                
+                                self.imageScrollView.contentSize = CGSize(width: xOffset, height: (imageView.frame.height))
+                                
+                                
+                            }
+                        })
+                        
+                    }).resume()
+                }
+
+            }
+        }
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = true
@@ -138,5 +198,17 @@ class ServicerController : UIViewController {
     
     
     
+    
+}
+
+extension ServicerController: UIScrollViewDelegate{
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // calcula o numero da página baseado no quanto o scrollview está deslocado em X
+        let page = floor(scrollView.contentOffset.x / self.view.frame.width)
+        
+        // Para atualizar o current page é necessário converter o float para Int
+        pageControl.currentPage = Int(page)
+    }
     
 }

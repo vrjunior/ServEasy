@@ -2,7 +2,7 @@
   "EstablishmentServicer" : [
     {
       "id":1,
-      "name": "Oficina do João",
+      "name": "Toreto's Garage",
       "rating":4.5,
       "phone":"(19) 997906497",
       "thumbnailUrl": "https://i.imgur.com/PRp9SCX.jpg",
@@ -16,11 +16,12 @@
       "addressStreet": "Rua A",
       "addressNumber": 190,
       "addressCity": "Campinas",
-      "addressUF": "SP"
+      "addressUF": "SP",
+      "facadeImages": ["https://i.imgur.com/JlWgGKP.png", "https://i.imgur.com/ve4M8Xm.png"]
     },
     {
       "id":2,
-      "name": "Jô Cabelereira",
+      "name": "Jô Cabeleireira",
       "rating":5,
       "phone":"(19) 997906498",
       "thumbnailUrl": "https://i.imgur.com/my8Gauf.png",
@@ -34,19 +35,52 @@
       "addressStreet": "Rua B",
       "addressNumber": 15,
       "addressCity": "Campinas",
-      "addressUF": "SP"
-    }
+      "addressUF": "SP",
+      "facadeImages": ["https://i.imgur.com/dLYJ9I0.png", "https://i.imgur.com/IXybi0t.png"]
+    },
+                             
+     {
+     "id":4,
+     "name": "Zé's Barbershop",
+     "rating":5,
+     "phone":"(19) 997906478",
+     "thumbnailUrl": "https://i.imgur.com/my8Gauf.png",
+     "category": { "id":1, "name":"Beleza" },
+     "locationLatitude":-22.8135178,
+     "locationLongitude":-47.0640335,
+     "openingHour": 7,
+     "openingMinute": 0,
+     "closingHour": 17,
+     "closingMinute": 0,
+     "addressStreet": "Rua B",
+     "addressNumber": 15,
+     "addressCity": "Campinas",
+     "addressUF": "SP",
+     "facadeImages": ["https://i.imgur.com/TPOOP7k.png"]
+     }
   ],
   "NonEstablishmentServicer" : [
     {
     "id":3,
-    "name": "João Pinta",
-    "rating":3.9,
+    "name": "John Grafitti",
+    "rating":4.9,
     "phone":"(19) 997906499",
     "thumbnailUrl": "https://i.imgur.com/PRp9SCX.jpg",
     "category": { "id":3, "name":"Pintor" },
     "cities": ["Campinas", "São Paulo", "Ubá"],
-    "citiesUF": ["SP", "SP", "MG"]
+    "citiesUF": ["SP", "SP", "MG"],
+    "facadeImages": ["https://i.imgur.com/KhhJGbn.png", "https://i.imgur.com/8bjZyKb.png"]
+    },
+    {
+    "id":4,
+    "name": "Vilma Manicure",
+    "rating":3.9,
+    "phone":"(19) 997986499",
+    "thumbnailUrl": "https://i.imgur.com/PRp9SCX.jpg",
+    "category": { "id":1, "name":"Beleza" },
+    "cities": ["Campinas", "São Paulo", "Ubá"],
+    "citiesUF": ["SP", "SP", "MG"],
+    "facadeImages": ["https://i.imgur.com/YWBjAEf.png", "https://i.imgur.com/g0fxsER.png"]
     }
    ]
 }

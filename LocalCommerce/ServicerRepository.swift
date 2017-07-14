@@ -34,7 +34,9 @@ class ServicerRepository: Repository {
                 establishmentService.phone = esDictionary["phone"] as? String!
                 establishmentService.rating = esDictionary["rating"] as? Float!
                 establishmentService.thumbnailUrl = esDictionary["thumbnailUrl"] as? String!
-                
+                if let facadeImages = esDictionary["facadeImages"] as? [String] {
+                    establishmentService.facadeImages = facadeImages
+                }
                 
                 //TODO remove this force unwraper
                 let categoryDic = esDictionary["category"] as! [String:AnyObject]
@@ -60,6 +62,9 @@ class ServicerRepository: Repository {
             for nesDictionary in nonEstServiceDictionaries{
                 let nonEstablishmentService = NonEstablishmentServicer()
                 
+                if let nestFacadeImages = nesDictionary["facadeImages"] as? [String] {
+                    nonEstablishmentService.facadeImages = nestFacadeImages
+                }
                 nonEstablishmentService.id = nesDictionary["id"] as? Int!
                 nonEstablishmentService.name = nesDictionary["name"] as? String!
                 nonEstablishmentService.phone = nesDictionary["phone"] as? String!
