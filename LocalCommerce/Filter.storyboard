@@ -239,7 +239,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="huz-nf-gjC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="cC1-wG-rsF"/>
             </objects>
-            <point key="canvasLocation" x="2224.8000000000002" y="-397.15142428785612"/>
+            <point key="canvasLocation" x="2023" y="-445"/>
         </scene>
         <!--FilterCategory-->
         <scene sceneID="9Kb-DW-NJY">

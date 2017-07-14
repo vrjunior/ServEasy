@@ -19,7 +19,6 @@ class EstablishmentServicer: Servicer {
     public var addressNumber: Int?
     public var addressCity: String?
     public var addressUF: String?
-    public var facadeImagesUrls: [String]?
     
     public func isOpen() -> Bool {
         return true

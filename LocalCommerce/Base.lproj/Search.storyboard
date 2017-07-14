@@ -200,6 +200,12 @@
                                             <outlet property="delegate" destination="MDa-Gd-0gD" id="nse-yk-vNk"/>
                                         </connections>
                                     </collectionView>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is no Servicer near" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzQ-Ld-FEF">
+                                        <rect key="frame" x="16" y="369.5" width="343" height="184.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -214,6 +220,7 @@
                                     <constraint firstItem="bWe-tQ-DcL" firstAttribute="trailing" secondItem="VJE-r1-jYp" secondAttribute="trailing" constant="-5" id="O1n-pl-VZb"/>
                                     <constraint firstAttribute="trailing" secondItem="ma7-Oq-4XG" secondAttribute="trailing" id="TJs-B9-8vF"/>
                                     <constraint firstAttribute="trailing" secondItem="a1b-aL-qcH" secondAttribute="trailing" id="hYh-Br-f6o"/>
+                                    <constraint firstItem="YzQ-Ld-FEF" firstAttribute="top" secondItem="ma7-Oq-4XG" secondAttribute="bottom" id="lDz-gA-Off"/>
                                     <constraint firstItem="Bh2-gQ-mSg" firstAttribute="centerX" secondItem="VJE-r1-jYp" secondAttribute="centerX" id="oeS-6c-7Gl"/>
                                     <constraint firstAttribute="bottom" secondItem="a1b-aL-qcH" secondAttribute="bottom" id="qCV-su-c5b"/>
                                     <constraint firstItem="bWe-tQ-DcL" firstAttribute="bottom" secondItem="ma7-Oq-4XG" secondAttribute="top" constant="-5" id="qEF-fZ-ogi"/>
@@ -227,6 +234,9 @@
                             <constraint firstItem="10I-GI-GZt" firstAttribute="leading" secondItem="DeQ-kP-TlZ" secondAttribute="leading" id="5pn-U3-jx8"/>
                             <constraint firstAttribute="trailing" secondItem="10I-GI-GZt" secondAttribute="trailing" id="CmH-jQ-wDy"/>
                             <constraint firstItem="GFb-3h-3W2" firstAttribute="top" secondItem="10I-GI-GZt" secondAttribute="bottom" id="GsV-pd-zWT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YzQ-Ld-FEF" secondAttribute="trailing" id="RKu-JN-c9H"/>
+                            <constraint firstItem="YzQ-Ld-FEF" firstAttribute="leading" secondItem="DeQ-kP-TlZ" secondAttribute="leadingMargin" id="gag-8t-PUg"/>
+                            <constraint firstItem="GFb-3h-3W2" firstAttribute="top" secondItem="YzQ-Ld-FEF" secondAttribute="bottom" id="po6-fZ-gMG"/>
                             <constraint firstItem="10I-GI-GZt" firstAttribute="top" secondItem="HXg-Ge-IEk" secondAttribute="bottom" id="tYT-eY-0EX"/>
                         </constraints>
                     </view>
@@ -243,6 +253,7 @@
                     <connections>
                         <outlet property="collectionView" destination="a1b-aL-qcH" id="jnR-rQ-a2S"/>
                         <outlet property="mapView" destination="VJE-r1-jYp" id="CZH-5M-bpw"/>
+                        <outlet property="noNearServicers" destination="YzQ-Ld-FEF" id="cUq-WF-eWS"/>
                         <outlet property="searchBar" destination="KHj-Ie-mCV" id="5Di-bQ-wXR"/>
                         <segue destination="jgn-6i-6IM" kind="show" identifier="servicerSegue" id="CVk-Mc-fhn"/>
                     </connections>

@@ -11,7 +11,28 @@ import CoreLocation
 
 class ServicerRepository: Repository {
     func getServicersByLocation(location: CLLocationCoordinate2D, radius: Double) -> [Servicer] {
-        return self.getAllServicersMockado()
+        
+        let location = CLLocation(latitude: location.latitude, longitude: location.longitude)
+        
+        let allServicers = self.getAllServicersMockado()
+        
+        let nearServicers = allServicers.filter( {(servicer) -> Bool in
+            if(servicer is EstablishmentServicer) {
+                let eServicer = servicer as! EstablishmentServicer
+                
+                let esLocation = CLLocation(latitude: eServicer.location!.latitude, longitude: eServicer.location!.longitude)
+                
+                let distanceKm = location.distance(from: esLocation) / 1000
+                
+                if(distanceKm <= radius) {
+                    return true
+                }
+            }
+            return false
+        })
+        
+        
+        return nearServicers
     }
     
     func getAllServicersMockado() -> [Servicer] {
@@ -34,7 +55,9 @@ class ServicerRepository: Repository {
                 establishmentService.phone = esDictionary["phone"] as? String!
                 establishmentService.rating = esDictionary["rating"] as? Float!
                 establishmentService.thumbnailUrl = esDictionary["thumbnailUrl"] as? String!
-                
+                if let facadeImages = esDictionary["facadeImages"] as? [String] {
+                    establishmentService.facadeImages = facadeImages
+                }
                 
                 //TODO remove this force unwraper
                 let categoryDic = esDictionary["category"] as! [String:AnyObject]
@@ -60,6 +83,9 @@ class ServicerRepository: Repository {
             for nesDictionary in nonEstServiceDictionaries{
                 let nonEstablishmentService = NonEstablishmentServicer()
                 
+                if let nestFacadeImages = nesDictionary["facadeImages"] as? [String] {
+                    nonEstablishmentService.facadeImages = nestFacadeImages
+                }
                 nonEstablishmentService.id = nesDictionary["id"] as? Int!
                 nonEstablishmentService.name = nesDictionary["name"] as? String!
                 nonEstablishmentService.phone = nesDictionary["phone"] as? String!

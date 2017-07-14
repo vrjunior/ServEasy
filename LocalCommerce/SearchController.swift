@@ -25,9 +25,12 @@ class SearchController: UIViewController {
     var currentMapZoom: Float = 15 //initial zoom
     var newSearchLocation:CLGeocoder? = CLGeocoder()
     
+    var placemark:CLPlacemark?
+    
     let servicerSegue = "servicerSegue"
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var noNearServicers: UILabel!
     
     
     var _myMapLocation: CLLocationCoordinate2D!
@@ -149,7 +152,19 @@ class SearchController: UIViewController {
     func updateNearServices() {
         let currentRadius = self.getMapVisibleRadiusInKM()
         
+        //let currentCity = self.placemark?.locality
+        //let currentUF = self.placemark?.administrativeArea
+        
+        //print(currentUF)
+        
         self.nearServices = self.servicerRepository.getServicersByLocation(location: self.myMapLocation, radius: currentRadius)
+        
+        if(self.nearServices.count <= 0) {
+            self.noNearServicers.isHidden = false
+        }
+        else {
+            self.noNearServicers.isHidden = true
+        }
     }
     
     func getMapVisibleRadiusInKM() -> Double {
@@ -170,8 +185,18 @@ extension SearchController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
+        CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: { (placemarks, error) -> Void in
+            if(error != nil) {
+                print("error placemark")
+            }
+            else {
+                self.placemark = placemarks?.first
+            }
+        })
+        
         //getting the last location
         currentLocation = locations.first
+        
         
         //getting the current coordinate
         let coordinate = currentLocation.coordinate
@@ -182,6 +207,7 @@ extension SearchController: CLLocationManagerDelegate {
         self.currentMapZoom = self.mapView.camera.zoom
         
     }
+
 }
 
 extension SearchController: GMSMapViewDelegate {
@@ -234,7 +260,6 @@ extension SearchController: UISearchBarDelegate {
             if error == nil {
                 for placemark in placemarks! {
                     print(placemark.name!)
-                    
                     //updating position
                     if let location = placemark.location {
                         self.locationManager.stopUpdatingLocation()
