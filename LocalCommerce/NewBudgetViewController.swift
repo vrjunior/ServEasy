@@ -29,7 +29,6 @@ class NewBudgetViewController : UIViewController{
         self.navigationController?.navigationBar.backItem?.title = "Beterraba"
         self.navigationItem.backBarButtonItem?.tintColor = UIColor.white
         
-    //    self.navigationController?.navigationBar.backItem?.backBarButtonItem?.tintColor = UIColor.white
     }
     
     

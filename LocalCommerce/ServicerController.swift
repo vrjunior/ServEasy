@@ -143,6 +143,7 @@ class ServicerController : UIViewController {
                                 imageView.frame = (imageView.frame.offsetBy(dx: xOffset, dy: 0))
                                 
                                 
+                                
                                 xOffset += self.view.frame.width
                                 
                                 self.imageScrollView.contentSize = CGSize(width: xOffset, height: (imageView.frame.height))
