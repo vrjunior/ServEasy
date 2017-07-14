@@ -1,5 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
-target 'LocalCommerce' do
+target 'ServEasy' do
 pod 'GoogleMaps'
 pod 'GooglePlaces'
 end
