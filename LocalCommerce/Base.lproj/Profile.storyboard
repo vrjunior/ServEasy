@@ -20,15 +20,6 @@
                     <view key="view" contentMode="scaleToFill" id="Iq1-na-gW7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Login" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U9E-TS-8x6">
-                                <rect key="frame" x="38" y="198" width="298" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="0.015786837786436081" green="0.011750607751309872" blue="0.011715307831764221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="Profile" selectedImage="Profile Highlight" id="O3S-Ro-eYa" userLabel="Profile"/>

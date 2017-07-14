@@ -30,6 +30,7 @@ class SearchController: UIViewController {
     let servicerSegue = "servicerSegue"
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var noNearServicers: UILabel!
     
     
     var _myMapLocation: CLLocationCoordinate2D!
@@ -157,6 +158,13 @@ class SearchController: UIViewController {
         //print(currentUF)
         
         self.nearServices = self.servicerRepository.getServicersByLocation(location: self.myMapLocation, radius: currentRadius)
+        
+        if(self.nearServices.count <= 0) {
+            self.noNearServicers.isHidden = false
+        }
+        else {
+            self.noNearServicers.isHidden = true
+        }
     }
     
     func getMapVisibleRadiusInKM() -> Double {
