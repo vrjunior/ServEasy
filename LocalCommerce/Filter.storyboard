@@ -9,6 +9,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Search-->
+        <scene sceneID="8Zh-Th-vdz">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Search" storyboardName="Search" referencedIdentifier="Search" id="INF-Nm-Qyo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lmo-qZ-Tma" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2225" y="117"/>
+        </scene>
         <!--Filters-->
         <scene sceneID="Lh3-Cw-CdJ">
             <objects>
@@ -21,20 +29,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="100" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="nBV-P8-ViF">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="nBV-P8-ViF">
                                 <rect key="frame" x="0.0" y="65" width="375" height="602"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="filter" rowHeight="49" id="dKE-yA-ZYG" customClass="CategoryFilterTableViewCell" customModule="LocalCommerce" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="49"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="filter" rowHeight="47" id="dKE-yA-ZYG" customClass="CategoryFilterTableViewCell" customModule="LocalCommerce" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dKE-yA-ZYG" id="J3L-vz-frP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="48.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="46.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mto-vh-o84">
-                                                    <rect key="frame" x="32" y="14" width="42" height="21"/>
+                                                    <rect key="frame" x="32" y="13" width="42" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="7bB-3v-Q1y"/>
                                                     </constraints>
@@ -53,7 +61,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="local" rowHeight="100" id="nwk-fA-pAD" customClass="LocalTableViewCell" customModule="LocalCommerce" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="104.5" width="375" height="100"/>
+                                        <rect key="frame" x="0.0" y="102.5" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nwk-fA-pAD" id="w7e-CL-lTe">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
@@ -90,7 +98,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rating" rowHeight="106" id="xLW-7Y-5qd" customClass="RatingTableViewCell" customModule="LocalCommerce" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="204.5" width="375" height="106"/>
+                                        <rect key="frame" x="0.0" y="202.5" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xLW-7Y-5qd" id="8hP-qz-4Gl">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="105.5"/>
@@ -134,7 +142,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="distance" rowHeight="180" id="9Fc-Fv-dGH" customClass="DistanceTableViewCell" customModule="LocalCommerce" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="310.5" width="375" height="180"/>
+                                        <rect key="frame" x="0.0" y="308.5" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Fc-Fv-dGH" id="o5Y-iK-UTG">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
@@ -202,14 +210,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Filters" id="QZA-BN-7Hf" userLabel="Filters">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="i1d-wa-tQ1" userLabel="Done"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="nBV-P8-ViF" id="RD6-V6-Fp2"/>
+                        <segue destination="INF-Nm-Qyo" kind="show" id="owb-im-sjH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="huz-nf-gjC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2224.8000000000002" y="-397.15142428785612"/>
+            <point key="canvasLocation" x="2023" y="-445"/>
         </scene>
     </scenes>
 </document>
