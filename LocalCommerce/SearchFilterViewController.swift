@@ -9,7 +9,12 @@
 import UIKit
 
 class SearchFilterViewController: UIViewController {
+   
     
+    var servicerRepository = ServicerRepository()
+    var servicers:[Servicer] = [Servicer]()
+    
+
     @IBOutlet weak var tableView: UITableView!
    
     override func viewDidLoad() {
@@ -21,29 +26,14 @@ class SearchFilterViewController: UIViewController {
         
         self.tableView.backgroundColor = .clear
         
-        
-        let rightButtonItem = UIBarButtonItem.init(
-            title: "Done",
-            style: .plain,
-            target: self,
-            action: #selector(rightButtonAction)
-        )
-        
-        //action: #selector(addTapped)
-        
-        self.navigationItem.rightBarButtonItem = rightButtonItem
+        servicers = servicerRepository.getAllServicersMockado()
 
+        
 
     }
     
     
-    func rightButtonAction(sender: UIBarButtonItem){
-    
-        let newVC = SearchController()
-        //self.navigationController?.pushViewController(newVC, animated: true)
-        
-        
-    }
+
 
    
     
@@ -57,6 +47,7 @@ class SearchFilterViewController: UIViewController {
 
     extension SearchFilterViewController: UITableViewDelegate, UITableViewDataSource {
         
+        
         func numberOfSections(in tableView: UITableView) -> Int {
             return 4
         }
@@ -65,7 +56,7 @@ class SearchFilterViewController: UIViewController {
 
             switch (section) {
                 case 0:
-                    return 10
+                    return servicers.count
                 case 1:
                     return 1
                 case 2:
@@ -88,6 +79,31 @@ class SearchFilterViewController: UIViewController {
         }
         
         
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            if(indexPath.section == 0){
+            
+                performSegue(withIdentifier: "showCategories", sender: nil)
+            }
+        }
+
+        
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let details = segue.destination as! FilterCategoryViewController
+            
+            
+            let id = servicers[(tableView.indexPathForSelectedRow?.row)!].category?.id
+            
+            
+            details.serviceID = id
+            
+        }
+
+        
+        
+        
+        
+        
+        
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
             var cell: UITableViewCell
@@ -95,8 +111,9 @@ class SearchFilterViewController: UIViewController {
             switch (indexPath.section) {
             case 0:
                 let categoryCell = tableView.dequeueReusableCell(withIdentifier: "filter", for: indexPath) as! CategoryFilterTableViewCell
+            
                 
-                categoryCell.category.text = "alguma coisa"
+                categoryCell.category.text = servicers[indexPath.row].category?.name
                 
                 cell = categoryCell
             
@@ -128,8 +145,7 @@ class SearchFilterViewController: UIViewController {
         }
 
         
-        
-        
+               
         
         func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
             
@@ -148,8 +164,6 @@ class SearchFilterViewController: UIViewController {
             
             
         }
-        
-        
         
         
         

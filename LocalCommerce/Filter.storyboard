@@ -29,10 +29,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="nBV-P8-ViF">
-                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="100" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="nBV-P8-ViF">
+                                <rect key="frame" x="0.0" y="20" width="375" height="602"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="RPI-T9-Qre"/>
+                                    <constraint firstAttribute="height" constant="602" id="uhC-S5-wtn"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="filter" rowHeight="47" id="dKE-yA-ZYG" customClass="CategoryFilterTableViewCell" customModule="LocalCommerce" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="47"/>
@@ -56,8 +59,10 @@
                                                 <constraint firstItem="mto-vh-o84" firstAttribute="centerY" secondItem="J3L-vz-frP" secondAttribute="centerY" id="mS7-53-Nd9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                         <connections>
                                             <outlet property="category" destination="mto-vh-o84" id="vnI-F6-IKq"/>
+                                            <segue destination="II4-Tl-uJx" kind="show" identifier="showCategories" trigger="accessoryAction" id="h7r-ry-TRH"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="local" rowHeight="100" id="nwk-fA-pAD" customClass="LocalTableViewCell" customModule="LocalCommerce" customModuleProvider="target">
@@ -96,6 +101,9 @@
                                                 <constraint firstItem="nfE-eY-B9C" firstAttribute="centerY" secondItem="w7e-CL-lTe" secondAttribute="centerY" id="lto-mp-fJP"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="local" destination="ok7-Go-Zrw" id="Lr3-C0-dQY"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rating" rowHeight="106" id="xLW-7Y-5qd" customClass="RatingTableViewCell" customModule="LocalCommerce" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="202.5" width="375" height="106"/>
@@ -156,7 +164,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="304" id="v8r-cf-sKw"/>
                                                             </constraints>
-                                                            <color key="minimumTrackTintColor" red="0.0" green="1" blue="0.91984818379166677" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="minimumTrackTintColor" red="0.41176470588235292" green="0.78431372549019607" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
                                                             <connections>
                                                                 <action selector="distanceChanged:" destination="9Fc-Fv-dGH" eventType="valueChanged" id="btv-xh-AoH"/>
                                                             </connections>
@@ -208,6 +216,15 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="nBV-P8-ViF" firstAttribute="leading" secondItem="WrR-5y-XGE" secondAttribute="leading" id="JaP-pu-p8T"/>
+                            <constraint firstItem="nBV-P8-ViF" firstAttribute="top" secondItem="zQY-I7-ugx" secondAttribute="bottom" id="i6c-4z-OcY"/>
+                            <constraint firstAttribute="trailing" secondItem="nBV-P8-ViF" secondAttribute="trailing" id="uUm-DC-Utq"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="cC1-wG-rsF" appends="YES" id="sin-US-c15"/>
+                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Filters" id="QZA-BN-7Hf" userLabel="Filters">
@@ -220,8 +237,17 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="huz-nf-gjC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cC1-wG-rsF"/>
             </objects>
             <point key="canvasLocation" x="2224.8000000000002" y="-397.15142428785612"/>
+        </scene>
+        <!--FilterCategory-->
+        <scene sceneID="9Kb-DW-NJY">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="FilterCategory" storyboardName="FilterCategory" id="II4-Tl-uJx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PDY-Ol-uI6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3032" y="-398"/>
         </scene>
     </scenes>
 </document>

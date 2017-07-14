@@ -19,6 +19,8 @@
 		A935D19E1F042D3000510B0A /* ServicerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A935D19D1F042D3000510B0A /* ServicerTableViewCell.swift */; };
 		A953163A1F16B01E000CB0B3 /* CategoryFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95316391F16B01E000CB0B3 /* CategoryFilterTableViewCell.swift */; };
 		A953163C1F16B1A9000CB0B3 /* LocalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953163B1F16B1A9000CB0B3 /* LocalTableViewCell.swift */; };
+		A953163E1F1933FB000CB0B3 /* FilterCategory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A953163D1F1933FB000CB0B3 /* FilterCategory.storyboard */; };
+		A95316401F193647000CB0B3 /* FilterCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953163F1F193647000CB0B3 /* FilterCategoryViewController.swift */; };
 		D22409DA1F0409E7006848A0 /* Servicer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22409D91F0409E7006848A0 /* Servicer.swift */; };
 		D22409DC1F040BE6006848A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22409DB1F040BE6006848A0 /* User.swift */; };
 		D22409DE1F040C34006848A0 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22409DD1F040C34006848A0 /* Review.swift */; };
@@ -69,6 +71,8 @@
 		A935D19D1F042D3000510B0A /* ServicerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicerTableViewCell.swift; sourceTree = "<group>"; };
 		A95316391F16B01E000CB0B3 /* CategoryFilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryFilterTableViewCell.swift; sourceTree = "<group>"; };
 		A953163B1F16B1A9000CB0B3 /* LocalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalTableViewCell.swift; sourceTree = "<group>"; };
+		A953163D1F1933FB000CB0B3 /* FilterCategory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FilterCategory.storyboard; sourceTree = "<group>"; };
+		A953163F1F193647000CB0B3 /* FilterCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCategoryViewController.swift; sourceTree = "<group>"; };
 		D22409D91F0409E7006848A0 /* Servicer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Servicer.swift; sourceTree = "<group>"; };
 		D22409DB1F040BE6006848A0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D22409DD1F040C34006848A0 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
@@ -221,6 +225,7 @@
 				D290D9AC1F02E290007B44D6 /* Profile.storyboard */,
 				D290D99C1F02E15F007B44D6 /* LaunchScreen.storyboard */,
 				3FB283561F0ECCB5007C614A /* Filter.storyboard */,
+				A953163D1F1933FB000CB0B3 /* FilterCategory.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 				A91341D71F16A8AA00B21EEA /* FilterCells */,
 				D290D9951F02E15F007B44D6 /* SearchController.swift */,
 				A91341B51F0EAC1600B21EEA /* SearchFilterViewController.swift */,
+				A953163F1F193647000CB0B3 /* FilterCategoryViewController.swift */,
 				A91341B31F057E6B00B21EEA /* ServicerCollectionViewCell.swift */,
 				D290D9AF1F02EA4F007B44D6 /* FavoritesController.swift */,
 				A935D19D1F042D3000510B0A /* ServicerTableViewCell.swift */,
@@ -349,6 +355,7 @@
 				D26543301F18049B00DF9012 /* Budgets.storyboard in Resources */,
 				3FB283571F0ECCB5007C614A /* Filter.storyboard in Resources */,
 				3FFBA8FE1F154D7D005A315D /* NewBudget.storyboard in Resources */,
+				A953163E1F1933FB000CB0B3 /* FilterCategory.storyboard in Resources */,
 				D26543241F18037300DF9012 /* Servicer.storyboard in Resources */,
 				D290D9B61F02F4D5007B44D6 /* Podfile in Resources */,
 				D2B474FF1F0F3AC20058DDEA /* services.json in Resources */,
@@ -439,6 +446,7 @@
 				D22E77981F0AB7110009DD4E /* Service.swift in Sources */,
 				D22409E01F040C64006848A0 /* Category.swift in Sources */,
 				D290D9961F02E15F007B44D6 /* SearchController.swift in Sources */,
+				A95316401F193647000CB0B3 /* FilterCategoryViewController.swift in Sources */,
 				D296002A1F0D7E3E00CDFB1B /* UIColor.swift in Sources */,
 				A91341D91F16A91700B21EEA /* DistanceTableViewCell.swift in Sources */,
 				A935D19E1F042D3000510B0A /* ServicerTableViewCell.swift in Sources */,

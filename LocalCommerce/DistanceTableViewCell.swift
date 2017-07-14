@@ -20,7 +20,7 @@ class DistanceTableViewCell: UITableViewCell {
         
         let currentValue = Int(sender.value)
         
-        distanceValue.text = "\(currentValue)"
+        distanceValue.text = "\(currentValue) km"
         
     }
     
