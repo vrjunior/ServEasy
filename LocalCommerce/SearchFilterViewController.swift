@@ -24,7 +24,7 @@ class SearchFilterViewController: UIViewController {
         
         let rightButtonItem = UIBarButtonItem.init(
             title: "Done",
-            style: .done,
+            style: .plain,
             target: self,
             action: #selector(rightButtonAction)
         )
@@ -39,9 +39,10 @@ class SearchFilterViewController: UIViewController {
     
     func rightButtonAction(sender: UIBarButtonItem){
     
-        print("done")
+        let newVC = SearchController()
+        //self.navigationController?.pushViewController(newVC, animated: true)
         
-    
+        
     }
 
    
