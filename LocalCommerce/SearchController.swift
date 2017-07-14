@@ -234,7 +234,6 @@ extension SearchController: UISearchBarDelegate {
             if error == nil {
                 for placemark in placemarks! {
                     print(placemark.name!)
-                    
                     //updating position
                     if let location = placemark.location {
                         self.locationManager.stopUpdatingLocation()
