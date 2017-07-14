@@ -16,4 +16,10 @@ extension UIColor {
         }
     }
     
+    static var titleColor:UIColor {
+        get {
+            return UIColor(colorLiteralRed: 59/255, green: 59/255, blue: 59/255, alpha: 1)
+        }
+    }
+    
 }

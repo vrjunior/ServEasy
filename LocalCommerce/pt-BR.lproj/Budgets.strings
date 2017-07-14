@@ -1,0 +1,15 @@
+
+/* Class = "UISegmentedControl"; 1dn-O5-4se.segmentTitles[0] = "Abertos"; ObjectID = "1dn-O5-4se"; */
+"1dn-O5-4se.segmentTitles[0]" = "Abertos";
+
+/* Class = "UISegmentedControl"; 1dn-O5-4se.segmentTitles[1] = "Fechados"; ObjectID = "1dn-O5-4se"; */
+"1dn-O5-4se.segmentTitles[1]" = "Fechados";
+
+/* Class = "UILabel"; text = "Pintura das paredes da sala"; ObjectID = "IZo-fw-TZY"; */
+"IZo-fw-TZY.text" = "Pintura das paredes da sala";
+
+/* Class = "UINavigationItem"; title = "Budgets"; ObjectID = "SOh-Go-lbc"; */
+"SOh-Go-lbc.title" = "Orçamentos";
+
+/* Class = "UITabBarItem"; title = "Budgets"; ObjectID = "UPq-L8-DH9"; */
+"UPq-L8-DH9.title" = "Orçamentos";

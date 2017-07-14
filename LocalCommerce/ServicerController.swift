@@ -9,7 +9,8 @@
 import UIKit
 import CoreLocation
 import CoreData
-import Foundation
+import GoogleMaps
+
 
 class ServicerController : UIViewController {
     
@@ -26,6 +27,7 @@ class ServicerController : UIViewController {
     @IBOutlet weak var servicerTimeDistance: UILabel!
     @IBOutlet weak var servicerCity: UILabel!
     @IBOutlet weak var servicerIsOpen: UILabel!
+    @IBOutlet weak var mapView: GMSMapView!
     
     @IBOutlet weak var imageScrollView: UIScrollView!
     
@@ -46,6 +48,7 @@ class ServicerController : UIViewController {
     
     override func viewDidLoad() {
         
+        
         //check if servicer is favorite
         self.isFavorite = self.favoriteAccessLayer.isServicerFavorite(id: self.currentServicer!.id!)
         if(isFavorite) {
@@ -53,7 +56,6 @@ class ServicerController : UIViewController {
         }
         
         if let servicer = currentServicer {
-            print(servicer.name!)
             self.servicerName.text = servicer.name
             self.servicerPhone.text = servicer.phone
             self.servicerRate.text = String(describing: servicer.rating!)
@@ -71,14 +73,16 @@ class ServicerController : UIViewController {
                     self.servicerTimeDistance.text = String(format: "DISTANCE_MSG".localized, distanceKm)
                 }
                 
-                
+                self.updateMapView(location: eServicer.location!)
                 
             }else if servicer is NonEstablishmentServicer{
                 let neServicer = servicer as! NonEstablishmentServicer
                 
-                self.addressIcon.isHidden = true
-                self.servicerAdress.isHidden = true
-                self.servicerCity.isHidden = true
+                self.addressIcon.removeFromSuperview()
+                self.servicerAdress.removeFromSuperview()
+                self.servicerCity.removeFromSuperview()
+                
+                self.mapView.removeFromSuperview()
                 
                 
                 self.servicerTimeDistance.text = "\(servicer.name ?? "") works on your area"
@@ -156,7 +160,50 @@ class ServicerController : UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    func updateMapView(location: CLLocationCoordinate2D) {
+        //disabling interaction with map
+        self.mapView.isUserInteractionEnabled = false
         
+        //defining style to hide poi on google maps
+        let myStyle = "[" +
+            "  {" +
+            "    \"featureType\": \"poi\"," +
+            "    \"elementType\": \"all\"," +
+            "    \"stylers\": [" +
+            "      {" +
+            "        \"visibility\": \"off\"" +
+            "      }" +
+            "    ]" +
+            "  }," +
+            "  {" +
+            "    \"featureType\": \"transit\"," +
+            "    \"elementType\": \"labels.icon\"," +
+            "    \"stylers\": [" +
+            "      {" +
+            "        \"visibility\": \"off\"" +
+            "      }" +
+            "    ]" +
+            "  }" +
+        "]"
+        
+        do {
+            try self.mapView.mapStyle = GMSMapStyle(jsonString: myStyle)
+        } catch {
+            NSLog("Fail to set style on google maps")
+        }
+        
+        //setting camera
+        self.mapView.camera = GMSCameraPosition(target: location, zoom: 16, bearing: 0, viewingAngle: 0)
+        
+        //creating and setting marker
+        let marker: GMSMarker = GMSMarker(position: location)
+        marker.icon = self.currentServicer?.category?.getMarkerIcon()
+        marker.title = self.currentServicer?.name
+        marker.snippet = self.currentServicer?.category?.name
+        
+        marker.map = self.mapView
         
     }
     
