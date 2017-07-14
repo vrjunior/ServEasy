@@ -27,8 +27,11 @@ class ServicerRepository: Repository {
                 if(distanceKm <= radius) {
                     return true
                 }
+                else {
+                    return false
+                }
             }
-            return false
+            return true
         })
         
         
