@@ -16,7 +16,7 @@
         <!--Servicer-->
         <scene sceneID="AR4-lc-Ckr">
             <objects>
-                <viewController storyboardIdentifier="Servicer" title="Servicer" id="lbY-FW-iGf" customClass="ServicerController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Servicer" title="Servicer" id="lbY-FW-iGf" customClass="ServicerController" customModule="ServEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aue-W3-cqx"/>
                         <viewControllerLayoutGuide type="bottom" id="W2a-2f-vpE"/>
