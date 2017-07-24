@@ -8,6 +8,8 @@
 
 "OPEN" = "Open";
 "CLOSED" = "Closed";
+"DONE" = "Done";
+"EDIT" = "Edit";
 "MY_LOCATION" = "My Location";
 "MY_CURRENT_LOCATION" = "My current location";
 "DISTANCE_MSG" = "%.1f km from your point";
@@ -16,3 +18,5 @@
 "UNFAVORITE_ALERT_MSG" = "Are you sure to unfavorite %@?";
 "UNFAVORITE" = "Unfavorite";
 "CANCEL" = "Cancel";
+"TAKE_PHOTO" = "Take Photo";
+"CHOOSE_PHOTO" = "Choose Photo";
