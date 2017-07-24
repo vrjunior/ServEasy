@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2U4-Lf-NWK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2U4-Lf-NWK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,7 +20,7 @@
         <!--Filters-->
         <scene sceneID="Lh3-Cw-CdJ">
             <objects>
-                <viewController title="Filters" id="2U4-Lf-NWK" customClass="SearchFilterViewController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Filters" id="2U4-Lf-NWK" customClass="SearchFilterViewController" customModule="ServEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zQY-I7-ugx"/>
                         <viewControllerLayoutGuide type="bottom" id="Ly1-HR-kH1"/>
@@ -37,7 +37,7 @@
                                     <constraint firstAttribute="height" constant="602" id="uhC-S5-wtn"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="filter" rowHeight="47" id="dKE-yA-ZYG" customClass="CategoryFilterTableViewCell" customModule="LocalCommerce" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="filter" rowHeight="47" id="dKE-yA-ZYG" customClass="CategoryFilterTableViewCell" customModule="ServEasy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dKE-yA-ZYG" id="J3L-vz-frP">
@@ -65,7 +65,7 @@
                                             <segue destination="II4-Tl-uJx" kind="show" identifier="showCategories" trigger="accessoryAction" id="h7r-ry-TRH"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="local" rowHeight="100" id="nwk-fA-pAD" customClass="LocalTableViewCell" customModule="LocalCommerce" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="local" rowHeight="100" id="nwk-fA-pAD" customClass="LocalTableViewCell" customModule="ServEasy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="102.5" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nwk-fA-pAD" id="w7e-CL-lTe">
@@ -105,7 +105,7 @@
                                             <outlet property="local" destination="ok7-Go-Zrw" id="Lr3-C0-dQY"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rating" rowHeight="106" id="xLW-7Y-5qd" customClass="RatingTableViewCell" customModule="LocalCommerce" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rating" rowHeight="106" id="xLW-7Y-5qd" customClass="RatingTableViewCell" customModule="ServEasy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="202.5" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xLW-7Y-5qd" id="8hP-qz-4Gl">
@@ -121,7 +121,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="KKA-My-HZ4" customClass="RatingView" customModule="LocalCommerce" customModuleProvider="target">
+                                                        <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="KKA-My-HZ4" customClass="RatingView" customModule="ServEasy" customModuleProvider="target">
                                                             <rect key="frame" x="37" y="76" width="200" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
@@ -149,7 +149,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="distance" rowHeight="180" id="9Fc-Fv-dGH" customClass="DistanceTableViewCell" customModule="LocalCommerce" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="distance" rowHeight="180" id="9Fc-Fv-dGH" customClass="DistanceTableViewCell" customModule="ServEasy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="308.5" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Fc-Fv-dGH" id="o5Y-iK-UTG">
