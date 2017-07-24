@@ -20,11 +20,23 @@ class ProfileController: UITableViewController, UIImagePickerControllerDelegate,
         super.viewDidLoad()
         
         self.imagePicker.delegate = self
+        
+        
+        //changing color of separators
+        self.tableView.separatorColor = UIColor.primaryColor
+        
+        //removing separators from empty space
+        self.tableView.tableFooterView = UIView()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return false
     }
     
     @IBAction func onTapEditButton(_ sender: Any) {

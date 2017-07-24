@@ -12,7 +12,6 @@
 		3FB283571F0ECCB5007C614A /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB283561F0ECCB5007C614A /* Filter.storyboard */; };
 		3FFBA8FE1F154D7D005A315D /* NewBudget.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFBA8FD1F154D7D005A315D /* NewBudget.storyboard */; };
 		3FFBA9001F155D98005A315D /* NewBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFBA8FF1F155D98005A315D /* NewBudgetViewController.swift */; };
-		7F626DECBBFD525CF71E0F62 /* libPods-ServEasy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD01D31F1B0FF85498353CE4 /* libPods-ServEasy.a */; };
 		A91341B41F057E6B00B21EEA /* ServicerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91341B31F057E6B00B21EEA /* ServicerCollectionViewCell.swift */; };
 		A91341B61F0EAC1600B21EEA /* SearchFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91341B51F0EAC1600B21EEA /* SearchFilterViewController.swift */; };
 		A91341D91F16A91700B21EEA /* DistanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91341D81F16A91700B21EEA /* DistanceTableViewCell.swift */; };
@@ -131,7 +130,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EF1AB1AD48FE469D0D69E7D /* libPods-ServEasy.a in Frameworks */,
-				7F626DECBBFD525CF71E0F62 /* libPods-ServEasy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
