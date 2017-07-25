@@ -332,6 +332,7 @@
 				TargetAttributes = {
 					D290D98F1F02E15F007B44D6 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 4KY332LQ8T;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -650,7 +651,7 @@
 			baseConfigurationReference = 367A49ABA1C78FB6531E3C50 /* Pods-ServEasy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4KY332LQ8T;
 				INFOPLIST_FILE = ServEasy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vrmassoni.ServEasy;
@@ -665,7 +666,7 @@
 			baseConfigurationReference = 2ADBC2FFB9A82FF090A5B94B /* Pods-ServEasy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4KY332LQ8T;
 				INFOPLIST_FILE = ServEasy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vrmassoni.ServEasy;
