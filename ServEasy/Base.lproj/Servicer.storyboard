@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
-        <capability name="Unknown constraint types" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Servicer-->
         <scene sceneID="AR4-lc-Ckr">
             <objects>
-                <viewController storyboardIdentifier="Servicer" title="Servicer" id="lbY-FW-iGf" customClass="ServicerController" customModule="ServEasy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Servicer" title="Servicer" automaticallyAdjustsScrollViewInsets="NO" id="lbY-FW-iGf" customClass="ServicerController" customModule="ServEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aue-W3-cqx"/>
                         <viewControllerLayoutGuide type="bottom" id="W2a-2f-vpE"/>
@@ -226,7 +225,6 @@
                                             <constraint firstItem="eOU-hc-3WM" firstAttribute="top" secondItem="JHY-CL-GIP" secondAttribute="bottom" constant="8" id="1Vr-CV-w91"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="eOU-hc-3WM" secondAttribute="trailing" id="3xW-UR-vuf"/>
                                             <constraint firstItem="air-tW-ER2" firstAttribute="leading" secondItem="ak6-gm-S6y" secondAttribute="leadingMargin" id="A5t-MA-S23"/>
-                                            <constraint firstAttribute="top" secondItem="ak6-gm-S6y" secondAttribute="top" id="AHv-iB-ra7"/>
                                             <constraint firstItem="KbL-cC-IPa" firstAttribute="centerX" secondItem="ak6-gm-S6y" secondAttribute="centerX" constant="-3.5" id="AVF-wd-4cT"/>
                                             <constraint firstItem="FiZ-Sq-gmZ" firstAttribute="centerY" secondItem="hWX-Ko-SfI" secondAttribute="centerY" id="DEj-kl-1pQ"/>
                                             <constraint firstItem="I9h-HQ-jkR" firstAttribute="leading" secondItem="ak6-gm-S6y" secondAttribute="leadingMargin" id="ENo-Hx-GOE"/>
@@ -397,7 +395,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AlH-A4-sWk" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cGJ-qN-hsg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cGJ-qN-hsg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
