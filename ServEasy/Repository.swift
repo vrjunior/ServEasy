@@ -9,7 +9,7 @@
 import Foundation
 
 class Repository {
-    static var server:String = ""
+    static var server:String = "http://localhost:3000/"
     
     
     func parseJSONFromData(jsonData: Data?) -> [String: AnyObject]?
