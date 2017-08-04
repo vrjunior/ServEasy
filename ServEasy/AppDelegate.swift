@@ -17,8 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        //change the status bar to light style
         UINavigationBar.appearance().barStyle = UIBarStyle.blackOpaque
         
+        //setting the google maps api key
         GMSServices.provideAPIKey("AIzaSyAXZNtNtrIZgZ4ejXqNvoG0afx_FOJK2R8")
         
         return true

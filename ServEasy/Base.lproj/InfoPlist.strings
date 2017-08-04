@@ -1,0 +1,4 @@
+"NSLocationAlwaysUsageDescription" = "Do you allow ServEasy to always know your location?";
+"NSLocationWhenInUseUsageDescription" = "Do you allow ServEasy to know your current location?";
+"NSPhotoLibraryUsageDescription" = "Do you allow ServEasy to access your photos?";
+"NSCameraUsageDescription" = "Do you allow ServEasy to open the camera?";

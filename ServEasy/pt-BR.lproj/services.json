@@ -2,7 +2,7 @@
   "EstablishmentServicer" : [
     {
       "id":1,
-      "name": "Toreto's Garage",
+      "name": "Garagem do Toreto",
       "rating":4.5,
       "phone":"(19) 997906497",
       "thumbnailUrl": "https://i.imgur.com/JlWgGKP.png",
@@ -41,7 +41,7 @@
                              
      {
      "id":4,
-     "name": "Zé's Barbershop",
+     "name": "Barbearia do Zé",
      "rating":5,
      "phone":"(19) 997906478",
      "thumbnailUrl": "https://i.imgur.com/TPOOP7k.png",
@@ -62,7 +62,7 @@
   "NonEstablishmentServicer" : [
     {
     "id":3,
-    "name": "John Grafitti",
+    "name": "João Pintor",
     "rating":4.9,
     "phone":"(19) 997906499",
     "thumbnailUrl": "https://i.imgur.com/KhhJGbn.png",

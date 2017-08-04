@@ -17,9 +17,6 @@ class SearchController: UIViewController {
     var servicerRepository = ServicerRepository()
     
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var mapView: GMSMapView!
-    
-    var locationManager: CLLocationManager = CLLocationManager()
     
     var currentLocation: CLLocation!
     var currentMapZoom: Float = 15 //initial zoom
@@ -46,20 +43,14 @@ class SearchController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        //change the tint color of tabbar
-        self.tabBarController?.tabBar.tintColor = UIColor.primaryColor
-
-        
-        //fix searchbar
-        self.fixSearchBar()
-        
-        self.mapView.delegate = self
-        searchBar.delegate = self
+    @IBOutlet weak var mapView: GMSMapView!
     
+    override func viewDidLoad() {
+        //You can style the maps in your own way!!
+        
         //defining style to hide poi on google maps
+        
+        //Here we are removing all the POI (Points of interest, like schools points) and transit markers
         let myStyle = "[" +
             "  {" +
             "    \"featureType\": \"poi\"," +
@@ -86,6 +77,20 @@ class SearchController: UIViewController {
         } catch {
             NSLog("Fail to set style on google maps")
         }
+        
+        super.viewDidLoad()
+        
+        //change the tint color of tabbar
+        self.tabBarController?.tabBar.tintColor = UIColor.primaryColor
+
+        
+        //fix searchbar
+        self.fixSearchBar()
+        
+        self.mapView.delegate = self
+        searchBar.delegate = self
+    
+        
         
         
         self.determineMyCurrentLocation()
@@ -114,11 +119,20 @@ class SearchController: UIViewController {
         }
     }
     
+    
+    var locationManager: CLLocationManager = CLLocationManager()
+    
     func determineMyCurrentLocation() {
+        //setting the minimum accuracy to update with 100 meters
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        
+        //setting the delegate to this class
         locationManager.delegate = self
+        
+        //check if user allow to get location or ask if don't
         locationManager.requestWhenInUseAuthorization()
         
+        //if user allow, we start updating location
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
@@ -183,24 +197,16 @@ class SearchController: UIViewController {
 
 extension SearchController: CLLocationManagerDelegate {
     
+    //This method will be called when gps location move more than 100 meters (the previous accuracy setted)
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: { (placemarks, error) -> Void in
-            if(error != nil) {
-                print("error placemark")
-            }
-            else {
-                self.placemark = placemarks?.first
-            }
-        })
         
         //getting the last location
         currentLocation = locations.first
         
-        
         //getting the current coordinate
         let coordinate = currentLocation.coordinate
         
+        //here we create a new camera and set it to maps
         self.mapView.camera = GMSCameraPosition(target: coordinate, zoom: self.currentMapZoom, bearing: 0, viewingAngle: 0)
         
         //saving current zoom to next update
@@ -212,27 +218,14 @@ extension SearchController: CLLocationManagerDelegate {
 
 extension SearchController: GMSMapViewDelegate {
     
-
-    /*func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-
-        self.locationManager.stopUpdatingLocation()
-        self.myMarkerPoint.position = coordinate
-        
-        //center the camera to marker stay on center
-        self.mapView.animate(toLocation: coordinate)
-    }*/
-    
+    //method to handle tap on a map marker
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         self.mapView.selectedMarker = marker
         return true
     }
     
-    //func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-        
-    //    self.locationManager.stopUpdatingLocation()
-    //    self.myMapLocation = position.target
-    //}
-    
+    //method to handle the scroll on map
+    //it's only called when you stopped for 1 second in a position
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
         self.locationManager.stopUpdatingLocation()
         self.myMapLocation = position.target
@@ -240,7 +233,6 @@ extension SearchController: GMSMapViewDelegate {
 }
 
 extension SearchController: UISearchBarDelegate {
-    
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         self.searchBar.setShowsCancelButton(true, animated: true)
@@ -255,6 +247,7 @@ extension SearchController: UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
         //getting the geocode from searchtext
         self.newSearchLocation?.geocodeAddressString(searchBar.text!, completionHandler: { (placemarks, error) in
             if error == nil {
@@ -278,7 +271,6 @@ extension SearchController: UISearchBarDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.searchBar.endEditing(true)
-     //   self.view.resignFirstResponder()
     }
     
 }

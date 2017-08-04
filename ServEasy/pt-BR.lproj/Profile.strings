@@ -1,4 +1,22 @@
 
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "7KB-YB-A8J"; */
+"7KB-YB-A8J.normalTitle" = "Editar";
+
+/* Class = "UINavigationItem"; title = "My Account"; ObjectID = "7cl-Zs-lzd"; */
+"7cl-Zs-lzd.title" = "Minha conta";
+
+/* Class = "UIButton"; normalTitle = "Be a Servicer"; ObjectID = "JO9-ZU-JbW"; */
+"JO9-ZU-JbW.normalTitle" = "Seja um prestador";
+
+/* Class = "UIButton"; normalTitle = "Change"; ObjectID = "Mwi-lA-d9I"; */
+"Mwi-lA-d9I.normalTitle" = "Mudar";
+
 /* Class = "UITabBarItem"; title = "Profile"; ObjectID = "O3S-Ro-eYa"; */
-"O3S-Ro-eYa.title" = "Conta";
+"O3S-Ro-eYa.title" = "Perfil";
+
+/* Class = "UITabBarItem"; title = "Conta"; ObjectID = "eNK-y1-6kN"; */
+"eNK-y1-6kN.title" = "Conta";
+
+/* Class = "UITableViewController"; title = "Profile"; ObjectID = "j9P-aC-lUN"; */
+"j9P-aC-lUN.title" = "Profile";
 

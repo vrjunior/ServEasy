@@ -12,7 +12,7 @@
         <!--Categories-->
         <scene sceneID="f2K-JN-rMi">
             <objects>
-                <viewController title="Categories" id="WEc-HW-g04" customClass="FilterCategoryViewController" customModule="LocalCommerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Categories" id="WEc-HW-g04" customClass="FilterCategoryViewController" customModule="ServEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="akb-kj-2T6"/>
                         <viewControllerLayoutGuide type="bottom" id="Glc-5K-Gnc"/>

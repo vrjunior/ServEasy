@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
@@ -37,8 +37,8 @@
                                                     <constraint firstAttribute="width" secondItem="CTj-gx-JDp" secondAttribute="height" multiplier="1:1" id="fRc-Pz-Hj6"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oficina do João" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="155" translatesAutoresizingMaskIntoConstraints="NO" id="fnz-6F-tAg">
-                                                <rect key="frame" x="12" y="231" width="155" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="155" translatesAutoresizingMaskIntoConstraints="NO" id="fnz-6F-tAg">
+                                                <rect key="frame" x="12" y="231" width="58" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="jfd-K2-DJv"/>
                                                 </constraints>
@@ -47,14 +47,14 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UPA-j8-itJ" userLabel="Category Icon">
-                                                <rect key="frame" x="187" y="231" width="24" height="24"/>
+                                                <rect key="frame" x="90" y="231" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="UPA-j8-itJ" secondAttribute="height" multiplier="1:1" id="gph-wM-XMv"/>
                                                     <constraint firstAttribute="height" constant="24" id="xqA-UU-6pu"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oficina mecânica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9h-HQ-jkR" userLabel="Category">
-                                                <rect key="frame" x="12" y="262" width="111" height="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9h-HQ-jkR" userLabel="Category">
+                                                <rect key="frame" x="12" y="262" width="60" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="Yfm-Ff-wEG"/>
                                                 </constraints>
@@ -78,8 +78,8 @@
                                                     <constraint firstAttribute="height" constant="24" id="ZkS-we-553"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aberto agora" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDc-NM-IRK">
-                                                <rect key="frame" x="73" y="296" width="96" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDc-NM-IRK">
+                                                <rect key="frame" x="73" y="296" width="39.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="e2n-Ou-EAV"/>
                                                 </constraints>
@@ -130,7 +130,7 @@
                                                     <constraint firstAttribute="width" secondItem="gDA-1x-tcM" secondAttribute="height" multiplier="1:1" id="jp2-OH-dFz"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 min dirigindo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRe-wS-8qv" userLabel="Route Info">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distancy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRe-wS-8qv" userLabel="Route Info">
                                                 <rect key="frame" x="50" y="385" width="313" height="19"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="19" id="098-Zj-LcU"/>
@@ -153,7 +153,7 @@
                                                     <constraint firstAttribute="width" secondItem="DwR-TR-beU" secondAttribute="height" multiplier="1:1" id="hJT-ag-uik"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(19) 99281-2440" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wn-B3-dYv" userLabel="Phone">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wn-B3-dYv" userLabel="Phone">
                                                 <rect key="frame" x="49" y="423" width="314" height="19"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="19" id="Oa6-Tc-sMB"/>
@@ -395,7 +395,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AlH-A4-sWk" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cGJ-qN-hsg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cGJ-qN-hsg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">

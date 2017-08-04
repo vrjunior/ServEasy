@@ -20,3 +20,7 @@
 "CANCEL" = "Cancel";
 "TAKE_PHOTO" = "Take Photo";
 "CHOOSE_PHOTO" = "Choose Photo";
+"CATEGORY" = "Category";
+"REVIEW" = "Review";
+"LOCAL" = "Local";
+"DISTANCY" = "Distancy";

@@ -151,13 +151,13 @@ class SearchFilterViewController: UIViewController {
             
             switch (section) {
             case 0:
-                return "Serviços"
+                return "CATEGORY".localized
             case 1:
-                return "Avaliação"
+                return "REVIEW".localized
             case 2:
-                return "Local"
+                return "LOCAL".localized
             case 3:
-                return "Serviço"
+                return "DISTANCY".localized
             default:
                 return "..."
             }

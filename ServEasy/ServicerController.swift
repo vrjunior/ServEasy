@@ -59,6 +59,7 @@ class ServicerController : UIViewController {
             self.servicerName.text = servicer.name
             self.servicerPhone.text = servicer.phone
             self.servicerRate.text = String(describing: servicer.rating!)
+            self.servicerCategory.text = servicer.category?.name
             print(servicer.rating!)
             self.getImages()
             
@@ -66,7 +67,6 @@ class ServicerController : UIViewController {
                 let eServicer = servicer as! EstablishmentServicer
                 self.servicerAdress.text = eServicer.addressStreet
                 self.servicerCity.text = eServicer.addressCity
-                self.servicerCategory.text = eServicer.category?.name
                 
                 if let mapLocation = myMapLocation{
                     let distanceKm = eServicer.getKmDistance(fromPosition: mapLocation)

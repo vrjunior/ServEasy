@@ -1,0 +1,4 @@
+"NSLocationAlwaysUsageDescription" = "Você permite o ServEasy a sempre acessar sua localização?";
+"NSLocationWhenInUseUsageDescription" = "Você permite o ServEasy acessar sua localização?";
+"NSPhotoLibraryUsageDescription" = "Você permite o ServEasy a acessar suas fotos?";
+"NSCameraUsageDescription" = "Você permite o ServEasy a abrir a câmera?";

@@ -1,0 +1,38 @@
+
+/* Class = "UILabel"; text = "Local"; ObjectID = "A6u-6P-I13"; */
+"A6u-6P-I13.text" = "Local";
+
+/* Class = "UILabel"; text = "Doméstico"; ObjectID = "DGq-ct-o9D"; */
+"DGq-ct-o9D.text" = "Doméstico";
+
+/* Class = "UIButton"; normalTitle = "Adicionar Foto"; ObjectID = "I9R-ZQ-k8b"; */
+"I9R-ZQ-k8b.normalTitle" = "Adicionar Foto";
+
+/* Class = "UILabel"; text = "Beauty"; ObjectID = "JaL-8W-GFE"; */
+"JaL-8W-GFE.text" = "Beleza";
+
+/* Class = "UILabel"; text = "Selecione a distância máxima"; ObjectID = "KXH-tG-yjg"; */
+"KXH-tG-yjg.text" = "Selecione a distância máxima";
+
+/* Class = "UILabel"; text = "Categories"; ObjectID = "cTn-QW-8NK"; */
+"cTn-QW-8NK.text" = "Categorias";
+
+/* Class = "UILabel"; text = "Review"; ObjectID = "eua-fv-PSZ"; */
+"eua-fv-PSZ.text" = "Avaliação";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "jrP-5m-aBa"; */
+"jrP-5m-aBa.text" = "Descrição";
+
+/* Class = "UILabel"; text = "Distancy"; ObjectID = "lFv-rE-WEM"; */
+"lFv-rE-WEM.text" = "Distância";
+
+/* Class = "UILabel"; text = "Mecânico"; ObjectID = "mgX-U0-AX7"; */
+"mgX-U0-AX7.text" = "Mecânico";
+
+/* Class = "UILabel"; text = "Selecione o numero mínimo de estrelas"; ObjectID = "oaM-Lk-Zz9"; */
+"oaM-Lk-Zz9.text" = "Selecione o numero mínimo de estrelas";
+
+/* Class = "UILabel"; text = "Construction"; ObjectID = "xJl-iD-06b"; */
+"xJl-iD-06b.text" = "Construção";
+
+"OaI-ts-pgi.placeholder" = "Insira um local";

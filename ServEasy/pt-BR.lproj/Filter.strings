@@ -1,0 +1,21 @@
+
+/* Class = "UIViewController"; title = "Filters"; ObjectID = "2U4-Lf-NWK"; */
+"2U4-Lf-NWK.title" = "Filtros";
+
+/* Class = "UILabel"; text = "Selecione a distância máxima:"; ObjectID = "Jb7-qh-j84"; */
+"Jb7-qh-j84.text" = "Selecione a distância máxima:";
+
+/* Class = "UINavigationItem"; title = "Filters"; ObjectID = "QZA-BN-7Hf"; */
+"QZA-BN-7Hf.title" = "Filtros";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "SHo-Ph-FWw"; */
+"SHo-Ph-FWw.text" = "0";
+
+/* Class = "UILabel"; text = "Selecione o mínimo de estrelas:"; ObjectID = "dxv-bd-wsU"; */
+"dxv-bd-wsU.text" = "Selecione o mínimo de estrelas:";
+
+/* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "i1d-wa-tQ1"; */
+"i1d-wa-tQ1.title" = "Feito";
+
+/* Class = "UITextField"; text = "Insira o local"; ObjectID = "ok7-Go-Zrw"; */
+"ok7-Go-Zrw.text" = "Insira o local";

@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "2xp-c8-70Z"; */
+"2xp-c8-70Z.normalTitle" = "Login";
+
+/* Class = "UILabel"; text = "Do not have account?"; ObjectID = "7jl-TY-8HK"; */
+"7jl-TY-8HK.text" = "Ainda não possuí conta?";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "8qf-VL-RFx"; */
+"8qf-VL-RFx.placeholder" = "Senha";
+
+/* Class = "UIViewController"; title = "Login"; ObjectID = "CCo-vV-nZd"; */
+"CCo-vV-nZd.title" = "Login";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "Cg0-cW-7oD"; */
+"Cg0-cW-7oD.placeholder" = "Email";
+
+/* Class = "UIButton"; normalTitle = "  Connect with Facebook"; ObjectID = "QMW-Vy-emq"; */
+"QMW-Vy-emq.normalTitle" = "  Conectar com o Facebook";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "jxg-eW-fTj"; */
+"jxg-eW-fTj.normalTitle" = "Inscrever-se";
